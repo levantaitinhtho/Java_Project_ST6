@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package model;
 
 /**
  *
  * @author Van Tai
  */
-public class connectSQL {
+public class model {
     
 }

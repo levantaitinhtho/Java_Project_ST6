@@ -9,6 +9,6 @@ package service;
  *
  * @author Van Tai
  */
-public class Service {
+public class service {
     
 }
