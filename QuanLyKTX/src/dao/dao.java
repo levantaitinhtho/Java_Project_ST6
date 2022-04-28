@@ -5,10 +5,6 @@
  */
 package dao;
 
-/**
- *
- * @author Van Tai
- */
 public class dao {
     
 }
