@@ -5,6 +5,7 @@ public class FormDangNhapDangKy324 extends javax.swing.JFrame {
 
     public FormDangNhapDangKy324() {
         initComponents();
+        System.out.println("Cho nay co thay doi");
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
