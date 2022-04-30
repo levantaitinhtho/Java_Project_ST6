@@ -12,13 +12,13 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         //Thiet lap mat dinh cho not dang nhap 
-        dangNhap_Label_324.setBackground(new Color(58,52,52));
+        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3 , 0, Color.CYAN));
         dangNhap_Label_324.setForeground(Color.red);
         DangNhap_Panel_324.setVisible(true);
         
         //Thiet lam mat dinh cho not dang ky
-        dangKy_Label_324.setBackground(new Color(58,52,52));
+        dangKy_Label_324.setBackground(new Color(0,0,0));
         dangKy_Label_324.setBorder(new MatteBorder(0, 0, 0, 0, Color.GREEN));
         dangKy_Label_324.setForeground(Color.white);
         DangKy_Panel_324.setVisible(false);
@@ -303,35 +303,36 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         DangKy_Panel_324Layout.setHorizontalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tenTaiKhoanDK_Label_324))
-                    .addComponent(matKhau1DK_Label_324)
-                    .addComponent(maKhau2DK_Label_324))
-                .addGap(18, 18, 18)
-                .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(matKhau1DK_PassWordField_324, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailDK_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tenTaiKhoan_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(matKhau2DK_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(showPass1_Lable1)
-                    .addComponent(hide1_Lable)
-                    .addComponent(showPass2_Lable2)
-                    .addComponent(hide))
-                .addGap(16, 16, 16))
-            .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tenTaiKhoanDK_Label_324))
+                            .addComponent(matKhau1DK_Label_324)
+                            .addComponent(maKhau2DK_Label_324))
+                        .addGap(18, 18, 18)
+                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(matKhau1DK_PassWordField_324, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailDK_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tenTaiKhoan_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(matKhau2DK_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(showPass1_Lable1)
+                            .addComponent(hide1_Lable)
+                            .addComponent(showPass2_Lable2)
+                            .addComponent(hide))))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         DangKy_Panel_324Layout.setVerticalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -356,7 +357,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(showPass2_Lable2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(hide)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -459,8 +460,8 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         
         dangKy_Label_324.setBorder(null);
         dangKy_Label_324.setForeground(Color.white);
-        dangKy_Label_324.setBackground(new Color(58,52,52));
-        dangNhap_Label_324.setBackground(new Color(58,52,52));
+        dangKy_Label_324.setBackground(new Color(0,0,0));
+        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setForeground(Color.red);
         dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
         DangNhap_Panel_324.setVisible(true);
@@ -470,12 +471,12 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
 
     private void dangKy_Label_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangKy_Label_324MousePressed
         dangNhap_Label_324.setBorder(null);
-        dangNhap_Label_324.setBackground(new Color(58,52,52));
+        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setForeground(Color.white);
         DangNhap_Panel_324.setVisible(false);
         
         dangKy_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
-        dangKy_Label_324.setBackground(new Color(58,52,52));
+        dangKy_Label_324.setBackground(new Color(0,0,0));
         dangKy_Label_324.setForeground(Color.red);
         DangKy_Panel_324.setVisible(true);
     }//GEN-LAST:event_dangKy_Label_324MousePressed
@@ -596,11 +597,12 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         }
         if(sb.length() > 0){
             JOptionPane.showMessageDialog(this, sb.toString(), "Lỗi đăng ký!", JOptionPane.ERROR_MESSAGE);
+            dangKy_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.cyan));
             return;
         }
         else{
             JOptionPane.showMessageDialog(this, "Tuyet vơi");
-            dangKy_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.cyan));
+            
         }
     }//GEN-LAST:event_dangKy_JLabel_324MousePressed
 
