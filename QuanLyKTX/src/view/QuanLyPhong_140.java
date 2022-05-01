@@ -27,8 +27,9 @@ import javax.swing.table.TableModel;
  * @author Huynh Hau
  */
 public class QuanLyPhong_140 extends javax.swing.JFrame {
-//abcd
- 
+    
+ //Hau bo sung code lan 1
+ //o đay co su thay doi lan 2
     /**
      * Creates new form QuanLyPhong_140
      */
@@ -455,7 +456,7 @@ private void showDuLieu(){
         int position = BangThongTin_Table.getSelectedRow();
         System.out.println(position);
         if (position == -1 ){
-            JOptionPane.showMessageDialog(QuanLyPhong_140.this,"chọn người dùng cần xóa !!!","lỗi",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(QuanLyPhong_140.this,"Chọn người dùng cần xóa!!!","Lỗi",JOptionPane.ERROR_MESSAGE);
         } else {
             int result = JOptionPane.showConfirmDialog(null,"Bạn có chắc chắn muốn xóa không");
             if(result == JOptionPane.YES_OPTION){
