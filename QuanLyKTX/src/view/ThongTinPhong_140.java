@@ -17,13 +17,16 @@ public class ThongTinPhong_140 {
     private String tinhTrangPhong;
     private int loaiPhong;
 
-    
-    
+    private String maSV;
+    private String maKTX;
+    private String hoTen;
+    private String CMND;
+    private String Sdt;
     
     public void ThongTinPhong() {
         
     }
-    
+
     public int getLoaiPhong() {
         return loaiPhong;
     }
@@ -73,6 +76,46 @@ public class ThongTinPhong_140 {
         this.tinhTrangPhong = tinhTrangPhong;
     }
     
+    public String getMaSV() {
+        return maSV;
+    }
+
+    public void setMaSV(String maSV) {
+        this.maSV = maSV;
+    }
+
+    public String getMaKTX() {
+        return maKTX;
+    }
+
+    public void setMaKTX(String maKTX) {
+        this.maKTX = maKTX;
+    }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public String getCMND() {
+        return CMND;
+    }
+
+    public void setCMND(String CMND) {
+        this.CMND = CMND;
+    }
+
+    public String getSdt() {
+        return Sdt;
+    }
+
+    public void setSdt(String Sdt) {
+        this.Sdt = Sdt;
+    }
+  
 
 }
     

@@ -30,11 +30,14 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
     
  //Hau bo sung code lan 1
  //o đay co su thay doi lan 2
+ //o day co su thay doi lan 3
+    
     /**
      * Creates new form QuanLyPhong_140
      */
     DefaultTableModel defaultTableModel = new DefaultTableModel();
     ThongTinPhong_140 h40 = new ThongTinPhong_140();
+    Student st40 = new Student();
     StudentDao stDao;
     
      StudentService service = new StudentService();
@@ -112,13 +115,18 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
         PhongCanTim_ComboBox = new javax.swing.JComboBox<>();
         ThongBaoTimKiem_Label = new javax.swing.JLabel();
         ThongBaoTimKiem1_Label = new javax.swing.JLabel();
+        MaSv_TextField = new javax.swing.JTextField();
+        MaKTX_TextField = new javax.swing.JTextField();
+        Hoten_TextField = new javax.swing.JTextField();
+        CMND_TextField = new javax.swing.JTextField();
+        SDT_TextField = new javax.swing.JTextField();
         ThongTin_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin chi tiết của phòng:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 16))); // NOI18N
         jPanel1.setToolTipText("");
 
@@ -215,13 +223,13 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
 
         BangThongTin_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Tên phòng", "Mã phòng", "Loại phòng ", "Số sinh viên hiện tại", "Số sinh viên tối đa", "Tình trạng phòng"
+                "Mã sinh viên ", "Mã KTX ", "Họ tên", "CMND", "Số điên thoại"
             }
         ));
         jScrollPane2.setViewportView(BangThongTin_Table);
@@ -239,13 +247,19 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
 
         PhongCanTim_ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A2.2", "A3.1", "A4.1", "B1.1", "C1.1" }));
 
-        ThongBaoTimKiem1_Label.setText("jLabel1");
+        ThongBaoTimKiem1_Label.setText("TK");
+
+        MaKTX_TextField.setName(""); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PhongCanTim_Label)
@@ -280,17 +294,25 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(ThongBaoTimKiem_Label)
                 .addGap(5, 5, 5))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(MaSv_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(MaKTX_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Hoten_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(CMND_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(SDT_TextField)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(ThongBaoTimKiem1_Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PhongCanTim_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PhongCanTim_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,7 +342,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(LoaiPhong_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LoaiPhong_Label))
-                        .addGap(21, 21, 21)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(SoSinhVienHienTai_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(SoSinhVienHienTai_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -332,7 +354,14 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TinhTrangPhong_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(TinhTrangPhong_Label))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MaSv_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MaKTX_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Hoten_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CMND_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SDT_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -361,7 +390,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                 .addComponent(ThongTin_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -376,7 +405,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -388,18 +417,47 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
 
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
         // TODO add your handling code here:
-
-        h40.setTenPhong(TenPhong_TextField.getText());
-        h40.setMaPhong(MaPhong_TextField.getText());
-        //h40.setLoaiPhong(LoaiPhong_ComboBox.isSelected()? 1; 0);
-        String valueCombobox = LoaiPhong_ComboBox.getSelectedItem().toString();
-        h40.setSoSVHienTai(SoSinhVienHienTai_TextField.getText());
-        h40.setSoSVToiDa(SoSinhVienToiDa_TextField.getText());
-        h40.setTinhTrangPhong(TinhTrangPhong_TextField.getText());
+        String MaSV = MaSv_TextField.getText();
+        String MaKTX = MaKTX_TextField.getText();
+        String HoTen = Hoten_TextField.getText();
+        String CMND = CMND_TextField.getText();
+        String SDT = SDT_TextField.getText();
+        StringBuilder sb = new StringBuilder();
+        
+        
+        st40.setMaSv_140(MaSv_TextField.getText());
+        st40.setMaKTX_140(MaKTX_TextField.getText());
+        st40.setHo_140(Hoten_TextField.getText());
+        st40.setTen_140(Hoten_TextField.getText());
+        st40.setCMND_140(CMND_TextField.getText());
+        st40.setSDT_140(SDT_TextField.getText());
         BangThongTin_Table.setModel(defaultTableModel);
-        defaultTableModel.addRow(new Object[]{h40.getTenPhong(), h40.getMaPhong(),h40.getLoaiPhong(),
-            h40.getSoSVHienTai(), h40.getSoSVToiDa(), h40.getTinhTrangPhong()});
-    JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+        defaultTableModel.addRow(new Object[]{ st40.getMaSv_140(),st40.getMaKTX_140(),
+            (st40.getHo_140()+" "+st40.getTen_140()), st40.getCMND_140(), st40.getSDT_140()});
+         if (MaSV.equals("")){
+           sb.append("Mã sinh viên không được để trống!\n");
+        }
+        if(MaKTX.equals("")){
+            sb.append("Mã kí túc xá không được để trống!\n");
+        }
+        if(HoTen.equals("")){
+            sb.append("Họ và tên sinh viên không được để trống!\n");
+        }
+        if(CMND.equals("")){
+            sb.append("CMND không được để trống!\n");
+        }
+        if(SDT.equals("")){
+            sb.append("Số điện thoại không được để trống!\n");
+        }
+        if (sb.length()>0){
+        JOptionPane.showMessageDialog(this, sb.toString(), "Thông báo lỗi!",
+                JOptionPane.ERROR_MESSAGE);           
+            return;
+        }
+        else{
+        JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo", 
+                JOptionPane.INFORMATION_MESSAGE); 
+        }
     }//GEN-LAST:event_Them_ButtonActionPerformed
 
     private void Sua_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sua_ButtonActionPerformed
@@ -411,12 +469,12 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
         } else {
             ThongTinPhong_140 h40 = new ThongTinPhong_140();
 
-            h40.setTenPhong((String) BangThongTin_Table.getValueAt(row, 0));
-            h40.setMaPhong((String) BangThongTin_Table.getValueAt(row, 1));
-            h40.setLoaiPhong((int) BangThongTin_Table.getValueAt(row, 2));
-            h40.setSoSVHienTai((String) BangThongTin_Table.getValueAt(row, 3));
-            h40.setSoSVToiDa((String) BangThongTin_Table.getValueAt(row, 4));
-            h40.setTinhTrangPhong((String) BangThongTin_Table.getValueAt(row, 5));
+            st40.setMaSv_140((String) BangThongTin_Table.getValueAt(row, 0));
+            st40.setMaKTX_140((String) BangThongTin_Table.getValueAt(row, 1));
+            st40.setHo_140((String) BangThongTin_Table.getValueAt(row, 2));
+            st40.setTen_140((String) BangThongTin_Table.getValueAt(row, 3));
+            st40.setCMND_140((String) BangThongTin_Table.getValueAt(row, 4));
+            st40.setSDT_140((String) BangThongTin_Table.getValueAt(row, 5));
             new QuanLyPhong_140().setVisible(true);
             this.dispose();
         }
@@ -433,7 +491,7 @@ private void showDuLieu(){
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 Vector vector = new Vector();
-                vector.add(rs.getString("mSV"));
+                vector.add(rs.getString("maSV"));
                 vector.add(rs.getString("maKTX"));
                 vector.add(rs.getString("hoTen"));
                 vector.add(rs.getString("CMND"));
@@ -509,7 +567,7 @@ private void showDuLieu(){
         if (!resultSearch.isEmpty()) {
            setTableData(resultSearch);
         } else {
-            ThongBaoTimKiem1_Label.setText(valueCombobox + " Doesn't exist!");
+            ThongBaoTimKiem1_Label.setText(valueCombobox + " Không tồn tại tên phòng mà bạn vừa nhập!");
         }            
     }//GEN-LAST:event_TimKiem_ButtonActionPerformed
 
@@ -557,13 +615,18 @@ private void showDuLieu(){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable BangThongTin_Table;
+    private javax.swing.JTextField CMND_TextField;
+    private javax.swing.JTextField Hoten_TextField;
     private javax.swing.JComboBox<String> LoaiPhong_ComboBox;
     private javax.swing.JLabel LoaiPhong_Label;
+    private javax.swing.JTextField MaKTX_TextField;
     private javax.swing.JLabel MaPhong_Label;
     private javax.swing.JTextField MaPhong_TextField;
+    private javax.swing.JTextField MaSv_TextField;
     private javax.swing.JComboBox<String> PhongCanTim_ComboBox;
     private javax.swing.JLabel PhongCanTim_Label;
     private javax.swing.JTextField PhongCanTim_TextField;
+    private javax.swing.JTextField SDT_TextField;
     private javax.swing.JLabel SoSinhVienHienTai_Label;
     private javax.swing.JTextField SoSinhVienHienTai_TextField;
     private javax.swing.JLabel SoSinhVienToiDa_Label;
