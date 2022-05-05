@@ -1,11 +1,25 @@
+<<<<<<< OURS
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/HOCKY_221/LT_JavaNC/Java_Project_ST6/QuanLyKTX/src/view/ThongTinPhong_140.java</file>
-            <file>file:/D:/HOCKY_221/LT_JavaNC/Java_Project_ST6/QuanLyKTX/src/model/Student.java</file>
             <file>file:/D:/HOCKY_221/LT_JavaNC/Java_Project_ST6/QuanLyKTX/src/view/QuanLyPhong_140.java</file>
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Văn%20Tài/OneDrive/Tài%20liệu/NetBeansProjects/QuanLyKTX/src/model/model.java</file>
+            <file>file:/C:/Users/Văn%20Tài/OneDrive/Tài%20liệu/NetBeansProjects/QuanLyKTX/src/dao/dao.java</file>
+            <file>file:/C:/Users/Văn%20Tài/OneDrive/Tài%20liệu/NetBeansProjects/QuanLyKTX/src/quanlyktx/QuanLyKTX.java</file>
+            <file>file:/C:/Users/Văn%20Tài/OneDrive/Tài%20liệu/NetBeansProjects/QuanLyKTX/src/image/img.java</file>
+            <file>file:/C:/Users/Văn%20Tài/OneDrive/Tài%20liệu/NetBeansProjects/QuanLyKTX/src/service/service.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> THEIRS
