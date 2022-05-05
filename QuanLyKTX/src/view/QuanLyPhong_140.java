@@ -31,6 +31,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
  //Hau bo sung code lan 1
  //o đay co su thay doi lan 2
  //o day co su thay doi lan 3
+ //Hau bo sung code lan 4
     
     /**
      * Creates new form QuanLyPhong_140
@@ -40,7 +41,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
     Student st40 = new Student();
     StudentDao stDao;
     
-     StudentService service = new StudentService();
+    StudentService service = new StudentService();
     public QuanLyPhong_140() {
         
        
@@ -83,7 +84,6 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                 (st.getHo_140()+" "+st.getTen_140()), st.getCMND_140(), st.getSDT_140()});
         }
     }
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -451,12 +451,12 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
         }
         if (sb.length()>0){
         JOptionPane.showMessageDialog(this, sb.toString(), "Thông báo lỗi!",
-                JOptionPane.ERROR_MESSAGE);           
-            return;
+            JOptionPane.ERROR_MESSAGE);           
+        return;
         }
         else{
         JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo", 
-                JOptionPane.INFORMATION_MESSAGE); 
+            JOptionPane.INFORMATION_MESSAGE); 
         }
     }//GEN-LAST:event_Them_ButtonActionPerformed
 
@@ -482,7 +482,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
 private void showDuLieu(){
         try{
             BangThongTin_Table.removeAll();
-            String[] arr = {"Mã sinh viên", "Mã KTX", "Họ tên", "CMND","Số điện thoại"};
+            String[] arr = {"Mã sinh viên", "Mã KTX", "Họ và tên", "CMND","Số điện thoại"};
             DefaultTableModel model = new DefaultTableModel(arr,0);
             BangThongTin_Table.setModel(model);
             Connection connection = KetNoiSQL.getConnection();
@@ -514,9 +514,9 @@ private void showDuLieu(){
         int position = BangThongTin_Table.getSelectedRow();
         System.out.println(position);
         if (position == -1 ){
-            JOptionPane.showMessageDialog(QuanLyPhong_140.this,"Chọn người dùng cần xóa!!!","Lỗi",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(QuanLyPhong_140.this,"Chọn hàng dữ liệu cần xóa!!!","Lỗi",JOptionPane.ERROR_MESSAGE);
         } else {
-            int result = JOptionPane.showConfirmDialog(null,"Bạn có chắc chắn muốn xóa không");
+            int result = JOptionPane.showConfirmDialog(null,"Bạn có chắc chắn muốn xóa không?");
             if(result == JOptionPane.YES_OPTION){
             String data = (String) BangThongTin_Table.getValueAt(position, 0);
             service.DeleteTTPhong(data);
