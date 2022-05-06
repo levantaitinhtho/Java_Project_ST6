@@ -1,7 +1,7 @@
 package dao;
 
 import connect.KetNoiSQL;
-import model.Student;
+import model.SinhVien_tatCaThongTin_140;
 import view.ThongTinPhong_140;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,13 +20,13 @@ import javax.swing.table.TableModel;
 
 public class StudentDao {
 
-    public List<Student> getAlLStudents() {
-        List<Student> students = new ArrayList<Student>();
+    public List<SinhVien_tatCaThongTin_140> getAlLStudents() {
+        List<SinhVien_tatCaThongTin_140> students = new ArrayList<SinhVien_tatCaThongTin_140>();
         KetNoiSQL connection = new KetNoiSQL();
         try {
             ResultSet rs = connection.GetResultSet("[SinhVien]");
             while (rs.next()) {
-                Student student = new Student();
+                SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
 
                 student.setMaSv_140(rs.getString("MaSV"));
                 student.setMaKTX_140(rs.getString("MaKTX"));
@@ -55,10 +55,10 @@ public class StudentDao {
 
     }
 
-    public Student getStudentByID(String id) {
+    public SinhVien_tatCaThongTin_140 getStudentByID(String id) {
         Connection conn = KetNoiSQL.getConnection();
         String sql = "Select * from SinhVien where MaSV = ?";
-        Student student = new Student();
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
         try {
             PreparedStatement stm;
             stm = conn.prepareStatement(sql);
@@ -103,7 +103,7 @@ public class StudentDao {
         }
     }
     
-    public void TimKiemTenPhong(Student SD_140) {
+    public void TimKiemTenPhong(SinhVien_tatCaThongTin_140 SD_140) {
         Connection conn = KetNoiSQL.getConnection();
 
         try {
@@ -120,8 +120,8 @@ public class StudentDao {
     
     
     
-    public List<Student> GetResultSearch(String searchType, String valueSearch) {
-        List<Student> student = new ArrayList<>();
+    public List<SinhVien_tatCaThongTin_140> GetResultSearch(String searchType, String valueSearch) {
+        List<SinhVien_tatCaThongTin_140> student = new ArrayList<>();
         Connection conn = KetNoiSQL.getConnection();
 
         try {
@@ -138,7 +138,7 @@ public class StudentDao {
             ResultSet result = stm.executeQuery();
 
             while (result.next()) {
-                Student SD = new Student();
+                SinhVien_tatCaThongTin_140 SD = new SinhVien_tatCaThongTin_140();
 
                 SD.setTenPhong_140(result.getString("tenPhong"));
                

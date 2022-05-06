@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
-/**
- *
- * @author Huynh Hau
- */
-public class Student {
+public class SinhVien_tatCaThongTin_140 {
     private String MaSv_140;
     private String MaKTX_140;
     private String Ho_140;

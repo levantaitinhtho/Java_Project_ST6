@@ -1,8 +1,8 @@
 
 package view;
 
-import dao.Controller;
-import dao.DaoSinhVien;
+import controller.Controller_DieuKhien_trangChu_324;
+import dao.SinhVienDao;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class TrangChu extends javax.swing.JFrame {
     List<JPanel> listPanel_317 = new ArrayList<>();
     List<JPanel> listPanelCon = new ArrayList<>();
     List<JLabel> listLabel_317 = new ArrayList<>();
-    Controller ctr ;
+    Controller_DieuKhien_trangChu_324 ctr ;
     String[] title = {"Ma phong","Ma sinh vien" , "Ten" , "CMND", "Gioi tinh", "Que Quan"}; 
     DefaultTableModel defaultTableModel = new DefaultTableModel(title,0);
     public TrangChu() {
@@ -29,8 +29,8 @@ public class TrangChu extends javax.swing.JFrame {
        jpn_QLSinhVien_324.setVisible(false);
         setLocationRelativeTo(null);
         jpn_quanLyTiemKiem.setVisible(false);
-        ctr = new Controller();
-        DaoSinhVien dao = new DaoSinhVien();
+        ctr = new Controller_DieuKhien_trangChu_324();
+        SinhVienDao dao = new SinhVienDao();
         ctr.SetTable(tbSV,defaultTableModel);
        
     }
@@ -60,15 +60,11 @@ public class TrangChu extends javax.swing.JFrame {
                 if(i == index_324){
                     listPanelCon.get(i).setVisible(true);
                     
-//                    listLabel_317.get(i).setBorder(new MatteBorder(0 , 4 , 0 , 0 , Color.red));
-//                    listLabel_317.get(i).setBackground(new Color(85,65,118));
                 }
                 else{
                     
                     listPanelCon.get(i).setVisible(false);
                     jpn_TrangChu_317.setVisible(false);
-//                    listLabel_317.get(i).setBorder(new MatteBorder(0, 0 , 0 , 0 , Color.red));
-//                    listLabel_317.get(i).setBackground(new Color(64,43,100));
                 }
         }
     }
@@ -175,7 +171,7 @@ public class TrangChu extends javax.swing.JFrame {
         jlb_phong_317.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jlb_phong_317.setForeground(new java.awt.Color(255, 255, 255));
         jlb_phong_317.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlb_phong_317.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/3592840-cog-gear-machine-office-radio-settings-setting-settings_107729.png"))); // NOI18N
+        jlb_phong_317.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/caiDat.png"))); // NOI18N
         jlb_phong_317.setText("   Cài Đặt");
         jlb_phong_317.setOpaque(true);
         jlb_phong_317.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -961,7 +957,7 @@ public class TrangChu extends javax.swing.JFrame {
     private void jbt_tiemKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tiemKiemActionPerformed
         defaultTableModel.setRowCount(0);
         String ten = jtf_tiemKiem.getText();
-        ctr = new Controller();
+        ctr = new Controller_DieuKhien_trangChu_324();
         ctr.SetTableTiemKiem(tbSV,ten,defaultTableModel);
 
     }//GEN-LAST:event_jbt_tiemKiemActionPerformed
@@ -974,7 +970,7 @@ public class TrangChu extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         String a = jComboBox2.getSelectedItem().toString();
         jpn_quanLyTiemKiem.setVisible(true);
-        ctr = new Controller();
+        ctr = new Controller_DieuKhien_trangChu_324();
         System.out.println(a);
         if(a.equals("Quê quán")){
             ctr.quanLy_jList_queQuan(jl_queQuan);
@@ -991,7 +987,7 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jl_queQuanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_queQuanMouseClicked
         String diaChi = jl_queQuan.getSelectedValue().toString();
-        ctr = new Controller();
+        ctr = new Controller_DieuKhien_trangChu_324();
         defaultTableModel.setRowCount(0);
         ctr.tiemKiemTheoTinh(diaChi, tbSV, defaultTableModel);
 
@@ -1003,7 +999,7 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jbt_tk_SoCMNDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tk_SoCMNDActionPerformed
         String cmnd = jtf_soCMND.getText();
-        ctr = new Controller();
+        ctr = new Controller_DieuKhien_trangChu_324();
         defaultTableModel.setRowCount(0);
         ctr.quanLy_jList_CMND(tbSV, cmnd, defaultTableModel);
     }//GEN-LAST:event_jbt_tk_SoCMNDActionPerformed

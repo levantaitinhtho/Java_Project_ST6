@@ -1,6 +1,7 @@
 
 package view;
 
+import controller.KiemTraEmail_324;
 import java.awt.Color;
 import javax.swing.*;
 import javax.swing.border.*;
