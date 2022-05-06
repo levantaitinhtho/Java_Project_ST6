@@ -1,11 +1,5 @@
 package connect;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-
 import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,19 +8,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
-
-
-/**
- *
- * @author Huynh Hau
- */
 public class KetNoiSQL {
 
     public static void closeConnection(Connection connection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
     private Connection con = null;
 
     public KetNoiSQL() {
