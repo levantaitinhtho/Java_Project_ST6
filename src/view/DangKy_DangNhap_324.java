@@ -554,7 +554,12 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, sb.toString(), "Lỗi đăng nhập!", JOptionPane.ERROR_MESSAGE);
             dangNhap_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.cyan));
             return;
+        }else{
+            TrangChu trangChu = new TrangChu();
+            trangChu.setVisible(true);
+            this.dispose();
         }
+        
     }//GEN-LAST:event_dangNhap_JLabel_324MousePressed
 
     private void dangKy_JLabel_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangKy_JLabel_324MousePressed
