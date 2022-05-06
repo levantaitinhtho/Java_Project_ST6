@@ -134,7 +134,7 @@
         <Container class="javax.swing.JPanel" name="trangThai_Panel_324">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="34" green="34" red="3a" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="doubleBuffered" type="boolean" value="false"/>
           </Properties>
@@ -160,6 +160,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="dangKy_Label_324">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="1"/>
                 </Property>

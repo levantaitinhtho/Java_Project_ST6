@@ -2,7 +2,7 @@ package dao;
 
 import connect.KetNoiSQL;
 import model.SinhVien_tatCaThongTin_140;
-import view.ThongTinPhong_140;
+import model.ThongTinPhong_140;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
