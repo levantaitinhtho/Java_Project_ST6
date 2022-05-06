@@ -1,6 +1,7 @@
 
 package view;
 
+import model.ThongTinPhong_140;
 import dao.StudentDao;
 import connect.KetNoiSQL;
 import model.SinhVien_tatCaThongTin_140;
@@ -99,8 +100,6 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
         Hoten_TextField = new javax.swing.JTextField();
         CMND_TextField = new javax.swing.JTextField();
         SDT_TextField = new javax.swing.JTextField();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 

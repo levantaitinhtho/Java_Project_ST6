@@ -64,8 +64,6 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         QueQuan_320TextField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         mainPanel.setBackground(new java.awt.Color(53, 111, 198));
         mainPanel.setLayout(new java.awt.GridLayout(1, 0, 15, 0));
 

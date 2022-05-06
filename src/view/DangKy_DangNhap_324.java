@@ -81,7 +81,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         dangNhapDangKy_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
         dangNhapDangKy_Panel_324.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 255), 2));
 
-        trangThai_Panel_324.setBackground(new java.awt.Color(58, 52, 52));
+        trangThai_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
         trangThai_Panel_324.setDoubleBuffered(false);
         trangThai_Panel_324.setLayout(new java.awt.GridLayout(1, 2));
 
@@ -97,6 +97,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         });
         trangThai_Panel_324.add(dangNhap_Label_324);
 
+        dangKy_Label_324.setBackground(new java.awt.Color(0, 0, 0));
         dangKy_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         dangKy_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dangKy_Label_324.setText("ĐĂNG KÝ");
