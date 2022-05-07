@@ -42,7 +42,7 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_quanLyTiemKiem.setVisible(false);
         ctr = new Controller_DieuKhien_trangChu_324();
         ctr.SetTable(tbSV,defaultTableModel);
-        SinhVienDao dao = new SinhVienDao();
+
         
        
     }
@@ -280,11 +280,11 @@ public class TrangChu extends javax.swing.JFrame {
                 .addComponent(jSeparator1_317, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(jlb_TrangChu_317, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(2, 2, 2)
                 .addComponent(jlb_phong_317, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(2, 2, 2)
                 .addComponent(jlb_ThongKe_317, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -413,8 +413,8 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jPanel3_QuanLyPhongKTX_317Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(jLabel4_icon_qlpktx_317)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2_qlpktx_317, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2_qlpktx_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4_ThongKe_317.setBackground(new java.awt.Color(121, 130, 222));
@@ -617,7 +617,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel4.setText("QUẢN LÝ THÔNG TIN CỦA TẤT CẢ CÁC SINH VIÊN TRONG KÝ TÚC XÁ");
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Khu vực tìm kiếm:", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Khu vực tìm kiếm:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Nhập vào tên để tìm kiếm:");
@@ -908,7 +908,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGap(77, 77, 77)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpn_QLSinhVien_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1079,6 +1079,7 @@ public class TrangChu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void jlb_TrangChu_317MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_TrangChu_317MouseClicked
         Choose_Lable(0);
     }//GEN-LAST:event_jlb_TrangChu_317MouseClicked
@@ -1141,14 +1142,21 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void jbt_tiemKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tiemKiemActionPerformed
         String ten = jtf_tiemKiem.getText();
+        String theLoai = "Ten";
         if(ten.equals("")){
             JOptionPane.showMessageDialog(this, "Bạn phải nhập vào tên trước!");
         }
         else{   
-            defaultTableModel.setRowCount(0);
-            ctr = new Controller_DieuKhien_trangChu_324();
-            String timTen = "Ten";
-            ctr.tiemKiemTheoThongTin(ten, timTen, tbSV,defaultTableModel);
+            SinhVienDao dao = new SinhVienDao();
+            if(ctr.getKiemTraTen(theLoai,ten)==1){
+                defaultTableModel.setRowCount(0);
+                ctr = new Controller_DieuKhien_trangChu_324();
+                String timTen = "Ten";
+                ctr.tiemKiemTheoThongTin(ten, timTen, tbSV,defaultTableModel);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên có tên là: "+ ten , "Thông báo lỗi",JOptionPane.ERROR_MESSAGE);
+            }
         }
 
     }//GEN-LAST:event_jbt_tiemKiemActionPerformed
@@ -1249,12 +1257,16 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_timMaSVActionPerformed
 
     private void btn_tk_MaSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tk_MaSVActionPerformed
-        String maSV = jtf_timMaSV.getText();
-        defaultTableModel.setRowCount(0);
+        String maSV1 = jtf_timMaSV.getText();
         String select_maSV = "maSV";
-        ctr = new Controller_DieuKhien_trangChu_324();
-        ctr.tiemKiemTheoThongTin(maSV, select_maSV, tbSV,defaultTableModel);
-        
+        if(ctr.getKiemTraTen(select_maSV, maSV1)==1){
+            defaultTableModel.setRowCount(0);
+            ctr = new Controller_DieuKhien_trangChu_324();
+            ctr.tiemKiemTheoThongTin(maSV1, select_maSV, tbSV,defaultTableModel);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Không tìm thấy sinh viên có mã sinh viên là: "+ maSV1 , "Thông báo lỗi",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btn_tk_MaSVActionPerformed
 
     private void btn_dong_tkMSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dong_tkMSVActionPerformed
@@ -1335,7 +1347,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel5_ThuPhi_317;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1_317;
     private javax.swing.JButton jbt_tiemKiem;

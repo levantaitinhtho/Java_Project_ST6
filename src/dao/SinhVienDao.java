@@ -76,7 +76,28 @@ public class SinhVienDao {
                 e.printStackTrace();    
             }
         return sinhVien;
-}
+    }
+    
+    //Su dung chung de kiem tra thong tin tim kiem
+    public SinhVien_trangChu_324 getTen(String theLoai ,String doiTuong){
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "select * from SinhVien where " + theLoai + " = ?";
+            try{
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1,doiTuong);
+                ResultSet rs = preparedStatement.executeQuery();
+                   while(rs.next()){
+                    SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
+                        sv.setMaPhong_324(rs.getString(theLoai));
+                        System.out.println(sv.getMaPhong_324());
+                        return sv;
+                   }
+            }
+            catch(SQLException e){
+                e.printStackTrace();    
+            }
+       return null;
+    }
     
     //Hay nay duoc su dung de lay thong tin theo dieu kien "where"
     public List<SinhVien_trangChu_324> getThongTinTheoDieuKien_324(String loai, String ten){   
@@ -103,6 +124,12 @@ public class SinhVienDao {
             }
         return sinhVien;
 }
-
+    public static void main(String[] args) {
+        SinhVienDao svd = new SinhVienDao();
+        String maSV = "maSV";
+        String ten = "tài";
+        svd.getTen(maSV, ten);
+    }
 }
+
 

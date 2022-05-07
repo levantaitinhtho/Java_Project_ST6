@@ -31,7 +31,15 @@ public class Controller_DieuKhien_trangChu_324 {
         setListSinhVien(dao.getThongTinTheoDieuKien_324(theLoai,tenTT),defaultTableModel); 
     }
     
+    public int getKiemTraTen(String theLoai, String doiTuong){
+        dao = new SinhVienDao();
+        if(dao.getTen(theLoai,doiTuong)==null)
+            return 0;
+        else
+            return 1;
+    }
     
+
     public void quanLy_jList_queQuan(JList list){
         this.list = list;
         dao = new SinhVienDao();
