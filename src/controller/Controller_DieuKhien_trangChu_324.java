@@ -25,18 +25,12 @@ public class Controller_DieuKhien_trangChu_324 {
         this.a = a;
         this.tbl = tbl;
     }
-    public void tiemKiemTheoTinh(String tenTT ,JTable tbl,DefaultTableModel defaultTableModel){
+    public void tiemKiemTheoThongTin(String tenTT, String theLoai ,JTable tbl,DefaultTableModel defaultTableModel){
         this.tbl = tbl;
         dao = new SinhVienDao();
-        String queQuan = "queQuan";
-        setListSinhVien(dao.getThongTinTheoDieuKien_324(queQuan,tenTT),defaultTableModel); 
+        setListSinhVien(dao.getThongTinTheoDieuKien_324(theLoai,tenTT),defaultTableModel); 
     }
     
-    public void tiemKiemTheoCMND(String soCMND ,JTable tbl,DefaultTableModel defaultTableModel){
-        this.tbl = tbl;
-        dao = new SinhVienDao();
-        setListSinhVien(dao.getThongTinTheoCMND_324(),defaultTableModel); 
-    }
     
     public void quanLy_jList_queQuan(JList list){
         this.list = list;
@@ -48,12 +42,6 @@ public class Controller_DieuKhien_trangChu_324 {
         list.setModel(model);
     }
     
-    public void quanLy_jList_CMND(JTable tbl,String cmnd,DefaultTableModel defaultTableModel){
-        this.tbl = tbl;
-        dao = new SinhVienDao();
-        String theLoai = "CMND";
-        setListSinhVien(dao.getThongTinTheoDieuKien_324(theLoai, cmnd),defaultTableModel);    
-    }
     
     public void SetTable(JTable tbl,DefaultTableModel defaultTableModel){
         this.tbl = tbl;
@@ -61,12 +49,6 @@ public class Controller_DieuKhien_trangChu_324 {
         setListSinhVien(dao.getTatCaThongTinSinhVien_324(),defaultTableModel);   
     }
     
-    public void SetTableTiemKiem(JTable tbl, String ten, DefaultTableModel defaultTableModel){
-        this.tbl = tbl;
-        dao = new SinhVienDao();
-        String theLoai = "Ten";
-        setListSinhVien(dao.getThongTinTheoDieuKien_324(theLoai,ten),defaultTableModel);   
-    }
     
     private void setListSinhVien(List<SinhVien_trangChu_324> listSV,DefaultTableModel defaultTableModel){
         this.defaultTableModel = defaultTableModel;
