@@ -12,13 +12,11 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         //Thiet lap mat dinh cho not dang nhap 
-        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3 , 0, Color.CYAN));
         dangNhap_Label_324.setForeground(Color.red);
         DangNhap_Panel_324.setVisible(true);
         
         //Thiet lam mat dinh cho not dang ky
-        dangKy_Label_324.setBackground(new Color(0,0,0));
         dangKy_Label_324.setBorder(new MatteBorder(0, 0, 0, 0, Color.GREEN));
         dangKy_Label_324.setForeground(Color.white);
         DangKy_Panel_324.setVisible(false);
@@ -78,13 +76,14 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         setName("FormDangNhapDangKy_324"); // NOI18N
         setUndecorated(true);
 
-        dangNhapDangKy_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
-        dangNhapDangKy_Panel_324.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 255), 2));
+        dangNhapDangKy_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
+        dangNhapDangKy_Panel_324.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 40, 120), 2));
 
-        trangThai_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
+        trangThai_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
         trangThai_Panel_324.setDoubleBuffered(false);
         trangThai_Panel_324.setLayout(new java.awt.GridLayout(1, 2));
 
+        dangNhap_Label_324.setBackground(new java.awt.Color(0, 40, 120));
         dangNhap_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         dangNhap_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dangNhap_Label_324.setText("ĐĂNG NHẬP");
@@ -97,7 +96,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         });
         trangThai_Panel_324.add(dangNhap_Label_324);
 
-        dangKy_Label_324.setBackground(new java.awt.Color(0, 0, 0));
+        dangKy_Label_324.setBackground(new java.awt.Color(0, 40, 120));
         dangKy_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         dangKy_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dangKy_Label_324.setText("ĐĂNG KÝ");
@@ -109,7 +108,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         });
         trangThai_Panel_324.add(dangKy_Label_324);
 
-        DangNhap_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
+        DangNhap_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
 
         tenTaiKhoan_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         tenTaiKhoan_Label_324.setForeground(new java.awt.Color(255, 255, 255));
@@ -211,7 +210,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
-        DangKy_Panel_324.setBackground(new java.awt.Color(0, 0, 0));
+        DangKy_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
 
         tenTaiKhoanDK_Label_324.setBackground(new java.awt.Color(255, 255, 204));
         tenTaiKhoanDK_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -362,15 +361,14 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                 .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        KeoNgang_jSeparator.setBackground(new java.awt.Color(51, 255, 255));
-        KeoNgang_jSeparator.setForeground(new java.awt.Color(51, 255, 255));
+        KeoNgang_jSeparator.setForeground(new java.awt.Color(255, 255, 255));
 
         KyTucXa_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         KyTucXa_Label_324.setForeground(new java.awt.Color(255, 255, 255));
         KyTucXa_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         KyTucXa_Label_324.setText("KÝ TÚC XÁ");
 
-        jPanel1.setBackground(new java.awt.Color(49, 202, 232));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         exitSystem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         exitSystem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -461,8 +459,6 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         
         dangKy_Label_324.setBorder(null);
         dangKy_Label_324.setForeground(Color.white);
-        dangKy_Label_324.setBackground(new Color(0,0,0));
-        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setForeground(Color.red);
         dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
         DangNhap_Panel_324.setVisible(true);
@@ -472,12 +468,10 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
 
     private void dangKy_Label_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangKy_Label_324MousePressed
         dangNhap_Label_324.setBorder(null);
-        dangNhap_Label_324.setBackground(new Color(0,0,0));
         dangNhap_Label_324.setForeground(Color.white);
         DangNhap_Panel_324.setVisible(false);
         
         dangKy_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
-        dangKy_Label_324.setBackground(new Color(0,0,0));
         dangKy_Label_324.setForeground(Color.red);
         DangKy_Panel_324.setVisible(true);
     }//GEN-LAST:event_dangKy_Label_324MousePressed

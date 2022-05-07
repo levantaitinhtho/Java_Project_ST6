@@ -56,12 +56,12 @@
     <Container class="javax.swing.JPanel" name="dangNhapDangKy_Panel_324">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
+          <Color blue="78" green="28" red="0" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder thickness="2">
-              <Color PropertyName="color" blue="ff" green="ff" red="33" type="rgb"/>
+              <Color PropertyName="color" blue="78" green="28" red="0" type="rgb"/>
             </LineBorder>
           </Border>
         </Property>
@@ -134,7 +134,7 @@
         <Container class="javax.swing.JPanel" name="trangThai_Panel_324">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="78" green="28" red="0" type="rgb"/>
             </Property>
             <Property name="doubleBuffered" type="boolean" value="false"/>
           </Properties>
@@ -146,6 +146,9 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="dangNhap_Label_324">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="78" green="28" red="0" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="1"/>
                 </Property>
@@ -161,7 +164,7 @@
             <Component class="javax.swing.JLabel" name="dangKy_Label_324">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
+                  <Color blue="78" green="28" red="0" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="1"/>
@@ -179,7 +182,7 @@
         <Container class="javax.swing.JPanel" name="DangNhap_Panel_324">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="78" green="28" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -353,7 +356,7 @@
         <Container class="javax.swing.JPanel" name="DangKy_Panel_324">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="78" green="28" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -617,11 +620,8 @@
         </Container>
         <Component class="javax.swing.JSeparator" name="KeoNgang_jSeparator">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="33" type="rgb"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="33" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
@@ -640,7 +640,7 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e8" green="ca" red="31" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
 
