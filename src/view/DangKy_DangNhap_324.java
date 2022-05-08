@@ -12,7 +12,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         //Thiet lap mat dinh cho not dang nhap 
-        dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3 , 0, Color.CYAN));
+        dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3 , 0, Color.white));
         dangNhap_Label_324.setForeground(Color.red);
         DangNhap_Panel_324.setVisible(true);
         
@@ -25,7 +25,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         hide1_Lable.setVisible(false);
         hidePassDn_Lable.setVisible(false);
         
-        quenMatKhau_Label.setBorder(new MatteBorder(0, 0, 1 , 0, Color.CYAN));
+        quenMatKhau_Label.setBorder(new MatteBorder(0, 0, 1 , 0, Color.white));
     }
 
     @SuppressWarnings("unchecked")
@@ -460,7 +460,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         dangKy_Label_324.setBorder(null);
         dangKy_Label_324.setForeground(Color.white);
         dangNhap_Label_324.setForeground(Color.red);
-        dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
+        dangNhap_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.white));
         DangNhap_Panel_324.setVisible(true);
         
         DangKy_Panel_324.setVisible(false);
@@ -471,7 +471,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         dangNhap_Label_324.setForeground(Color.white);
         DangNhap_Panel_324.setVisible(false);
         
-        dangKy_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.CYAN));
+        dangKy_Label_324.setBorder(new MatteBorder(0, 0, 3, 0, Color.white));
         dangKy_Label_324.setForeground(Color.red);
         DangKy_Panel_324.setVisible(true);
     }//GEN-LAST:event_dangKy_Label_324MousePressed
