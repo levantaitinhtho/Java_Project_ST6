@@ -89,6 +89,42 @@ public class StudentDao {
         }
         return student;
     }
+    public List<SinhVien_tatCaThongTin_140> getSinhVienTrongPhong(String id) {
+        List<SinhVien_tatCaThongTin_140> st = new ArrayList<>();
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "Select * from SinhVien where maSV = ?";
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
+        try {
+            PreparedStatement stm;
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, id);
+            ResultSet rs ;
+            rs = stm.executeQuery();
+            if (rs.next()) {
+                student.setMaSv_140(rs.getString("MaSV"));
+                student.setMaKTX_140(rs.getString("MaKTX"));
+                student.setHo_140(rs.getString("Ho"));
+                student.setTen_140(rs.getString("Ten"));
+                student.setCMND_140(rs.getString("CMND"));
+                student.setGioitinh_140(rs.getInt("Gioitinh"));
+                student.setNgaysinh_140(rs.getString("Ngaysinh"));
+                student.setSDT_140(rs.getString("SDT"));
+                student.setQuequan_140(rs.getString("Quequan"));
+                student.setNgaylamhopdong_140(rs.getString("Ngaylamhopdong"));
+                student.setMaPhong_140(rs.getString("MaPhong"));
+                student.setHinh_140(rs.getString("Hinh"));
+                student.setHotengh_140(rs.getString("Hotengh"));
+                student.setSdtgh_140(rs.getString("Sdtgh"));
+                student.setQuanhe_140(rs.getString("Quanhe"));
+                student.setNghenghiep_140(rs.getString("Nghenghiep"));
+                st.add(student);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return st;
+    }
+    
     
     public void DeleteTTPhong(String id) {
         Connection conn = KetNoiSQL.getConnection();
@@ -116,10 +152,44 @@ public class StudentDao {
             Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public SinhVien_tatCaThongTin_140 getStudentByMaSv_320(String MaSv) {
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "Select * from SinhVien where MaSV = ?";
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
+        try {
+            PreparedStatement stm;
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, MaSv);
+            ResultSet rs ;
+            rs = stm.executeQuery();
+            if (rs.next()) {
+                student.setMaSv_140(rs.getString("maSV"));
+                student.setMaKTX_140(rs.getString("maKTX"));
+                student.setHo_140(rs.getString("Ho"));
+                student.setTen_140(rs.getString("Ten"));
+                student.setCMND_140(rs.getString("CMND"));
+                student.setGioitinh_140(rs.getInt("gioiTinh"));
+                student.setNgaysinh_140(rs.getString("ngaySinh"));
+                student.setSDT_140(rs.getString("SDT"));
+                student.setQuequan_140(rs.getString("queQuan"));
+                student.setNgaylamhopdong_140(rs.getString("ngayLamHopDong"));
+                student.setMaPhong_140(rs.getString("maPhong"));
+                student.setHinh_140(rs.getString("Hinh"));
+                student.setHotengh_140(rs.getString("hoTenGH"));
+                student.setSdtgh_140(rs.getString("sdtGH"));
+                student.setQuanhe_140(rs.getString("quanHe"));
+                student.setNghenghiep_140(rs.getString("Nghenghiep"));
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return student;
+    }
+
 
     
-    
-    
+      
     public List<SinhVien_tatCaThongTin_140> GetResultSearch(String searchType, String valueSearch) {
         List<SinhVien_tatCaThongTin_140> student = new ArrayList<>();
         Connection conn = KetNoiSQL.getConnection();
