@@ -2026,18 +2026,29 @@ public class TrangChu extends javax.swing.JFrame {
     private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
         qlphong.setVisible(true);
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel9MouseClicked
 
     private void jPanel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel16MouseClicked
-        // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+        String phong = "MSV02";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel16MouseClicked
 
     private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseClicked
-        // TODO add your handling code here:
+       QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+       qlphong.setVisible(true);
+       String phong = "MSV02";
+       qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel18MouseClicked
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
-        // TODO add your handling code here:
+      QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+      qlphong.setVisible(true);
+      String phong = "MSV02";
+      qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel20MouseClicked
 
     private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseClicked
@@ -2128,9 +2139,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -2140,15 +2148,9 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2_tk_317;
     private javax.swing.JLabel jLabel2_tp_317;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
@@ -2186,11 +2188,8 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel8_icon_tk_317;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel1_QuanLyNhaXe_317;
     private javax.swing.JPanel jPanel1_QuanLySinhVien_317;
     private javax.swing.JPanel jPanel2;
