@@ -60,10 +60,6 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="progressBar" min="-2" pref="374" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel6" min="-2" pref="423" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       </Group>
@@ -72,6 +68,14 @@
                           <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="thayDoi" min="-2" max="-2" attributes="0"/>
+                      <Component id="progressBar" min="-2" pref="396" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -84,11 +88,13 @@
                   <Component id="jLabel5" min="-2" pref="33" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
-                  <Component id="jPanel2" min="-2" pref="257" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="progressBar" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="268" max="-2" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <Component id="progressBar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="thayDoi" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -319,6 +325,14 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="&#x110;&#x1ea0;I H&#x1ecc;C &#x110;&#xc0; N&#x1eb4;NG"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="thayDoi">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x110;ang th&#x1ef1;c hi&#x1ec7;n load d&#x1eef; li&#x1ec7;u..."/>
           </Properties>
         </Component>
       </SubComponents>
