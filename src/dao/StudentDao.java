@@ -89,6 +89,42 @@ public class StudentDao {
         }
         return student;
     }
+    public List<SinhVien_tatCaThongTin_140> getSinhVienTrongPhong(String id) {
+        List<SinhVien_tatCaThongTin_140> st = new ArrayList<>();
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "Select * from SinhVien where maSV = ?";
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
+        try {
+            PreparedStatement stm;
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, id);
+            ResultSet rs ;
+            rs = stm.executeQuery();
+            if (rs.next()) {
+                student.setMaSv_140(rs.getString("MaSV"));
+                student.setMaKTX_140(rs.getString("MaKTX"));
+                student.setHo_140(rs.getString("Ho"));
+                student.setTen_140(rs.getString("Ten"));
+                student.setCMND_140(rs.getString("CMND"));
+                student.setGioitinh_140(rs.getInt("Gioitinh"));
+                student.setNgaysinh_140(rs.getString("Ngaysinh"));
+                student.setSDT_140(rs.getString("SDT"));
+                student.setQuequan_140(rs.getString("Quequan"));
+                student.setNgaylamhopdong_140(rs.getString("Ngaylamhopdong"));
+                student.setMaPhong_140(rs.getString("MaPhong"));
+                student.setHinh_140(rs.getString("Hinh"));
+                student.setHotengh_140(rs.getString("Hotengh"));
+                student.setSdtgh_140(rs.getString("Sdtgh"));
+                student.setQuanhe_140(rs.getString("Quanhe"));
+                student.setNghenghiep_140(rs.getString("Nghenghiep"));
+                st.add(student);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return st;
+    }
+    
     
     public void DeleteTTPhong(String id) {
         Connection conn = KetNoiSQL.getConnection();
