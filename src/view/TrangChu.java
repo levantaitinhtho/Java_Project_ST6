@@ -2162,7 +2162,7 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_tk_SoCMNDActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ThongTinChiTietSinhVien thongTin = new ThongTinChiTietSinhVien();
+        ThongTinChiTietSinhVien thongTin = new ThongTinChiTietSinhVien("MSV01");
         thongTin.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
