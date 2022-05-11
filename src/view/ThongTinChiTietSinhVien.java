@@ -5,6 +5,9 @@
  */
 package view;
 
+import model.SinhVien_tatCaThongTin_140;
+import service.StudentService;
+
 /**
  *
  * @author LÊ HOÀNG ANH TUẤN
@@ -14,8 +17,31 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
     /**
      * Creates new form ThongTinChiTietSinhVien
      */
-    public ThongTinChiTietSinhVien() {
+    StudentService studentService = new StudentService();
+    public ThongTinChiTietSinhVien(String MaSV) {
         initComponents();
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
+        student = studentService.getStudentByMaSv_320(MaSV);
+
+        MaSV_320TextField.setText(student.getMaSv_140());
+        MaKTX_320TextField.setText(student.getMaKTX_140());
+        HoTen_320TextField.setText(student.getHo_140()+ " " + student.getTen_140());
+        CMND_320TextField.setText(student.getCMND_140());
+        if (student.getGioitinh_140()== 1) {
+            GioiTinh_320TextField.setText("Nam");
+        }
+        if (student.getGioitinh_140() == 0) {
+            GioiTinh_320TextField.setText("Nữ");
+        }
+        NgaySinh_320TextField.setText(student.getNgaysinh_140());
+        SDT_320TextField.setText(student.getSDT_140());
+        QueQuan_320TextField.setText(student.getQuequan_140());
+        TenNGH_320TextField.setText(student.getHotengh_140());
+        SDT_NGH_320TextField.setText(student.getSdtgh_140());
+        QuanHe_320TextField.setText(student.getQuanhe_140());
+        NgheNghiep_320TextField.setText(student.getNghenghiep_140());
+        NgayLHD_320TextField.setText(student.getNgaylamhopdong_140());
+        MaPhong_320TextField.setText(student.getMaPhong_140());
     }
 
     /**
@@ -465,7 +491,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ThongTinChiTietSinhVien().setVisible(true);
+                new ThongTinChiTietSinhVien("MSV01").setVisible(true);
             }
         });
     }

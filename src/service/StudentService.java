@@ -16,5 +16,8 @@ public class StudentService {
     public void DeleteTTPhong(String id){
         studentDao.DeleteTTPhong(id);
     }
+    public SinhVien_tatCaThongTin_140 getStudentByMaSv_320 (String MaSV){
+        return studentDao.getStudentByMaSv_320(MaSV);
+    }
     
 }
