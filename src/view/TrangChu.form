@@ -1551,9 +1551,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                      <Component id="jPanel9" max="32767" attributes="0"/>
+                                      <Component id="jpn_Phong1" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                      <Component id="jPanel16" max="32767" attributes="0"/>
+                                      <Component id="jpn_Phong2" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                       <Component id="jPanel20" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
@@ -1567,8 +1567,8 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jPanel16" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jpn_Phong1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jpn_Phong2" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jPanel20" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jPanel18" alignment="0" max="32767" attributes="0"/>
                                       </Group>
@@ -1578,14 +1578,14 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel9">
+                            <Container class="javax.swing.JPanel" name="jpn_Phong1">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="de" green="82" red="79" type="rgb"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel9MouseClicked"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpn_Phong1MouseClicked"/>
                               </Events>
 
                               <Layout>
@@ -1643,14 +1643,14 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="jPanel16">
+                            <Container class="javax.swing.JPanel" name="jpn_Phong2">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="de" green="82" red="79" type="rgb"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel16MouseClicked"/>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpn_Phong2MouseClicked"/>
                               </Events>
 
                               <Layout>
