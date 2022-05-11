@@ -2243,47 +2243,100 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jpn_Phong1MouseClicked
 
     private void jpn_Phong2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_Phong2MouseClicked
-        // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MPA1";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jpn_Phong2MouseClicked
 
     private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseClicked
-        // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel18MouseClicked
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel20MouseClicked
 
     private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel27MouseClicked
 
     private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel28MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel28MouseClicked
 
     private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel29MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel29MouseClicked
 
     private void jPanel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel30MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel30MouseClicked
 
     private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel31MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel31MouseClicked
 
     private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel32MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel32MouseClicked
 
     private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel33MouseClicked
         // TODO add your handling code here:
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel33MouseClicked
 
     private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel34MouseClicked
         // TODO add your handling code here:
+         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.setVisible(true);
+
+        String phong = "MSV01";
+        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel34MouseClicked
 
     private void jpn_QLThongKe_324AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jpn_QLThongKe_324AncestorAdded
