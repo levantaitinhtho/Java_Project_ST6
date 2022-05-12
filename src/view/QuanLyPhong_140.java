@@ -65,7 +65,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
     
     public void setTableData(List<SinhVien_tatCaThongTin_140> students){
         for (SinhVien_tatCaThongTin_140 st: students) {
-            defaultTableModel.addRow(new Object[]{ st.getMaSv_140(),st.getMaKTX_140(),
+            defaultTableModel.addRow(new Object[]{ st.getMaPhong_140(),st.getMaSv_140(),
                 (st.getHo_140()+" "+st.getTen_140()), st.getCMND_140(), st.getSDT_140()});
         }
     }
