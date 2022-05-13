@@ -39,8 +39,8 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
             }
         };
         BangThongTin_Table.setModel(defaultTableModel);
+        defaultTableModel.addColumn("Mã phòng");
         defaultTableModel.addColumn("Mã sinh viên");
-        defaultTableModel.addColumn("Mã KTX");
         defaultTableModel.addColumn("Họ tên");
         defaultTableModel.addColumn("CMND");
         defaultTableModel.addColumn("Số điện thoại");
@@ -65,7 +65,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
     
     public void setTableData(List<SinhVien_tatCaThongTin_140> students){
         for (SinhVien_tatCaThongTin_140 st: students) {
-            defaultTableModel.addRow(new Object[]{ st.getMaSv_140(),st.getMaKTX_140(),
+            defaultTableModel.addRow(new Object[]{ st.getMaPhong_140(),st.getMaSv_140(),
                 (st.getHo_140()+" "+st.getTen_140()), st.getCMND_140(), st.getSDT_140()});
         }
     }
@@ -300,7 +300,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(68, 68, 68))
+                .addGap(59, 59, 59))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
