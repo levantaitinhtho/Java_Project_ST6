@@ -226,9 +226,10 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Mã sinh viên ", "Mã KTX ", "Họ tên", "CMND", "Số điên thoại"
+                "Mã phòng", "Mã sinh viên ", "Họ tên", "CMND", "Số điên thoại"
             }
         ));
+        BangThongTin_Table.setName(""); // NOI18N
         jScrollPane2.setViewportView(BangThongTin_Table);
 
         TinhTrangPhong_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -503,7 +504,7 @@ public class QuanLyPhong_140 extends javax.swing.JFrame {
 private void showDuLieu(){
         try{
             BangThongTin_Table.removeAll();
-            String[] arr = {"Mã sinh viên", "Mã KTX", "Họ và tên", "CMND","Số điện thoại"};
+            String[] arr = {"Mã phòng", "Mã sinh viên", "Họ và tên", "CMND","Số điện thoại"};
             DefaultTableModel model = new DefaultTableModel(arr,0);
             BangThongTin_Table.setModel(model);
             Connection connection = KetNoiSQL.getConnection();
