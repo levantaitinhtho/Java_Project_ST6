@@ -15,7 +15,7 @@ public class ThongTinPhong_140 {
     private String soSVHienTai;
     private String soSVToiDa;
     private String tinhTrangPhong;
-    private int loaiPhong;
+    private String loaiPhong;
 
     private String maSV;
     private String maKTX;
@@ -27,11 +27,11 @@ public class ThongTinPhong_140 {
         
     }
 
-    public int getLoaiPhong() {
+    public String getLoaiPhong() {
         return loaiPhong;
     }
 
-    public void setLoaiPhong(int loaiPhong) {
+    public void setLoaiPhong(String loaiPhong) {
         this.loaiPhong = loaiPhong;
     }
 
