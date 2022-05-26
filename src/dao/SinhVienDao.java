@@ -130,6 +130,10 @@ public class SinhVienDao {
         String ten = "tài";
         svd.getTen(maSV, ten);
     }
+
+    void getAlLStudents() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

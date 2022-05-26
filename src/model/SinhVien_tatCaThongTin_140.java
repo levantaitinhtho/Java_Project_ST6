@@ -19,6 +19,44 @@ public class SinhVien_tatCaThongTin_140 {
     private String Quanhe_140;
     private String Nghenghiep_140;
     private String TenPhong_140;
+    private String SoSinhVienHienTai_140;
+    private String SoSinhVienToiDa_140;
+    private String TinhTrangPhong_140;
+    private String LoaiPhong_140;
+
+    public String getTinhTrangPhong_140() {
+        return TinhTrangPhong_140;
+    }
+
+    public void setTinhTrangPhong_140(String TinhTrangPhong_140) {
+        this.TinhTrangPhong_140 = TinhTrangPhong_140;
+    }
+   
+
+    public String getLoaiPhong_140() {
+        return LoaiPhong_140;
+    }
+
+    public void setLoaiPhong_140(String LoaiPhong_140) {
+        this.LoaiPhong_140 = LoaiPhong_140;
+    }
+
+    public String getSoSinhVienHienTai_140() {
+        return SoSinhVienHienTai_140;
+    }
+
+    public void setSoSinhVienHienTai_140(String SoSinhVienHienTai_140) {
+        this.SoSinhVienHienTai_140 = SoSinhVienHienTai_140;
+    }
+
+    public String getSoSinhVienToiDa_140() {
+        return SoSinhVienToiDa_140;
+    }
+
+    public void setSoSinhVienToiDa_140(String SoSinhVienToiDa_140) {
+        this.SoSinhVienToiDa_140 = SoSinhVienToiDa_140;
+    }
+    
 
     public String getMaSv_140() {
         return MaSv_140;
