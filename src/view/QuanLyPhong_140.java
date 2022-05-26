@@ -106,7 +106,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         TinhTrangPhong_Label = new javax.swing.JLabel();
         ThongBaoTimKiem_Label = new javax.swing.JLabel();
         ThongBaoTimKiem1_Label = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         LoaiPhong_TextField = new javax.swing.JTextField();
 
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -263,13 +262,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
 
         ThongBaoTimKiem1_Label.setText("TK");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         LoaiPhong_TextField.setName(""); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -324,10 +316,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
                                     .addComponent(SoSinhVienToiDa_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(SoSinhVienHienTai_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TinhTrangPhong_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(Thoat_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(46, 46, 46)
-                                        .addComponent(jButton1))))))
+                                    .addComponent(Thoat_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -372,8 +361,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
                             .addComponent(Xoa_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Sua_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Thoat_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Them_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))))
+                            .addComponent(Them_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(67, Short.MAX_VALUE))
@@ -632,18 +620,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SoSinhVienHienTai_TextFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int row = BangThongTin_Table.getSelectedRow();
-        int id = Integer.parseInt(String.valueOf(BangThongTin_Table.getValueAt(row, 0)));
-        ThongTinPhong_140 getInfo = new ThongTinPhong_140();
-        getInfo = StudentDao.getInfo(id);
-        TenPhong_TextField.setText(getInfo.getTenPhong());
-        MaPhong_TextField.setText(getInfo.getMaPhong());
-        TinhTrangPhong_TextField.setText(getInfo.getTinhTrangPhong()); 
-        SoSinhVienHienTai_TextField.setText(getInfo.getSoSVHienTai());
-        SoSinhVienToiDa_TextField.setText(getInfo.getSoSVToiDa());
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void TenPhong_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TenPhong_TextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TenPhong_TextFieldActionPerformed
@@ -752,7 +728,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
     private javax.swing.JLabel TinhTrangPhong_Label;
     private javax.swing.JTextField TinhTrangPhong_TextField;
     private javax.swing.JButton Xoa_Button;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
