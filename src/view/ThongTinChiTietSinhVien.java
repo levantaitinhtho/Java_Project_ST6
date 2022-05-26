@@ -20,6 +20,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
     StudentService studentService = new StudentService();
     public ThongTinChiTietSinhVien(String MaSV) {
         initComponents();
+        setLocationRelativeTo(null);
         SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
         student = studentService.getStudentByMaSv_320(MaSV);
 
