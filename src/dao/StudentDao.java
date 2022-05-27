@@ -71,7 +71,7 @@ public class StudentDao {
                 student.setLoaiPhong_140(rs.getString("loaiPhong"));
                 student.setSoSinhVienHienTai_140(rs.getString("soNguoiHienTai"));
                 student.setSoSinhVienToiDa_140(rs.getString("soNguoiToiDa"));
-//                student.setTinhTrangPhong_140(rs.getString("tinhTrangPhong"));
+                student.setTinhTrangPhong_140(rs.getString("tinhTrangPhong"));
                 
                 students.add(student);
             }
