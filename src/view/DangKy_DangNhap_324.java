@@ -5,8 +5,11 @@ import controller.KiemTraEmail_324;
 import java.awt.Color;
 import javax.swing.*;
 import javax.swing.border.*;
+import model.TaiKhoanDangNhap_324;
+import service.TaiKhoanService_324;
 
 public class DangKy_DangNhap_324 extends javax.swing.JFrame {
+    TaiKhoanService_324 service = new TaiKhoanService_324();
     public DangKy_DangNhap_324() {
         initComponents();
         setLocationRelativeTo(null);
@@ -530,10 +533,10 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         dangNhap_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.red));
         //Nhan vao ten dang nhap va luot bo 2 ky tu trang o dau
         String tenTaiKhoan = tenTaiKhoan_textField_324.getText();
-
+            
         //Nhan vao mat khau va chuyen thanh chuoi de kiem tra
         String matKhau = new String(matKhauDN_PassWordField_324.getPassword());
-
+           
         //Su dung StringBuider de dua ra thong bao neu cac truong khong dung quy tac
         StringBuilder sb = new StringBuilder();
         if(tenTaiKhoan.isEmpty()&& matKhau.isEmpty()){
@@ -551,9 +554,18 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             dangNhap_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.cyan));
             return;
         }else{
-            TrangChu trangChu = new TrangChu();
-            trangChu.setVisible(true);
-            this.dispose();
+            TaiKhoanDangNhap_324 tk = service.CheckAccount_324(tenTaiKhoan, matKhau);
+            if(tenTaiKhoan.equals(tk.getUsername())==true && matKhau.equals(tk.getPassword())==true){
+                TrangChu tc = new TrangChu();
+                tc.setVisible(true);
+                this.dispose();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "dang nhap tam bay", "Ten tai khoan hoac mat khau khong dung \n vui long nhap lai", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+                
+           
         }
         
     }//GEN-LAST:event_dangNhap_JLabel_324MousePressed
