@@ -20,11 +20,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableModel;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PiePlot;
-import org.jfree.data.general.DefaultPieDataset;
 
 public class TrangChu extends javax.swing.JFrame {
     List<JPanel> listPanel_317 = new ArrayList<>();
