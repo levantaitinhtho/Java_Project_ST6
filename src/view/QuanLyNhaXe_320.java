@@ -5,7 +5,10 @@
  */
 package view;
 
+import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Xe_320;
 import service.XeServices_320;
@@ -21,6 +24,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
      */
     XeServices_320 xeServices_320 = new XeServices_320();
     DefaultTableModel defaultTableModel;
+    
     public QuanLyNhaXe_320() {
         initComponents();
         setLocationRelativeTo(null);
@@ -30,18 +34,19 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
                 return false;
             }
         };
-       
+        
         BangThongTin_Table.setModel(defaultTableModel);
         defaultTableModel.addColumn("Mã xe");
         defaultTableModel.addColumn("Mã sinh viên");
         defaultTableModel.addColumn("Biển số");
         defaultTableModel.addColumn("Ngày gửi");
-      
+        
         setTableData(xeServices_320.getAllMotobike());
     }
-     private void setTableData(List<Xe_320> Motos) {
-        for (Xe_320 moto :Motos ) {
-            defaultTableModel.addRow(new Object[]{moto.getMaXe(), moto.getMSV(), moto.getBienSo(),  moto.getNgayGui()});
+    
+    private void setTableData(List<Xe_320> Motos) {
+        for (Xe_320 moto : Motos) {
+            defaultTableModel.addRow(new Object[]{moto.getMaXe(), moto.getMSV(), moto.getBienSo(), moto.getNgayGui()});
         }
     }
 
@@ -309,51 +314,40 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
     }//GEN-LAST:event_BienSo_TextFieldActionPerformed
 
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
-
-//        String TenPhong = MaXe_TextField.getText();
-//        String MaPhong = MaSinhVien_TextField.getText();
-//        String LoaiPhong = LoaiPhong_TextField.getText();
-//        String SoSVHienTai = BienSo_TextField.getText();
-//        String SoSVToiDa = NgayGui_TextField.getText();
-//        String TinhTrangPhong = TinhTrangPhong_TextField.getText();
-//        StringBuilder sb = new StringBuilder();
-//
-//        if (TenPhong.equals("")){
-//            sb.append("Tên phòng không được để trống!\n");
-//        }
-//        if(MaPhong.equals("")){
-//            sb.append("Mã phòng không được để trống!\n");
-//        }
-//        if(LoaiPhong.equals("")){
-//            sb.append("Loại phòng không được để trống!\n");
-//        }
-//        if(SoSVHienTai.equals("")){
-//            sb.append("Nhập số sinh viên hiện tại của phòng!\n");
-//        }
-//        if(SoSVToiDa.equals("")){
-//            sb.append("Nhập số sinh viên tối đa của phòng!\n");
-//        }
-//        if(TinhTrangPhong.equals("")){
-//            sb.append("Tình trạng phòng hiện tại như thế nào!\n");
-//        }
-//        if (sb.length()>0){
-//            JOptionPane.showMessageDialog(this, sb.toString(), "Thông báo lỗi!",
-//                JOptionPane.ERROR_MESSAGE);
-//            return;
-//        }
-//        else{
-//            st40.setTenPhong_140(MaXe_TextField.getText());
-//            st40.setMaPhong_140(MaSinhVien_TextField.getText());
-//            st40.setLoaiPhong_140(LoaiPhong_TextField.getText());
-//            st40.setSoSinhVienHienTai_140(BienSo_TextField.getText());
-//            st40.setSoSinhVienToiDa_140(NgayGui_TextField.getText());
-//            st40.setTinhTrangPhong_140(TinhTrangPhong_TextField.getText());
-//            BangThongTin_Table.setModel(defaultTableModel);
-//            defaultTableModel.addRow(new Object[]{ st40.getTenPhong_140(),st40.getMaPhong_140(),
-//                st40.getLoaiPhong_140(), st40.getSoSinhVienHienTai_140(), st40.getSoSinhVienToiDa_140(),st40.getTinhTrangPhong_140()});
-//        JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo",
-//            JOptionPane.INFORMATION_MESSAGE);
-//        }
+        
+        String MaXe = MaXe_TextField.getText();
+        String MSV = MaSinhVien_TextField.getText();
+        String BienSo = BienSo_TextField.getText();
+        LocalDate NgayGui = java.time.LocalDate.now();
+        StringBuilder sb = new StringBuilder();
+        
+        if (MaXe.equals("")) {
+            sb.append("Mã xe không được để trống!\n");
+        }
+        if (MSV.equals("")) {
+            sb.append("Mã sinh viên không được để trống!\n");
+        }
+        if (BienSo.equals("")) {
+            sb.append("Biển số không được để trống!\n");
+        }
+        
+        if (sb.length() > 0) {
+            JOptionPane.showMessageDialog(this, sb.toString(), "Thông báo lỗi!",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Xe_320 xe = new Xe_320();
+            xe.setMaXe(MaXe);
+            xe.setMSV(MSV);
+            xe.setBienSo(BienSo);
+            xe.setNgayGui(String.valueOf(NgayGui));
+            xeServices_320.addMotobike(xe);
+            JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo",
+                    JOptionPane.INFORMATION_MESSAGE);
+            defaultTableModel.setRowCount(0);
+            setTableData(xeServices_320.getAllMotobike());
+            
+        }
     }//GEN-LAST:event_Them_ButtonActionPerformed
 
     private void Sua_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sua_ButtonActionPerformed
@@ -412,7 +406,6 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
     }//GEN-LAST:event_Sua_ButtonActionPerformed
 
     private void Xoa_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Xoa_ButtonActionPerformed
-
         
 
     }//GEN-LAST:event_Xoa_ButtonActionPerformed
