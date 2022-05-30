@@ -5,6 +5,7 @@
 package dao;
 
 import connect.KetNoiSQL;
+import dao.ThongKeDao_317;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.SinhVien_tatCaThongTin_140;
+import model.ThongKePhong_317;
 import model.Thongke_NS_317;
 
 /**
@@ -32,6 +34,29 @@ public class ThongKeDao implements ThongKeDao_317 {
                 thongke_NS_317.setNamSinh(rs.getString("Năm_Sinh"));
                 thongke_NS_317.setSoLuongSV(rs.getInt("SinhVienSinhNam"));
                 list.add(thongke_NS_317);
+            }
+            ps.close();
+            cons.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<ThongKePhong_317> getListBySinhVienP() {
+         Connection cons = KetNoiSQL.getConnection();
+        String sql = "select tenPhong , count(maSV) as soLuong from SinhVien join Phong on SinhVien.maPhong =  Phong.maPhong group by tenPhong;";
+        List<ThongKePhong_317> list = new ArrayList<>();
+        try {
+            PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ThongKePhong_317 thongke_P_317 = new ThongKePhong_317();
+                thongke_P_317.setTenPhong(rs.getString("tenPhong"));
+                thongke_P_317.setSoLuong(rs.getInt("SoLuong"));
+                list.add(thongke_P_317);
             }
             ps.close();
             cons.close();

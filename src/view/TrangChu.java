@@ -236,6 +236,8 @@ public class TrangChu extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jpn_QLThongKe_324 = new javax.swing.JPanel();
         tk1_317 = new javax.swing.JPanel();
+        TK_2 = new javax.swing.JPanel();
+        jButton7 = new javax.swing.JButton();
         jpn_ThuPhi_324 = new javax.swing.JPanel();
         jpn_QLNhanXe_324 = new javax.swing.JPanel();
         thanh_Xoa_phongTo_317 = new javax.swing.JPanel();
@@ -1762,7 +1764,7 @@ public class TrangChu extends javax.swing.JFrame {
 
         jpn_ThietKe_317.add(jpn_QLPhongKTX_324, "card7");
 
-        jpn_QLThongKe_324.setBackground(new java.awt.Color(51, 51, 51));
+        jpn_QLThongKe_324.setBackground(new java.awt.Color(255, 255, 255));
         jpn_QLThongKe_324.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jpn_QLThongKe_324AncestorAdded(evt);
@@ -1777,28 +1779,51 @@ public class TrangChu extends javax.swing.JFrame {
         tk1_317.setLayout(tk1_317Layout);
         tk1_317Layout.setHorizontalGroup(
             tk1_317Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 780, Short.MAX_VALUE)
         );
         tk1_317Layout.setVerticalGroup(
             tk1_317Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 204, Short.MAX_VALUE)
+            .addGap(0, 251, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout TK_2Layout = new javax.swing.GroupLayout(TK_2);
+        TK_2.setLayout(TK_2Layout);
+        TK_2Layout.setHorizontalGroup(
+            TK_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        TK_2Layout.setVerticalGroup(
+            TK_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 246, Short.MAX_VALUE)
+        );
+
+        jButton7.setText("BACK");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpn_QLThongKe_324Layout = new javax.swing.GroupLayout(jpn_QLThongKe_324);
         jpn_QLThongKe_324.setLayout(jpn_QLThongKe_324Layout);
         jpn_QLThongKe_324Layout.setHorizontalGroup(
             jpn_QLThongKe_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tk1_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(TK_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_QLThongKe_324Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tk1_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(320, 320, 320))
         );
         jpn_QLThongKe_324Layout.setVerticalGroup(
             jpn_QLThongKe_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpn_QLThongKe_324Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
                 .addComponent(tk1_317, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TK_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jpn_ThietKe_317.add(jpn_QLThongKe_324, "card8");
@@ -2241,7 +2266,19 @@ public class TrangChu extends javax.swing.JFrame {
                  
         QuanLyThongKeContrller contrller  = new QuanLyThongKeContrller();
         contrller.setDataToChart1(tk1_317);
+        contrller.setDataToChart2
+        
+         
+        
+        
+        (TK_2);
     }//GEN-LAST:event_jpn_QLThongKe_324AncestorAdded
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        jpn_TrangChu_317.setVisible(true);
+        jpn_QLThongKe_324.setVisible(false);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
   
     public static void main(String args[]) {
@@ -2280,6 +2317,7 @@ public class TrangChu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Name_KTX_317;
     private javax.swing.JLabel Phongto_ThuNho_317;
+    private javax.swing.JPanel TK_2;
     private javax.swing.JLabel an_317;
     private javax.swing.JButton btn_dong_tkMSV;
     private javax.swing.JButton btn_tk_MaSV;
@@ -2292,6 +2330,7 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox2;

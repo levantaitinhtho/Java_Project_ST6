@@ -6,6 +6,7 @@ package dao;
 
 import java.util.List;
 import model.SinhVien_trangChu_324;
+import model.ThongKePhong_317;
 import model.Thongke_NS_317;
 
 /**
@@ -14,4 +15,5 @@ import model.Thongke_NS_317;
  */
 public interface ThongKeDao_317 {
      public List<Thongke_NS_317> getListBySinhVien();
+     public List<ThongKePhong_317> getListBySinhVienP();
 }

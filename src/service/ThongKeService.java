@@ -6,7 +6,9 @@ package service;
 
 import dao.ThongKeDao;
 import java.util.List;
+import model.ThongKePhong_317;
 import model.Thongke_NS_317;
+import service.ThongKeService_317;
 
 /**
  *
@@ -23,6 +25,11 @@ public class ThongKeService implements ThongKeService_317{
     @Override
     public List<Thongke_NS_317> getListBySinhVien() {
         return thongKeDao.getListBySinhVien();
+    }
+
+    @Override
+    public List<ThongKePhong_317> getListBySinhVienP() {
+        return thongKeDao.getListBySinhVienP();
     }
      
 }
