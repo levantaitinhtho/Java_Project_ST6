@@ -13,6 +13,10 @@ public class KetNoiSQL {
     public static void closeConnection(Connection connection) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
+
+    public static Connection ConnectSQL() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private Connection con = null;
 
     public KetNoiSQL() {

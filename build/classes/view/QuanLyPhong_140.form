@@ -5,6 +5,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="formComponentShown"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -22,12 +25,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jPanel1" max="32767" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-              </Group>
+              <Component id="jPanel2" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -35,9 +36,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jPanel2" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,14 +57,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="375" max="-2" attributes="0"/>
                   <Component id="ThongTin_Label" min="-2" pref="639" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="316" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                   <Component id="ThongTin_Label" min="-2" pref="91" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -104,15 +105,8 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="25" max="32767" attributes="0"/>
-                  <Component id="ThongBaoTimKiem1_Label" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -123,48 +117,40 @@
                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="PhongCanTim_Label" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="PhongCanTim_TextField" min="-2" pref="421" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="TimKiem_Button" min="-2" pref="188" max="-2" attributes="0"/>
+                                  <Component id="TenPhong_TextField" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
+                                  <Component id="SoSinhVienHienTai_Label" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="TenPhong_TextField" min="-2" pref="316" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
-                                          <Component id="SoSinhVienHienTai_Label" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="Them_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                                              <Component id="Sua_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="Xoa_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="MaPhong_TextField" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                                                  <Component id="LoaiPhong_ComboBox" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="SoSinhVienToiDa_Label" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="TinhTrangPhong_Label" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
+                                  <Component id="Them_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="Sua_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="Xoa_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="LamMoi_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="MaPhong_TextField" pref="316" max="32767" attributes="0"/>
+                                      <Component id="LoaiPhong_TextField" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="SoSinhVienToiDa_TextField" min="-2" pref="316" max="-2" attributes="0"/>
-                                      <Component id="SoSinhVienHienTai_TextField" min="-2" pref="316" max="-2" attributes="0"/>
-                                      <Component id="TinhTrangPhong_TextField" min="-2" pref="316" max="-2" attributes="0"/>
-                                      <Component id="Thoat_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="SoSinhVienToiDa_Label" min="-2" max="-2" attributes="0"/>
+                                      <Component id="TinhTrangPhong_Label" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="SoSinhVienToiDa_TextField" min="-2" pref="316" max="-2" attributes="0"/>
+                              <Component id="SoSinhVienHienTai_TextField" min="-2" pref="316" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="Thoat_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="TinhTrangPhong_TextField" min="-2" pref="316" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -172,7 +158,12 @@
                           <Component id="jScrollPane2" min="-2" pref="1182" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                  <EmptySpace pref="80" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -181,51 +172,44 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Component id="ThongBaoTimKiem1_Label" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="PhongCanTim_Label" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="PhongCanTim_TextField" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="TimKiem_Button" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="TenPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="TenPhong_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="SoSinhVienHienTai_Label" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="TinhTrangPhong_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="MaPhong_TextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="MaPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="SoSinhVienHienTai_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LoaiPhong_ComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="LoaiPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="TinhTrangPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="SoSinhVienToiDa_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Xoa_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="Sua_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="Thoat_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="Them_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="MaPhong_TextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="MaPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Component id="SoSinhVienToiDa_TextField" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LoaiPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TinhTrangPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TinhTrangPhong_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="LoaiPhong_TextField" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Xoa_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="Sua_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="Them_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="Thoat_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="LamMoi_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="40" max="32767" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="189" max="-2" attributes="0"/>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
+                  <EmptySpace pref="62" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -332,41 +316,11 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="TenPhong_TextField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TenPhong_TextFieldActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="MaPhong_TextField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="PhongCanTim_Label">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Nh&#x1ead;p t&#xea;n ph&#xf2;ng c&#x1ea7;n t&#xec;m: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="PhongCanTim_TextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PhongCanTim_TextFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="TimKiem_Button">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="99" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/image/search-icon-24.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="T&#xec;m Ki&#x1ebf;m"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TimKiem_ButtonActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="TenPhong_Label">
           <Properties>
@@ -422,18 +376,23 @@
             <Component class="javax.swing.JTable" name="BangThongTin_Table">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="4">
-                    <Column editable="true" title="M&#xe3; sinh vi&#xea;n " type="java.lang.Object"/>
-                    <Column editable="true" title="M&#xe3; KTX " type="java.lang.Object"/>
-                    <Column editable="true" title="H&#x1ecd; t&#xea;n" type="java.lang.Object"/>
-                    <Column editable="true" title="CMND" type="java.lang.Object"/>
-                    <Column editable="true" title="S&#x1ed1; &#x111;i&#xea;n tho&#x1ea1;i" type="java.lang.Object"/>
+                  <Table columnCount="6" rowCount="4">
+                    <Column editable="true" title="T&#xea;n ph&#xf2;ng" type="java.lang.Object"/>
+                    <Column editable="true" title="M&#xe3; ph&#xf2;ng " type="java.lang.Object"/>
+                    <Column editable="true" title="Lo&#x1ea1;i ph&#xf2;ng" type="java.lang.Object"/>
+                    <Column editable="true" title="S&#x1ed1; sinh vi&#xea;n hi&#x1ec7;n t&#x1ea1;i" type="java.lang.Object"/>
+                    <Column editable="true" title="S&#x1ed1; sinh vi&#xea;n t&#x1ed1;i &#x111;a" type="java.lang.Object"/>
+                    <Column editable="true" title="T&#xec;nh tr&#x1ea1;ng ph&#xf2;ng" type="java.lang.Object"/>
                   </Table>
                 </Property>
+                <Property name="name" type="java.lang.String" value="" noResource="true"/>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="BangThongTin_TableComponentShown"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -448,28 +407,32 @@
             <Property name="text" type="java.lang.String" value="T&#xec;nh Tr&#x1ea1;ng Ph&#xf2;ng: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="LoaiPhong_ComboBox">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="Nam"/>
-                <StringItem index="1" value="N&#x1eef;"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoaiPhong_ComboBoxActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JLabel" name="ThongBaoTimKiem_Label">
         </Component>
-        <Component class="javax.swing.JLabel" name="ThongBaoTimKiem1_Label">
+        <Component class="javax.swing.JTextField" name="LoaiPhong_TextField">
           <Properties>
-            <Property name="text" type="java.lang.String" value="TK"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="LamMoi_Button">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/image/new-icon-16.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LamMoi_ButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
