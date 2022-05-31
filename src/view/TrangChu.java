@@ -198,7 +198,7 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_Phong1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        soChoTrongA1_JLable_324 = new javax.swing.JLabel();
         jpn_Phong2 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
@@ -1168,15 +1168,15 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Phong A1");
+        jLabel10.setText("Phong A101");
 
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Tổng số chỗ: 8");
 
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("Số chỗ còn trống:");
+        soChoTrongA1_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
+        soChoTrongA1_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        soChoTrongA1_JLable_324.setText("Số chỗ còn trống:");
 
         javax.swing.GroupLayout jpn_Phong1Layout = new javax.swing.GroupLayout(jpn_Phong1);
         jpn_Phong1.setLayout(jpn_Phong1Layout);
@@ -1184,17 +1184,17 @@ public class TrangChu extends javax.swing.JFrame {
             jpn_Phong1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
             .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(soChoTrongA1_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpn_Phong1Layout.setVerticalGroup(
             jpn_Phong1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpn_Phong1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22)
                 .addGap(5, 5, 5)
-                .addComponent(jLabel23)
+                .addComponent(soChoTrongA1_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1208,7 +1208,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("Phong A1");
+        jLabel27.setText("Phong A102");
 
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1248,7 +1248,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("Phong A1");
+        jLabel33.setText("Phong A104");
 
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1283,12 +1283,15 @@ public class TrangChu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel20MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel20MouseEntered(evt);
+            }
         });
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("Phong A1");
+        jLabel39.setText("Phong A103");
 
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1358,7 +1361,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("Phong A1");
+        jLabel42.setText("Phong B104");
 
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1398,7 +1401,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("Phong A1");
+        jLabel45.setText("Phong B102");
 
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1438,7 +1441,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("Phong A1");
+        jLabel48.setText("Phong B101");
 
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1478,7 +1481,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel51.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("Phong A1");
+        jLabel51.setText("Phong B103");
 
         jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1548,7 +1551,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel54.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel54.setText("Phong A1");
+        jLabel54.setText("Phong C101");
 
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1588,7 +1591,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel57.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(255, 255, 255));
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setText("Phong A1");
+        jLabel57.setText("Phong C103");
 
         jLabel58.setForeground(new java.awt.Color(255, 255, 255));
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1628,7 +1631,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(255, 255, 255));
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel60.setText("Phong A1");
+        jLabel60.setText("Phong C104");
 
         jLabel61.setForeground(new java.awt.Color(255, 255, 255));
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1668,7 +1671,7 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel63.setText("Phong A1");
+        jLabel63.setText("Phong C102");
 
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
         jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1801,10 +1804,10 @@ public class TrangChu extends javax.swing.JFrame {
 
         jpn_QLThongKe_324.setBackground(new java.awt.Color(255, 255, 255));
         jpn_QLThongKe_324.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jpn_QLThongKe_324AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -2375,69 +2378,60 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jpn_Phong1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_Phong1MouseClicked
+        String maPhong = "MPA1";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
+        soChoTrongA1_JLable_324.setText("So cho con trong: "+ String.valueOf(qlphong.setDemSoChoTrong(maPhong)));
         qlphong.setVisible(true);
     }//GEN-LAST:event_jpn_Phong1MouseClicked
 
     private void jpn_Phong2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_Phong2MouseClicked
+      String maPhong = "MPA2";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MPA1";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jpn_Phong2MouseClicked
 
     private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseClicked
+        String maPhong = "MPA3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel18MouseClicked
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
-        // TODO add your handling code here:
+       String maPhong = "MPA3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel20MouseClicked
 
     private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseClicked
-        // TODO add your handling code here:
+        String maPhong = "MPB4";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel27MouseClicked
 
     private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel28MouseClicked
-        // TODO add your handling code here:
+     String maPhong = "MPB2";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel28MouseClicked
 
     private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel29MouseClicked
-        // TODO add your handling code here:
+      String maPhong = "MPB1";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel29MouseClicked
 
     private void jPanel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel30MouseClicked
-        // TODO add your handling code here:
+      String maPhong = "MPB3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel30MouseClicked
 
     private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel31MouseClicked
@@ -2450,30 +2444,24 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel31MouseClicked
 
     private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel32MouseClicked
-        // TODO add your handling code here:
+        String maPhong = "MPC3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel32MouseClicked
 
     private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel33MouseClicked
-        // TODO add your handling code here:
+        String maPhong = "MPC4";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel33MouseClicked
 
     private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel34MouseClicked
-        // TODO add your handling code here:
-         QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        String maPhong = "MPC2";
+        QuanLyPhong_140 qlphong = new QuanLyPhong_140();
+        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
-
-        String phong = "MSV01";
-        qlphong.setBang(phong);
     }//GEN-LAST:event_jPanel34MouseClicked
 
     private void jpn_QLThongKe_324AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jpn_QLThongKe_324AncestorAdded
@@ -2544,6 +2532,9 @@ public class TrangChu extends javax.swing.JFrame {
        defaultTableModel1.setRowCount(0);
        ctr.SetTable_317(tbDN, defaultTableModel1);      
     }//GEN-LAST:event_jButton12ActionPerformed
+    private void jPanel20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel20MouseEntered
 
   
     public static void main(String args[]) {
@@ -2630,7 +2621,6 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1_qlnx_317;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -2745,6 +2735,7 @@ public class TrangChu extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser ntt_317;
     private javax.swing.JPanel panelcon;
     private javax.swing.JTable tbDN;
+    private javax.swing.JLabel soChoTrongA1_JLable_324;
     private javax.swing.JTable tbSV;
     private javax.swing.JPanel thanh_Xoa_phongTo_317;
     private javax.swing.JLabel thoat_317;
