@@ -20,11 +20,20 @@ public class XeServices_320 {
     public List<Xe_320> getAllMotobike() {
         return xeDao_320.getAllMotobike();
     }
-    public void addMotobike(Xe_320 xe){
+
+    public void addMotobike(Xe_320 xe) {
         xeDao_320.addMotobike(xe);
     }
-    public void deleteMotobike(String maXe){
+
+    public void deleteMotobike(String maXe) {
         xeDao_320.deleteMotobike(maXe);
     }
 
+    public Xe_320 getMotobikeById(String maXe){
+        return xeDao_320.getMotobikeById(maXe);
+    }
+    
+    public void editMotobike(Xe_320 xe){
+        xeDao_320.editMotobike(xe);
+    }
 }
