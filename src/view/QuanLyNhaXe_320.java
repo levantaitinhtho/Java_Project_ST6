@@ -328,6 +328,10 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
         if (MaXe.equals("")) {
             sb.append("Mã xe không được để trống!\n");
         }
+        if (xeServices_320.getMotobikeById(MaXe)!=null){
+            JOptionPane.showMessageDialog(QuanLyNhaXe_320.this,"Mã xe đã tồn tại","Lỗi",JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         if (MSV.equals("")) {
             sb.append("Mã sinh viên không được để trống!\n");
         }
@@ -371,6 +375,9 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             BienSo_TextField.setText(xe.getBienSo());
             NgayGui_TextField.setText(xe.getNgayGui());
             Sua_Button.setVisible(false);
+            Them_Button.setVisible(false);
+            Xoa_Button.setVisible(false);
+            Thoat_Button.setVisible(false);
             Luu_Button.setVisible(true);
         }
 //        if (MaXe_TextField.getText().equals("") || MaSinhVien_TextField.getText().equals("") || LoaiPhong_TextField.getText().equals("")
