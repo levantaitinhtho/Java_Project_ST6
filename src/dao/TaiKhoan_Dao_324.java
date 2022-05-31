@@ -36,8 +36,4 @@ public class TaiKhoan_Dao_324 {
        }
        return null;
    }
-     public static void main(String[] args) {
-        TaiKhoan_Dao_324 kiemta = new TaiKhoan_Dao_324();
-        kiemta.CheckAccount_324("levantaitinhtho", "123");
-    }
 }

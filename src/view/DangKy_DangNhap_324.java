@@ -1,6 +1,7 @@
 
 package view;
 
+import controller.CheckAccount_Controller_324;
 import controller.KiemTraEmail_324;
 import java.awt.Color;
 import javax.swing.*;
@@ -9,7 +10,9 @@ import model.TaiKhoanDangNhap_324;
 import service.TaiKhoanService_324;
 
 public class DangKy_DangNhap_324 extends javax.swing.JFrame {
+    CheckAccount_Controller_324 controll = new CheckAccount_Controller_324();
     TaiKhoanService_324 service = new TaiKhoanService_324();
+    TrangChu tc = new TrangChu();
     public DangKy_DangNhap_324() {
         initComponents();
         setLocationRelativeTo(null);
@@ -526,7 +529,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     }//GEN-LAST:event_showPassDn_LableMousePressed
 
     private void quenMatKhau_LabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quenMatKhau_LabelMousePressed
-        JOptionPane.showMessageDialog(this,"Co cai mat khau ma cung quen , tao lay may");
+        JOptionPane.showMessageDialog(this,"Tính năng này hiện tại đang cập nhật");
     }//GEN-LAST:event_quenMatKhau_LabelMousePressed
 
     private void dangNhap_JLabel_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangNhap_JLabel_324MousePressed
@@ -540,7 +543,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         //Su dung StringBuider de dua ra thong bao neu cac truong khong dung quy tac
         StringBuilder sb = new StringBuilder();
         if(tenTaiKhoan.isEmpty()&& matKhau.isEmpty()){
-            sb.append("Ban can nhap cac thong tin");
+            sb.append("Bạn cần điền đầy đủ các thông tin");
         }else{
             if(tenTaiKhoan.isEmpty()) {
                 sb.append("Tên đăng nhập không được để trống!");
@@ -554,14 +557,13 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             dangNhap_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.cyan));
             return;
         }else{
-            TaiKhoanDangNhap_324 tk = service.CheckAccount_324(tenTaiKhoan, matKhau);
-            if(tenTaiKhoan.equals(tk.getUsername())==true && matKhau.equals(tk.getPassword())==true){
+            if(controll.checkoutAccountUser(tenTaiKhoan, matKhau)==1){
                 TrangChu tc = new TrangChu();
                 tc.setVisible(true);
                 this.dispose();
             }
             else{
-                JOptionPane.showMessageDialog(this, "dang nhap tam bay", "Ten tai khoan hoac mat khau khong dung \n vui long nhap lai", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Tên tài khoản hoặc mật khẩu không đúng \n Vui lòng nhập lại!", "Thông báo lỗi", JOptionPane.ERROR_MESSAGE);
                 return;
             }
                 
