@@ -42,7 +42,7 @@ public class SinhVienDao {
     public List<SinhVien_trangChu_324> getThongTinTheoQueQuan_324(){
         List<SinhVien_trangChu_324> sinhVien = new ArrayList<SinhVien_trangChu_324>();
             Connection connection = KetNoiSQL.getConnection();
-            String sql = "select queQuan from SinhVien";
+            String sql = "select DISTINCT queQuan from SinhVien";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 ResultSet rs = preparedStatement.executeQuery();
@@ -124,16 +124,7 @@ public class SinhVienDao {
             }
         return sinhVien;
 }
-    public static void main(String[] args) {
-        SinhVienDao svd = new SinhVienDao();
-        String maSV = "maSV";
-        String ten = "tài";
-        svd.getTen(maSV, ten);
-    }
 
-    void getAlLStudents() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
 
 
