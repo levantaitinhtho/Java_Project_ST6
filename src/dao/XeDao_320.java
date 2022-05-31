@@ -77,14 +77,14 @@ public class XeDao_320 {
         }
     }
 
-    public Xe_320 getMotobikeById(int maXe) {
+    public Xe_320 getMotobikeById(String maXe) {
         Connection conn = KetNoiSQL.getConnection();
-        String sql = "SELECT * FROM dbo.[Product] WHERE maXe= ? ";
+        String sql = "SELECT * FROM dbo.[Xe] WHERE maXe= ? ";
 
         try {
             PreparedStatement stm;
             stm = conn.prepareStatement(sql);
-            stm.setInt(1, maXe);
+            stm.setString(1, maXe);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
                 Xe_320 xe = new Xe_320();
@@ -100,6 +100,24 @@ public class XeDao_320 {
             Logger.getLogger(XeDao_320.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+    
+    public void editMotobike(Xe_320 xe){
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "UPDATE dbo.[Xe] SET maSV = ?, bienSo=?,ngayGui=? WHERE maXe = ?";
+        PreparedStatement stm;
+        try {
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, xe.getMSV());
+            stm.setString(2, xe.getBienSo());
+            stm.setString(3, xe.getNgayGui());
+            stm.setString(4, xe.getMaXe());
+            int rs = stm.executeUpdate();
+            System.out.println(rs);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(XeDao_320.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
