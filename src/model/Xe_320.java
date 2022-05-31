@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author LÊ HOÀNG ANH TUẤN
@@ -13,7 +15,7 @@ public class Xe_320 {
     private String MaXe;
     private String MSV;
     private String BienSo;
-    private String NgayGui;
+    private Date NgayGui;
 
     public String getMaXe() {
         return MaXe;
@@ -39,11 +41,11 @@ public class Xe_320 {
         this.BienSo = BienSo;
     }
 
-    public String getNgayGui() {
+    public Date getNgayGui() {
         return NgayGui;
     }
 
-    public void setNgayGui(String NgayGui) {
+    public void setNgayGui(Date NgayGui) {
         this.NgayGui = NgayGui;
     }
 }

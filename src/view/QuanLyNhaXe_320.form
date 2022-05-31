@@ -146,9 +146,9 @@
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="BienSo_TextField" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="NgayGui_TextField" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="BienSo_TextField" pref="316" max="32767" attributes="0"/>
+                              <Component id="NgayGui_datechooser" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jScrollPane2" alignment="0" min="-2" pref="1187" max="-2" attributes="0"/>
@@ -170,11 +170,13 @@
                       <Component id="BienSo_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="MaSinhVien_TextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="MaPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NgayGui_TextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="MaSinhVien_TextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="MaPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="NgayGui_datechooser" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="37" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -247,8 +249,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Sua_ButtonActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="NgayGui_TextField">
         </Component>
         <Component class="javax.swing.JButton" name="Xoa_Button">
           <Properties>
@@ -379,6 +379,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Luu_ButtonActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="NgayGui_datechooser">
+          <Properties>
+            <Property name="dateFormatString" type="java.lang.String" value="yyyy - MM - dd"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
