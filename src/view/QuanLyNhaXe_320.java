@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.util.Date;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
@@ -50,6 +51,14 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             defaultTableModel.addRow(new Object[]{moto.getMaXe(), moto.getMSV(), moto.getBienSo(), moto.getNgayGui()});
         }
     }
+    
+    private void deleteTextfiedData(){
+        MaXe_TextField.setEditable(true);
+        MaXe_TextField.setText("");
+        MaSinhVien_TextField.setText("");
+        BienSo_TextField.setText("");
+        NgayGui_datechooser.setDate(null);
+    }
 
 //    private void closeTextfied() {
 //    MaXe_TextField.setEditable(false);
@@ -73,7 +82,6 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
         BienSo_TextField = new javax.swing.JTextField();
         Them_Button = new javax.swing.JButton();
         Sua_Button = new javax.swing.JButton();
-        NgayGui_TextField = new javax.swing.JTextField();
         Xoa_Button = new javax.swing.JButton();
         Thoat_Button = new javax.swing.JButton();
         MaXe_TextField = new javax.swing.JTextField();
@@ -85,6 +93,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
         BangThongTin_Table = new javax.swing.JTable();
         ThongBaoTimKiem_Label = new javax.swing.JLabel();
         Luu_Button = new javax.swing.JButton();
+        NgayGui_datechooser = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -217,6 +226,8 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             }
         });
 
+        NgayGui_datechooser.setDateFormatString("yyyy - MM - dd");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -254,9 +265,9 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
                                 .addGap(185, 185, 185)
                                 .addComponent(SoSinhVienHienTai_Label)))
                         .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BienSo_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(NgayGui_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BienSo_TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                            .addComponent(NgayGui_datechooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1187, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
@@ -272,11 +283,12 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
                     .addComponent(SoSinhVienHienTai_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BienSo_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MaSinhVien_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MaPhong_Label)
-                    .addComponent(SoSinhVienToiDa_Label)
-                    .addComponent(NgayGui_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(MaSinhVien_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MaPhong_Label)
+                        .addComponent(SoSinhVienToiDa_Label))
+                    .addComponent(NgayGui_datechooser, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Them_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -319,10 +331,11 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
 
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
 
+        System.out.println(String.valueOf(NgayGui_datechooser.getDate()));
         String MaXe = MaXe_TextField.getText();
         String MSV = MaSinhVien_TextField.getText();
         String BienSo = BienSo_TextField.getText();
-        LocalDate NgayGui = java.time.LocalDate.now();
+        Date NgayGui = NgayGui_datechooser.getDate();
         StringBuilder sb = new StringBuilder();
 
         if (MaXe.equals("")) {
@@ -348,7 +361,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             xe.setMaXe(MaXe);
             xe.setMSV(MSV);
             xe.setBienSo(BienSo);
-            xe.setNgayGui(String.valueOf(NgayGui));
+            xe.setNgayGui( NgayGui);
             xeServices_320.addMotobike(xe);
             JOptionPane.showMessageDialog(rootPane, "Đã thêm thành công 1 hàng dữ liệu!", "Thông báo",
                     JOptionPane.INFORMATION_MESSAGE);
@@ -356,6 +369,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             setTableData(xeServices_320.getAllMotobike());
 
         }
+        deleteTextfiedData();
     }//GEN-LAST:event_Them_ButtonActionPerformed
 
     private void Sua_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sua_ButtonActionPerformed
@@ -373,7 +387,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             MaXe_TextField.setEnabled(false);
             MaSinhVien_TextField.setText(xe.getMSV());
             BienSo_TextField.setText(xe.getBienSo());
-            NgayGui_TextField.setText(xe.getNgayGui());
+            NgayGui_datechooser.setDate((xe.getNgayGui()));
             Sua_Button.setVisible(false);
             Them_Button.setVisible(false);
             Xoa_Button.setVisible(false);
@@ -447,19 +461,23 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Xe_320 xe = new Xe_320();
         if (MaXe_TextField.getText().equals("") || MaSinhVien_TextField.getText().equals("")
-                || BienSo_TextField.getText().equals("") || NgayGui_TextField.getText().equals("")) {
+                || BienSo_TextField.getText().equals("") || NgayGui_datechooser.getDate().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
         } else {
             xe.setMaXe(MaXe_TextField.getText());
             xe.setMSV(MaSinhVien_TextField.getText());
             xe.setBienSo(BienSo_TextField.getText());
-            xe.setNgayGui(NgayGui_TextField.getText());
+            xe.setNgayGui( NgayGui_datechooser.getDate());
             xeServices_320.editMotobike(xe);
             JOptionPane.showMessageDialog(this, "Cập nhật thông tin thành công!");
             defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
             setTableData(xeServices_320.getAllMotobike());
             Luu_Button.setVisible(false);
             Sua_Button.setVisible(true);
+            Them_Button.setVisible(true);
+            Xoa_Button.setVisible(true);
+            Thoat_Button.setVisible(true);
+            deleteTextfiedData();
         }
     }//GEN-LAST:event_Luu_ButtonActionPerformed
 
@@ -477,7 +495,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
     private javax.swing.JLabel MaPhong_Label;
     private javax.swing.JTextField MaSinhVien_TextField;
     private javax.swing.JTextField MaXe_TextField;
-    private javax.swing.JTextField NgayGui_TextField;
+    private com.toedter.calendar.JDateChooser NgayGui_datechooser;
     private javax.swing.JLabel SoSinhVienHienTai_Label;
     private javax.swing.JLabel SoSinhVienToiDa_Label;
     private javax.swing.JButton Sua_Button;

@@ -7,6 +7,7 @@ package dao;
 
 import connect.KetNoiSQL;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,7 +34,7 @@ public class XeDao_320 {
                 moto.setMaXe(rs.getString("maXe"));
                 moto.setMSV(rs.getString("maSV"));
                 moto.setBienSo(rs.getString("bienSo"));
-                moto.setNgayGui(rs.getString("ngayGui"));
+                moto.setNgayGui(rs.getDate("ngayGui"));
 
                 motos.add(moto);
             }
@@ -55,7 +56,7 @@ public class XeDao_320 {
             pstm.setString(1, xe.getMaXe());
             pstm.setString(2, xe.getMSV());
             pstm.setString(3, xe.getBienSo());
-            pstm.setString(4, xe.getNgayGui());
+            pstm.setDate(4, new Date(xe.getNgayGui().getTime()));
             pstm.executeUpdate();
 
         } catch (SQLException ex) {
@@ -91,7 +92,7 @@ public class XeDao_320 {
                 xe.setMaXe(rs.getString("maXe"));
                 xe.setMSV(rs.getString("maSV"));
                 xe.setBienSo(rs.getString("bienSo"));
-                xe.setNgayGui(rs.getString("ngayGui"));
+                xe.setNgayGui(rs.getDate("ngayGui"));
 
                 return xe;
             }
@@ -110,7 +111,7 @@ public class XeDao_320 {
             stm = conn.prepareStatement(sql);
             stm.setString(1, xe.getMSV());
             stm.setString(2, xe.getBienSo());
-            stm.setString(3, xe.getNgayGui());
+            stm.setDate(3, new Date(xe.getNgayGui().getTime()));
             stm.setString(4, xe.getMaXe());
             int rs = stm.executeUpdate();
             System.out.println(rs);
