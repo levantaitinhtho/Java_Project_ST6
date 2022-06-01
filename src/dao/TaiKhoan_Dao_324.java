@@ -36,4 +36,31 @@ public class TaiKhoan_Dao_324 {
        }
        return null;
    }
+   
+   
+   public TaiKhoanDangNhap_324 getTaiKhoanByUser(String user) {
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "select * from Taikhoan where userName = ?";
+
+        try {
+            PreparedStatement stm;
+            stm = conn.prepareStatement(sql);
+            stm.setString(1,"userName");
+            ResultSet rs = stm.executeQuery();
+            while (rs.next()) {
+                TaiKhoanDangNhap_324 taiKhoanDangNhap_324 = new TaiKhoanDangNhap_324();
+                taiKhoanDangNhap_324.setUsername(rs.getString("UserName"));
+                taiKhoanDangNhap_324.setPassword(rs.getString("Pass"));
+//                TaiKhoanDangNhap_324.setCScudien(rs.getFloat("CScudien"));
+//                dienNuoc_317.setCSmoidien(rs.getFloat("CSmoidien"));
+//                dienNuoc_317.setCScunuoc(rs.getFloat("CScunuoc"));
+//                dienNuoc_317.setCSmoinuoc(rs.getFloat("CSmoinuoc"));
+                return taiKhoanDangNhap_324;
+            }
+
+        } catch (Exception  e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
