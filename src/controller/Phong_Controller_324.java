@@ -145,16 +145,16 @@ public class Phong_Controller_324 {
      
         
         labelA1.setText("So cho con trong: " +( 8 - setDemSoChoTrong(maPhongA1)));
-        labelA2.setText("So cho con trong: " + setDemSoChoTrong(maPhongA2));
-        labelA3.setText("So cho con trong: " + setDemSoChoTrong(maPhongA3));
-        labelA4.setText("So cho con trong: " + setDemSoChoTrong(maPhongA4));
-        labelB1.setText("So cho con trong: " + setDemSoChoTrong(maPhongB1));
-        labelB2.setText("So cho con trong: " + setDemSoChoTrong(maPhongB2));
-        labelB3.setText("So cho con trong: " + setDemSoChoTrong(maPhongB3));
-        labelB4.setText("So cho con trong: " + setDemSoChoTrong(maPhongB4));
-        labelC1.setText("So cho con trong: " + setDemSoChoTrong(maPhongC1));
-        labelC2.setText("So cho con trong: " + setDemSoChoTrong(maPhongC2));
-        labelC3.setText("So cho con trong: " + setDemSoChoTrong(maPhongC3));
-        labelC4.setText("So cho con trong: " + setDemSoChoTrong(maPhongC4));
+        labelA2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA2)));
+        labelA3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA3)));
+        labelA4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA4)));
+        labelB1.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB1)));
+        labelB2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB2)));
+        labelB3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB3)));
+        labelB4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB4)));
+        labelC1.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC1)));
+        labelC2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC2)));
+        labelC3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC3)));
+        labelC4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC4)));
     }
 }
