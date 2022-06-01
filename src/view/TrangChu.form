@@ -287,7 +287,7 @@
             <Container class="javax.swing.JPanel" name="jpn_CaiDat_317">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color blue="c8" green="64" red="78" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -1537,6 +1537,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButton9">
                       <Properties>
@@ -2612,6 +2615,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

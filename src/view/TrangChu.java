@@ -421,7 +421,7 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_ThietKe_317.setBackground(new java.awt.Color(51, 153, 255));
         jpn_ThietKe_317.setLayout(new java.awt.CardLayout());
 
-        jpn_CaiDat_317.setBackground(new java.awt.Color(255, 255, 255));
+        jpn_CaiDat_317.setBackground(new java.awt.Color(120, 100, 200));
 
         javax.swing.GroupLayout jpn_CaiDat_317Layout = new javax.swing.GroupLayout(jpn_CaiDat_317);
         jpn_CaiDat_317.setLayout(jpn_CaiDat_317Layout);
@@ -1109,6 +1109,11 @@ public class TrangChu extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton8.setText("Quay lại");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton9.setText("Xuất file ");
@@ -1769,6 +1774,11 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(0, 102, 204));
 
         jButton6.setText("Quay lại");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -2632,13 +2642,26 @@ public class TrangChu extends javax.swing.JFrame {
 
     private void an_317MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_an_317MouseClicked
 
-        this.setExtendedState(NewJFrame.ICONIFIED);
+        this.setExtendedState(TrangChu.ICONIFIED);
     }//GEN-LAST:event_an_317MouseClicked
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         jpn_TrangChu_317.setVisible(true);
         jpn_QLDienNuoc_324.setVisible(false);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        
+        jpn_TrangChu_317.setVisible(true);
+        jpn_DangKyKTX_324.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        jpn_TrangChu_317.setVisible(true);
+        jpn_QLPhongKTX_324.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
