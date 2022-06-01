@@ -17,8 +17,7 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
     public ThemSinhVien_324(String maPhong) {
         initComponents();
         setLocationRelativeTo(null);
-        String maPhong1 = maPhong;
-  
+        maPhong_txt.setText(maPhong);
     }
 
 
@@ -49,6 +48,8 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         NgayLHD_320TextField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        maPhong_txt = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -164,21 +165,33 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
         NgayLHD_320TextField.setEditable(false);
         NgayLHD_320TextField.setMinimumSize(new java.awt.Dimension(216, 22));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Mã Phòng");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NgayLHD_320TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NgayLHD_320TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                    .addComponent(maPhong_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(232, 232, 232))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(24, 24, 24)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(maPhong_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(NgayLHD_320TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
@@ -420,7 +433,7 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
 
         student.setHotengh_140(TenNGH_320TextField.getText());
         student.setMaKTX_140("MKTX01");
-//        student.setMaPhong_140();
+        student.setMaPhong_140(maPhong_txt.getText());
         student.setSdtgh_140(SDT_NGH_320TextField.getText());
         student.setQuanhe_140(QuanHe_320TextField.getText());
         student.setNghenghiep_140(NgheNghiep_320TextField.getText());
@@ -496,6 +509,7 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
     private javax.swing.JTextField TenNGH_320TextField;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -514,6 +528,7 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel maPhong_txt;
     private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }
