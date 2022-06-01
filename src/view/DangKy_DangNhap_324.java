@@ -3,9 +3,12 @@ package view;
 
 import controller.CheckAccount_Controller_324;
 import controller.KiemTraEmail_324;
+import dao.DienNuocDao;
+import dao.TaiKhoan_Dao_324;
 import java.awt.Color;
 import javax.swing.*;
 import javax.swing.border.*;
+import model.DienNuoc_317;
 import model.TaiKhoanDangNhap_324;
 import service.TaiKhoanService_324;
 
@@ -533,6 +536,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     }//GEN-LAST:event_quenMatKhau_LabelMousePressed
 
     private void dangNhap_JLabel_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangNhap_JLabel_324MousePressed
+        TaiKhoan_Dao_324 tkd = new TaiKhoan_Dao_324();
         dangNhap_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.red));
         //Nhan vao ten dang nhap va luot bo 2 ky tu trang o dau
         String tenTaiKhoan = tenTaiKhoan_textField_324.getText();
@@ -559,7 +563,9 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         }else{
             if(controll.checkoutAccountUser(tenTaiKhoan, matKhau)==1){
                 TrangChu tc = new TrangChu();
-                tc.setVisible(true);
+                tc.setVisible(true);    
+                TaiKhoanDangNhap_324 tkd1 = tkd.getTaiKhoanByUser(tenTaiKhoan);
+                tc.setModel2(tkd1);
                 this.dispose();
             }
             else{
@@ -572,6 +578,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_dangNhap_JLabel_324MousePressed
 
+    
     private void dangKy_JLabel_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangKy_JLabel_324MousePressed
         dangKy_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.red));
         
