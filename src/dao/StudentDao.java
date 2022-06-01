@@ -278,6 +278,30 @@ public class StudentDao {
         }
         return student;
     }
+     public List<SinhVien_tatCaThongTin_140> getAllStudenByRoom(String maPhong){
+        List<SinhVien_tatCaThongTin_140> sv = new ArrayList<>();
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "select * from SinhVien where maPhong = ?";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, maPhong);
+            ResultSet rs = preparedStatement.executeQuery();
+            while(rs.next()){
+                SinhVien_tatCaThongTin_140 svs = new SinhVien_tatCaThongTin_140();
+                svs.setMaSv_140(rs.getString("maSV"));
+                svs.setTen_140(rs.getString("HoTen"));
+                svs.setCMND_140(rs.getString("CMND"));
+                svs.setNgaysinh_140(rs.getString("ngaySinh"));
+                svs.setGioitinh_140(rs.getInt("gioiTinh"));
+                svs.setSDT_140(rs.getString("SDT"));
+                svs.setQuequan_140(rs.getString("queQuan"));
+                sv.add(svs);
+            }
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return sv;
+    }
 
 /*public static Detail getInfo(int id) {
         Detail de = new Detail();

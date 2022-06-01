@@ -2387,85 +2387,72 @@ public class TrangChu extends javax.swing.JFrame {
     private void jpn_Phong1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_Phong1MouseClicked
         String maPhong = "MPA1";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
-//        soChoTrongA1_JLable_324.setText("So cho con trong: "+ String.valueOf(qlphong.setDemSoChoTrong(maPhong)));
         qlphong.setVisible(true);
     }//GEN-LAST:event_jpn_Phong1MouseClicked
 
     private void jpn_Phong2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpn_Phong2MouseClicked
       String maPhong = "MPA2";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jpn_Phong2MouseClicked
 
     private void jPanel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel18MouseClicked
         String maPhong = "MPA4";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel18MouseClicked
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
        String maPhong = "MPA3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel20MouseClicked
 
     private void jPanel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel27MouseClicked
         String maPhong = "MPB4";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel27MouseClicked
 
     private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel28MouseClicked
      String maPhong = "MPB2";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel28MouseClicked
 
     private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel29MouseClicked
       String maPhong = "MPB1";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel29MouseClicked
 
     private void jPanel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel30MouseClicked
       String maPhong = "MPB3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel30MouseClicked
 
     private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel31MouseClicked
           String maPhong = "MPC1";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel31MouseClicked
 
     private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel32MouseClicked
         String maPhong = "MPC3";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel32MouseClicked
 
     private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel33MouseClicked
         String maPhong = "MPC4";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel33MouseClicked
 
     private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel34MouseClicked
         String maPhong = "MPC2";
         QuanLyPhong_140 qlphong = new QuanLyPhong_140(maPhong);
-        qlphong.SetBangPhong(maPhong);
         qlphong.setVisible(true);
     }//GEN-LAST:event_jPanel34MouseClicked
 

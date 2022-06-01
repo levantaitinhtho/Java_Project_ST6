@@ -55,14 +55,15 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         
         BangThongTin_Table.setModel(defaultTableModel);
         
-        defaultTableModel.addColumn("Tên phòng");
-        defaultTableModel.addColumn("Mã phòng");
-        defaultTableModel.addColumn("Loại phòng");
-        defaultTableModel.addColumn("Số sinh viên hiện tại");
-        defaultTableModel.addColumn("Số sinh viên tối đa");
-        defaultTableModel.addColumn("Tình trạng phòng");
+        defaultTableModel.addColumn("Mã sinh viên");
+        defaultTableModel.addColumn("Họ và tên");
+        defaultTableModel.addColumn("CMND");
+        defaultTableModel.addColumn("Giới Tính");
+        defaultTableModel.addColumn("Ngày sinh");
+        defaultTableModel.addColumn("Số điện thoại");
+        defaultTableModel.addColumn("Quê Quán");
 //        
-        setTableData(service.getAllStudents2());
+        setTableData2(service.thongTinSinhVien(maPhong));
        
     }
    public void setBang(String maPhong){ 
@@ -89,7 +90,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
     public void setTableData2(List<SinhVien_tatCaThongTin_140> students){
         for(SinhVien_tatCaThongTin_140 st: students){
             defaultTableModel.addRow(new Object[]{st.getMaSv_140(),st.getTen_140(),
-                st.getCMND_140(),st.getNgaysinh_140(),st.getSDT_140(),st.getGioitinh_140()});
+                st.getCMND_140(),st.getGioitinh_140(),st.getNgaysinh_140(),st.getSDT_140(),st.getQuequan_140()});
         }
     }
     public void setTableData(List<SinhVien_tatCaThongTin_140> students){
@@ -169,7 +170,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         Them_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Them_Button.setForeground(new java.awt.Color(255, 255, 255));
         Them_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Login-icon-16.png"))); // NOI18N
-        Them_Button.setText("Thêm ");
+        Them_Button.setText("Thêm sinh viên");
         Them_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Them_ButtonActionPerformed(evt);
@@ -180,7 +181,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         Sua_Button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Sua_Button.setForeground(new java.awt.Color(255, 255, 255));
         Sua_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Actions-document-edit-icon-16.png"))); // NOI18N
-        Sua_Button.setText("Sửa");
+        Sua_Button.setText("Xem chi tiết");
         Sua_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Sua_ButtonActionPerformed(evt);
@@ -419,26 +420,12 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         int row = BangThongTin_Table.getSelectedRow();
         if (row == -1)//nguoi dung chua chon hang nao
         {
-            JOptionPane.showMessageDialog(QuanLyPhong_140.this, "Vui lòng chọn hàng thông tin cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(QuanLyPhong_140.this, "Vui lòng chọn hàng thông tin sinh viên cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
 
         } else {
-            int confirm = JOptionPane.showConfirmDialog(QuanLyPhong_140.this, "Bạn chắc chắn muốn xóa không?");
-            if (confirm == JOptionPane.YES_OPTION) {
-
-                try {
-                    String slId = String.valueOf(BangThongTin_Table.getValueAt(row, 0));
-
-                    stService.DeleteTTPhong(slId);
-
-                    defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
-                    setTableData(stService.getAllStudents2());
-                    JOptionPane.showMessageDialog(this, "Xóa thành công!");
-                } catch (SQLException ex) {
-                    Logger.getLogger(QuanLyPhong_140.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-            }
-
+                    String maSV = String.valueOf(BangThongTin_Table.getValueAt(row, 0));
+                    ThongTinChiTietSinhVien sv = new ThongTinChiTietSinhVien(maSV);
+                    sv.setVisible(true);
         }
         
  
