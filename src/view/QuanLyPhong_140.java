@@ -275,10 +275,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ThongBaoTimKiem_Label)
-                .addGap(5, 5, 5))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,17 +301,24 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(214, 214, 214)
-                        .addComponent(Them_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(Sua_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(Xoa_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(Thoat_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Them_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1217, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(ThongBaoTimKiem_Label)
+                        .addGap(5, 5, 5))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(Sua_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(Xoa_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(Thoat_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(313, 313, 313))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,11 +403,12 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
             String data = BangThongTin_Table.getModel().getValueAt(position, 0).toString();
               try{
                 Connection connection = KetNoiSQL.getConnection();
-                String query = "DELETE FROM dbo.[Phong] WHERE tenPhong = ? ";
+                String query = "DELETE FROM dbo.[SinhVien] WHERE maSV = ? ";
                 PreparedStatement ps = connection.prepareStatement(query);
                 ps.setString(1,data);
                 ps.executeUpdate();
-                showDuLieu();
+                defaultTableModel.setRowCount(0);
+                setTableData2(service.thongTinSinhVien(maPhong_ht_324.getText()));
                 KetNoiSQL.closeConnection(connection);
                 JOptionPane.showMessageDialog(null,"Xóa thành công");
         
@@ -421,25 +425,20 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         if (row == -1)//nguoi dung chua chon hang nao
         {
             JOptionPane.showMessageDialog(QuanLyPhong_140.this, "Vui lòng chọn hàng thông tin sinh viên cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
-
+            return;
         } else {
                     String maSV = String.valueOf(BangThongTin_Table.getValueAt(row, 0));
                     ThongTinChiTietSinhVien sv = new ThongTinChiTietSinhVien(maSV);
                     sv.setVisible(true);
         }
-        
- 
-        defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
-        setTableData(stService.getAllStudents2());
-        
-        JOptionPane.showMessageDialog(this, "Cập nhật thành công!");
-    
+
         
     }//GEN-LAST:event_Sua_ButtonActionPerformed
 
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
-      
-      
+        
+        ThemSinhVien_324 them = new ThemSinhVien_324(maPhong_ht_324.getText());
+         them.setVisible(true);
     }//GEN-LAST:event_Them_ButtonActionPerformed
    private void showDuLieu(){
         try{
