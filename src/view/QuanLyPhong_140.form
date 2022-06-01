@@ -105,64 +105,56 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="MaPhong_Label" min="-2" max="-2" attributes="0"/>
-                              <Component id="TenPhong_Label" min="-2" max="-2" attributes="0"/>
-                              <Component id="LoaiPhong_Label" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="Them_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="Sua_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="Xoa_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="LamMoi_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="tenPhong_hienThi_txt" pref="316" max="32767" attributes="0"/>
-                                      <Component id="maPhong_ht_324" max="32767" attributes="0"/>
-                                      <Component id="loaiPhong_ht_324" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="SoSinhVienToiDa_Label" min="-2" max="-2" attributes="0"/>
-                                      <Component id="TinhTrangPhong_Label" min="-2" max="-2" attributes="0"/>
-                                      <Component id="SoSinhVienHienTai_Label" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="svHt_ht_324" alignment="0" pref="316" max="32767" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="tinhTrang_ht_324" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="Thoat_Button" min="-2" pref="161" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="svTD_ht_324" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
+                          <Component id="Them_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="Sua_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="Xoa_Button" min="-2" pref="161" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Component id="Thoat_Button" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="1182" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="83" max="32767" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="MaPhong_Label" min="-2" max="-2" attributes="0"/>
+                      <Component id="TenPhong_Label" min="-2" max="-2" attributes="0"/>
+                      <Component id="LoaiPhong_Label" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="tenPhong_hienThi_txt" max="32767" attributes="0"/>
+                      <Component id="maPhong_ht_324" max="32767" attributes="0"/>
+                      <Component id="loaiPhong_ht_324" min="-2" pref="316" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="SoSinhVienToiDa_Label" min="-2" max="-2" attributes="0"/>
+                      <Component id="TinhTrangPhong_Label" min="-2" max="-2" attributes="0"/>
+                      <Component id="SoSinhVienHienTai_Label" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="tinhTrang_ht_324" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                      <Component id="svHt_ht_324" alignment="0" max="32767" attributes="0"/>
+                      <Component id="svTD_ht_324" alignment="0" min="-2" pref="208" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -170,34 +162,47 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="svHt_ht_324" min="-2" pref="28" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="ThongBaoTimKiem_Label" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="svHt_ht_324" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="SoSinhVienHienTai_Label" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="svTD_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TinhTrangPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tinhTrang_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="TenPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="SoSinhVienHienTai_Label" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="tenPhong_hienThi_txt" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="MaPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="SoSinhVienToiDa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="maPhong_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="svTD_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LoaiPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="loaiPhong_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LoaiPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TinhTrangPhong_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="loaiPhong_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="tinhTrang_ht_324" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="59" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -205,9 +210,8 @@
                       <Component id="Sua_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="Them_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="Thoat_Button" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="LamMoi_Button" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace pref="49" max="32767" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="189" max="-2" attributes="0"/>
                   <EmptySpace pref="64" max="32767" attributes="0"/>
               </Group>
@@ -218,7 +222,7 @@
         <Component class="javax.swing.JLabel" name="SoSinhVienToiDa_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -309,7 +313,7 @@
         <Component class="javax.swing.JLabel" name="TenPhong_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -320,7 +324,7 @@
         <Component class="javax.swing.JLabel" name="MaPhong_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -331,7 +335,7 @@
         <Component class="javax.swing.JLabel" name="LoaiPhong_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -342,7 +346,7 @@
         <Component class="javax.swing.JLabel" name="SoSinhVienHienTai_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -383,7 +387,7 @@
         <Component class="javax.swing.JLabel" name="TinhTrangPhong_Label">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
+              <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -392,26 +396,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="ThongBaoTimKiem_Label">
-        </Component>
-        <Component class="javax.swing.JButton" name="LamMoi_Button">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/image/new-icon-16.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LamMoi_ButtonActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="tenPhong_hienThi_txt">
           <Properties>
