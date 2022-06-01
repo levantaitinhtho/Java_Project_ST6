@@ -15,7 +15,7 @@ public class Controller_DieuKhien_trangChu_324 {
     SinhVienDao dao;
     DienNuocDao DN;
     private String a ;
-    private String ten;
+    private String hoTen;
     private JTable tbl = new JTable();
     DefaultListModel model = new DefaultListModel();
     JList list = new JList();
