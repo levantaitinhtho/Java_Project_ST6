@@ -84,7 +84,7 @@ public class DienNuoc_317 {
     }
 
     public double getTienDien() {
-        return (CSmoidien-CScudien)*1600;
+        return TienDien;
     }
 
     public void setTienDien(double TienDien) {
@@ -92,7 +92,7 @@ public class DienNuoc_317 {
     }
 
     public double getTienNuoc() {
-        return (CSmoinuoc - CScunuoc)*3600;
+        return TienNuoc;
     }
 
     public void setTienNuoc(double TienNuoc) {
@@ -100,7 +100,7 @@ public class DienNuoc_317 {
     }
 
     public double getTongTien() {
-        return getTienDien() + getTienNuoc();
+        return TongTien;
     }
 
     public void setTongTien(double TongTien) {

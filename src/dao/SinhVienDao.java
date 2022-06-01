@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import model.SinhVien_tatCaThongTin_140;
 import model.SinhVien_trangChu_324;
 
 
@@ -89,7 +90,6 @@ public class SinhVienDao {
                    while(rs.next()){
                     SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
                         sv.setMaPhong_324(rs.getString(theLoai));
-                        System.out.println(sv.getMaPhong_324());
                         return sv;
                    }
             }
@@ -98,7 +98,33 @@ public class SinhVienDao {
             }
        return null;
     }
-    
+    public void themSinhVien(SinhVien_tatCaThongTin_140 sv){
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "insert into SinhVien(maSV, maKTX, HoTen , CMND, gioiTinh, ngaySinh, SDT, queQuan, ngayLamHopDong, maPhong,hoTenGH, sdtGH, quanHe, Nghenghiep)"
+                + "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,sv.getMaSv_140());
+            preparedStatement.setString(2,sv.getMaKTX_140());
+            preparedStatement.setString(3,sv.getTen_140());
+            preparedStatement.setString(4,sv.getCMND_140());
+            preparedStatement.setInt(5,sv.getGioitinh_140());
+            preparedStatement.setString(6,sv.getNgaysinh_140());
+            preparedStatement.setString(7,sv.getSDT_140());
+            preparedStatement.setString(8,sv.getQuequan_140());
+            preparedStatement.setString(9,sv.getNgaylamhopdong_140());
+            preparedStatement.setString(10,sv.getMaPhong_140());
+            preparedStatement.setString(11,sv.getHotengh_140());
+            preparedStatement.setString(12,sv.getSdtgh_140());
+            preparedStatement.setString(13,sv.getQuanhe_140());
+            preparedStatement.setString(14,sv.getNghenghiep_140());
+            
+            int rs = preparedStatement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
     //Hay nay duoc su dung de lay thong tin theo dieu kien "where"
     public List<SinhVien_trangChu_324> getThongTinTheoDieuKien_324(String loai, String ten){   
         List<SinhVien_trangChu_324> sinhVien = new ArrayList<SinhVien_trangChu_324>();
