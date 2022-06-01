@@ -4,7 +4,6 @@ package model;
 public class SinhVien_tatCaThongTin_140 {
     private String MaSv_140;
     private String MaKTX_140;
-    private String Ho_140;
     private String Ten_140;
     private String CMND_140;
     private int Gioitinh_140;
@@ -24,39 +23,8 @@ public class SinhVien_tatCaThongTin_140 {
     private String TinhTrangPhong_140;
     private String LoaiPhong_140;
 
-    public String getTinhTrangPhong_140() {
-        return TinhTrangPhong_140;
+    public SinhVien_tatCaThongTin_140() {
     }
-
-    public void setTinhTrangPhong_140(String TinhTrangPhong_140) {
-        this.TinhTrangPhong_140 = TinhTrangPhong_140;
-    }
-   
-
-    public String getLoaiPhong_140() {
-        return LoaiPhong_140;
-    }
-
-    public void setLoaiPhong_140(String LoaiPhong_140) {
-        this.LoaiPhong_140 = LoaiPhong_140;
-    }
-
-    public String getSoSinhVienHienTai_140() {
-        return SoSinhVienHienTai_140;
-    }
-
-    public void setSoSinhVienHienTai_140(String SoSinhVienHienTai_140) {
-        this.SoSinhVienHienTai_140 = SoSinhVienHienTai_140;
-    }
-
-    public String getSoSinhVienToiDa_140() {
-        return SoSinhVienToiDa_140;
-    }
-
-    public void setSoSinhVienToiDa_140(String SoSinhVienToiDa_140) {
-        this.SoSinhVienToiDa_140 = SoSinhVienToiDa_140;
-    }
-    
 
     public String getMaSv_140() {
         return MaSv_140;
@@ -72,14 +40,6 @@ public class SinhVien_tatCaThongTin_140 {
 
     public void setMaKTX_140(String MaKTX_140) {
         this.MaKTX_140 = MaKTX_140;
-    }
-
-    public String getHo_140() {
-        return Ho_140;
-    }
-
-    public void setHo_140(String Ho_140) {
-        this.Ho_140 = Ho_140;
     }
 
     public String getTen_140() {
@@ -192,6 +152,38 @@ public class SinhVien_tatCaThongTin_140 {
 
     public void setTenPhong_140(String TenPhong_140) {
         this.TenPhong_140 = TenPhong_140;
+    }
+
+    public String getSoSinhVienHienTai_140() {
+        return SoSinhVienHienTai_140;
+    }
+
+    public void setSoSinhVienHienTai_140(String SoSinhVienHienTai_140) {
+        this.SoSinhVienHienTai_140 = SoSinhVienHienTai_140;
+    }
+
+    public String getSoSinhVienToiDa_140() {
+        return SoSinhVienToiDa_140;
+    }
+
+    public void setSoSinhVienToiDa_140(String SoSinhVienToiDa_140) {
+        this.SoSinhVienToiDa_140 = SoSinhVienToiDa_140;
+    }
+
+    public String getTinhTrangPhong_140() {
+        return TinhTrangPhong_140;
+    }
+
+    public void setTinhTrangPhong_140(String TinhTrangPhong_140) {
+        this.TinhTrangPhong_140 = TinhTrangPhong_140;
+    }
+
+    public String getLoaiPhong_140() {
+        return LoaiPhong_140;
+    }
+
+    public void setLoaiPhong_140(String LoaiPhong_140) {
+        this.LoaiPhong_140 = LoaiPhong_140;
     }
 
     
