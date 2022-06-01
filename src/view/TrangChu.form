@@ -1763,7 +1763,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel27" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel28" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel29" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongA2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -1774,7 +1774,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongA2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1802,7 +1802,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel29">
+                                <Component class="javax.swing.JLabel" name="soChoTrongA2_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1828,7 +1828,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel33" alignment="1" pref="143" max="32767" attributes="0"/>
                                       <Component id="jLabel34" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel35" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongA4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -1839,7 +1839,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongA4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1867,7 +1867,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel35">
+                                <Component class="javax.swing.JLabel" name="soChoTrongA4_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1894,7 +1894,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel39" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel40" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel41" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongA3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -1905,7 +1905,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongA3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1933,7 +1933,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel41">
+                                <Component class="javax.swing.JLabel" name="soChoTrongA3_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2010,7 +2010,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel42" alignment="1" pref="143" max="32767" attributes="0"/>
                                       <Component id="jLabel43" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel44" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongB4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2021,7 +2021,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongB4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2049,7 +2049,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel44">
+                                <Component class="javax.swing.JLabel" name="soChoTrongB4_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2075,7 +2075,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel45" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel46" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel47" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongB2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2086,7 +2086,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongB2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2114,7 +2114,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel47">
+                                <Component class="javax.swing.JLabel" name="soChoTrongB2_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2140,7 +2140,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel48" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel49" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel50" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongB1_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2151,7 +2151,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongB1_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2179,7 +2179,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel50">
+                                <Component class="javax.swing.JLabel" name="soChoTrongB1_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2205,7 +2205,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel51" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel52" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel53" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongB3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2216,7 +2216,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongB3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="17" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2244,7 +2244,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel53">
+                                <Component class="javax.swing.JLabel" name="soChoTrongB3_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2318,7 +2318,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel54" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel55" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel56" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongC1_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2329,7 +2329,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel56" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongC1_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2357,7 +2357,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel56">
+                                <Component class="javax.swing.JLabel" name="soChoTrongC1_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2383,7 +2383,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel57" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel58" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel59" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongC3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2394,7 +2394,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongC3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="26" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2422,7 +2422,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel59">
+                                <Component class="javax.swing.JLabel" name="soChoTrongC3_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2448,7 +2448,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel60" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel61" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel62" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongC4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2459,7 +2459,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongC4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2487,7 +2487,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel62">
+                                <Component class="javax.swing.JLabel" name="soChoTrongC4_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2513,7 +2513,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel63" alignment="1" pref="141" max="32767" attributes="0"/>
                                       <Component id="jLabel64" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel65" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="soChoTrongC2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -2524,7 +2524,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soChoTrongC2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -2552,7 +2552,7 @@
                                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng s&#x1ed1; ch&#x1ed7;: 8"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel65">
+                                <Component class="javax.swing.JLabel" name="soChoTrongC2_JLable_324">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
