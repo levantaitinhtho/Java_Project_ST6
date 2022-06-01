@@ -21,4 +21,11 @@ public class TaiKhoanService_324 {
     public TaiKhoanDangNhap_324 CheckAccount_324(String username, String password){
         return taiKhoandao.CheckAccount_324(username, password);
     }
+     public TaiKhoanDangNhap_324 getTaiKhoanByUser(String user) {
+         return taiKhoandao.getTaiKhoanByUser(user);
+     }
+    
+      public void updateTaiKhoan(TaiKhoanDangNhap_324 taiKhoanDangNhap_324) {
+          taiKhoandao.updateTaiKhoan(taiKhoanDangNhap_324);
+      }
 }

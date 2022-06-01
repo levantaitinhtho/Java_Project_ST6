@@ -114,7 +114,6 @@ public class XeDao_320 {
             stm.setDate(3, new Date(xe.getNgayGui().getTime()));
             stm.setString(4, xe.getMaXe());
             int rs = stm.executeUpdate();
-            System.out.println(rs);
 
         } catch (SQLException ex) {
             Logger.getLogger(XeDao_320.class.getName()).log(Level.SEVERE, null, ex);

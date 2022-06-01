@@ -449,6 +449,9 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
         student.setQuequan_140(QueQuan_320TextField.getText());
         try {
             studentService.ThemSinhVIen(student);
+            QuanLyPhong_140 quanLy = new QuanLyPhong_140(maPhong_txt.getText());
+            quanLy.setVisible(true);
+            this.dispose();
         } catch (SQLException ex) {
             Logger.getLogger(ThemSinhVien_324.class.getName()).log(Level.SEVERE, null, ex);
         }

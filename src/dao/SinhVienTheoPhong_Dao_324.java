@@ -76,7 +76,6 @@ public class SinhVienTheoPhong_Dao_324 {
             while(rs.next()){
                 a = a+1;
             }
-            System.out.println(a);
             }catch(Exception ex){
             ex.printStackTrace();
         }

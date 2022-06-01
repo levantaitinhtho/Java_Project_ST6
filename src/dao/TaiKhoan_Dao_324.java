@@ -36,4 +36,51 @@ public class TaiKhoan_Dao_324 {
        }
        return null;
    }
+   
+   
+   public TaiKhoanDangNhap_324 getTaiKhoanByUser(String user) {
+        Connection conn = KetNoiSQL.getConnection();
+        String sql = "select * from Taikhoan where userName = ?";
+
+        try {
+            PreparedStatement stm;
+            stm = conn.prepareStatement(sql);
+            stm.setString(1,user);
+            ResultSet rs = stm.executeQuery();
+            while (rs.next()) {
+                TaiKhoanDangNhap_324 taiKhoanDangNhap_324 = new TaiKhoanDangNhap_324();
+                taiKhoanDangNhap_324.setUsername(rs.getString("UserName"));
+                taiKhoanDangNhap_324.setPassword(rs.getString("Pass"));
+                taiKhoanDangNhap_324.setHoTen(rs.getString("hoVaTen"));
+                taiKhoanDangNhap_324.setGioiTinh(rs.getString("gioiTinh"));
+                taiKhoanDangNhap_324.setQuyen(rs.getString("Quyen"));
+                taiKhoanDangNhap_324.setSdt(rs.getString("SDT"));            
+                return taiKhoanDangNhap_324;
+            }
+
+        } catch (Exception  e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+   
+   
+   public void updateTaiKhoan(TaiKhoanDangNhap_324 taiKhoanDangNhap_324) {
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "Update Taikhoan set userName = ? , Pass = ? , hoVaTen = ? , gioiTinh =? , Quyen = ? , SDT = ?  where userName = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, taiKhoanDangNhap_324.getUsername());
+            preparedStatement.setString(2, taiKhoanDangNhap_324.getPassword());
+            preparedStatement.setString(3, taiKhoanDangNhap_324.getHoTen());
+            preparedStatement.setString(4, taiKhoanDangNhap_324.getGioiTinh() );
+            preparedStatement.setString(5, taiKhoanDangNhap_324.getQuyen());
+            preparedStatement.setString(6, taiKhoanDangNhap_324.getSdt());
+            preparedStatement.setString(7, taiKhoanDangNhap_324.getUsername() );
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -31,7 +31,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
     SinhVienTheoPhong_Dao_324 svDao = new SinhVienTheoPhong_Dao_324();
     
     Phong_Controller_324 phong = new Phong_Controller_324();
-    
     public QuanLyPhong_140(String maPhong) {
         
         service = new StudentService();
@@ -65,6 +64,11 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
 //        
         setTableData2(service.thongTinSinhVien(maPhong));
        
+    }
+    public void reload(){
+         stDao = new StudentDao();
+        defaultTableModel.setRowCount(0);
+        setTableData(stDao.getSinhVienTrongPhong_140(maPhong_ht_324.getText()));
     }
    public void setBang(String maPhong){ 
         stDao = new StudentDao();
@@ -438,7 +442,8 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
         
         ThemSinhVien_324 them = new ThemSinhVien_324(maPhong_ht_324.getText());
-         them.setVisible(true);
+        them.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_Them_ButtonActionPerformed
    private void showDuLieu(){
         try{
