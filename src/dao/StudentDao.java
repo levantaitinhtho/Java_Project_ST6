@@ -32,8 +32,7 @@ public class StudentDao {
 
                 student.setMaSv_140(rs.getString("MaSV"));
                 student.setMaKTX_140(rs.getString("MaKTX"));
-                student.setHo_140(rs.getString("Ho"));
-                student.setTen_140(rs.getString("Ten"));
+                student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getInt("GioiTinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
@@ -94,8 +93,7 @@ public class StudentDao {
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("MaSV"));
                 student.setMaKTX_140(rs.getString("MaKTX"));
-                student.setHo_140(rs.getString("Ho"));
-                student.setTen_140(rs.getString("Ten"));
+                student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getInt("Gioitinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
@@ -129,8 +127,7 @@ public class StudentDao {
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("MaSV"));
                 student.setMaKTX_140(rs.getString("MaKTX"));
-                student.setHo_140(rs.getString("Ho"));
-                student.setTen_140(rs.getString("Ten"));
+                student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getInt("Gioitinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
@@ -261,8 +258,7 @@ public class StudentDao {
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("maSV"));
                 student.setMaKTX_140(rs.getString("maKTX"));
-                student.setHo_140(rs.getString("Ho"));
-                student.setTen_140(rs.getString("Ten"));
+                student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getInt("gioiTinh"));
                 student.setNgaysinh_140(rs.getString("ngaySinh"));

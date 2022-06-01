@@ -25,7 +25,7 @@ public class SinhVienDao {
                 SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
                 sv.setMaPhong_324(rs.getString("maPhong"));
                 sv.setMsv_324(rs.getString("maSV"));
-                sv.setTen_324(rs.getString("Ten"));
+                sv.setTen_324(rs.getString("HoTen"));
                 sv.setCmnd_324(rs.getString("CMND"));
                 sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
                 sv.setQueQuan_324(rs.getString("queQuan"));
@@ -112,7 +112,7 @@ public class SinhVienDao {
                     SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
                     sv.setMaPhong_324(rs.getString("maPhong"));
                     sv.setMsv_324(rs.getString("maSV"));
-                    sv.setTen_324(rs.getString("Ten"));
+                    sv.setTen_324(rs.getString("HoTen"));
                     sv.setCmnd_324(rs.getString("CMND"));
                     sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
                     sv.setQueQuan_324(rs.getString("queQuan"));
