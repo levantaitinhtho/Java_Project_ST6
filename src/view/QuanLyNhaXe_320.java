@@ -331,7 +331,6 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
 
     private void Them_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Them_ButtonActionPerformed
 
-        System.out.println(String.valueOf(NgayGui_datechooser.getDate()));
         String MaXe = MaXe_TextField.getText();
         String MSV = MaSinhVien_TextField.getText();
         String BienSo = BienSo_TextField.getText();

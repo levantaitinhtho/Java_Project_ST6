@@ -88,7 +88,6 @@ public class DienNuocDao {
             stm.setFloat(6, dienNuoc_317.getCSmoinuoc());
 
             int rs = stm.executeUpdate();
-            System.out.println(rs);
 
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -109,7 +108,6 @@ public class DienNuocDao {
             preparedStatement.setString(7, dienNuoc_317.getMaPhong());
             preparedStatement.setDate(8, new Date(dienNuoc_317.getThang().getTime()));
             int rs = preparedStatement.executeUpdate();
-            System.out.println(rs);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -123,7 +121,6 @@ public class DienNuocDao {
             preparedStatement.setString(1,maphong);
             preparedStatement.setDate(2,thang);
             int rs = preparedStatement.executeUpdate();
-            System.out.println(rs);
         } catch (Exception e) {
            e.printStackTrace();
         }

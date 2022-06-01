@@ -48,7 +48,6 @@ public class StudentDao {
                 
                
                 students.add(student);
-                System.out.println(students);
             }
         } catch (SQLException ex) {
             Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -177,35 +176,7 @@ public class StudentDao {
         }
         return st;
     } 
-//    public void deletePhong(String maPhong) throws SQLException{
-//        Connection connection = KetNoiSQL.getConnection();
-//        String sql = "delete from Phong where tenPhong= ?";
-//        try{
-//        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//        preparedStatement.setString(1, maPhong);
-//        int rs = preparedStatement.executeUpdate();
-//        System.out.println(rs);
-//        }
-//        catch(Exception e){
-//            e.printStackTrace();
-//        }
-//    }
-    
-    
-//    public void DeleteTTPhong(String id) {
-//        Connection conn = KetNoiSQL.getConnection();
-//        
-//        try { 
-//            PreparedStatement stm = conn.prepareStatement(" Bạn có muốn xóa không ?");
-//            stm.setString(1, id);
-//            
-//            int resultSet = stm.executeUpdate();
-//                System.out.println("Xóa có được không?" + resultSet);
-//        } catch (SQLException ex) {
-//            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
-    
+
      public List<SinhVien_tatCaThongTin_140> getSinhVien_tatCaThongTin_140(){
         List<SinhVien_tatCaThongTin_140> sv = new ArrayList<SinhVien_tatCaThongTin_140>();
         Connection conn = KetNoiSQL.getConnection();
@@ -302,29 +273,6 @@ public class StudentDao {
         }
         return sv;
     }
-
-/*public static Detail getInfo(int id) {
-        Detail de = new Detail();
-        Connection conn = KetNoiSQL.getConnection();
-        try {
-            //String sql = "select title, price, des, user.name, phone, adr from user join product on user.id = product.id where product.idProduct = 1";
-            PreparedStatement preparedStatement = Conn.prepareStatement("select maPhong, tenPhong, loaiPhong, soSinhVienHienTai, soSinhVienToiDa where Phong= " + id);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                de.setMaPhong_140(resultSet.getString("maPhong"));
-                de.setTenPhong_140(resultSet.getString("tenPhong"));
-                de.setSoSinhVienHienTai_140(resultSet.getString("soSinhVienHienTai"));
-                de.setSoSinhvienToiDa_140(resultSet.getString("soSinhVienToiDa"));
-                //de.setPhone(resultSet.getString("phone"));
-                //de.setAddr(resultSet.getString("adr"));
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(ThongTinPhong_140.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return de;
-    }
-    */
       
     public List<SinhVien_tatCaThongTin_140> GetResultSearch(String searchType, String valueSearch) {
         List<SinhVien_tatCaThongTin_140> student = new ArrayList<>();
@@ -442,20 +390,7 @@ public class StudentDao {
             Logger.getLogger(StudentService.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-//    public void deleteTTPhong(String id) throws SQLException {
-//         java.sql.Connection con =KetNoiSQL.getConnection();
-//
-//        String sql = "delete from Phong where maPhong= ?";
-//
-//        try {
-//            PreparedStatement preparedStatement = con.prepareStatement(sql);
-//            preparedStatement.setString(1, id);
-//            int rs = preparedStatement.executeUpdate();
-//            System.out.println(rs);
-//        } catch (SQLException e) {
-//        }
-//    }
+
     
     
 
