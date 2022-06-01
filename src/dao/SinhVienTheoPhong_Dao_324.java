@@ -26,7 +26,7 @@ public class SinhVienTheoPhong_Dao_324 {
             while(rs.next()){
                 SinhVien_tatCaThongTin_140 svs = new SinhVien_tatCaThongTin_140();
                 svs.setMaSv_140(rs.getString("maSV"));
-                svs.setTen_140(rs.getString("Ten"));
+                svs.setTen_140(rs.getString("HoTen"));
                 svs.setCMND_140(rs.getString("CMND"));
                 svs.setNgaysinh_140(rs.getString("ngaySinh"));
                 svs.setGioitinh_140(rs.getInt("gioiTinh"));
