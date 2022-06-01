@@ -624,6 +624,11 @@ public class TrangChu extends javax.swing.JFrame {
 
         jPanel1_QuanLyNhaXe_317.setBackground(new java.awt.Color(121, 130, 222));
         jPanel1_QuanLyNhaXe_317.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1_QuanLyNhaXe_317.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1_QuanLyNhaXe_317MouseClicked(evt);
+            }
+        });
 
         jLabel1_qlnx_317.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jLabel1_qlnx_317.setForeground(new java.awt.Color(255, 255, 255));
@@ -1857,10 +1862,10 @@ public class TrangChu extends javax.swing.JFrame {
             jpn_QLThongKe_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(tk1_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(TK_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jpn_QLThongKe_324Layout.createSequentialGroup()
-                .addGap(324, 324, 324)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_QLThongKe_324Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(288, 288, 288))
         );
         jpn_QLThongKe_324Layout.setVerticalGroup(
             jpn_QLThongKe_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1869,9 +1874,9 @@ public class TrangChu extends javax.swing.JFrame {
                 .addComponent(tk1_317, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(TK_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(35, 35, 35)
-                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton7)
+                .addGap(35, 35, 35))
         );
 
         jpn_ThietKe_317.add(jpn_QLThongKe_324, "card8");
@@ -2527,6 +2532,11 @@ public class TrangChu extends javax.swing.JFrame {
     private void jPanel20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel20MouseEntered
+
+    private void jPanel1_QuanLyNhaXe_317MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1_QuanLyNhaXe_317MouseClicked
+        QuanLyNhaXe_320 nhaXe = new QuanLyNhaXe_320();
+        nhaXe.setVisible(true);
+    }//GEN-LAST:event_jPanel1_QuanLyNhaXe_317MouseClicked
 
   
     public static void main(String args[]) {
