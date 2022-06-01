@@ -19,7 +19,7 @@ public class KetNoiSQL {
         String url = "net.sourceforge.jtds.jdbc.Driver";
         try {
             Class.forName(url);
-            String dbUrl = "jdbc:jtds:sqlserver://localhost/ManagementKTX_TES;user=sa;password=sa123";
+            String dbUrl = "jdbc:jtds:sqlserver://localhost/Management;user=sa;password=sa123";
             try {
                 con = DriverManager.getConnection(dbUrl);
             } catch (SQLException ex) {
@@ -35,7 +35,7 @@ public class KetNoiSQL {
         String url = "net.sourceforge.jtds.jdbc.Driver";
         try {
             Class.forName(url);
-            String dbUrl = "jdbc:jtds:sqlserver://localhost/ManagementKTX_TES;user=sa;password=sa123";
+            String dbUrl = "jdbc:jtds:sqlserver://localhost/Management;user=sa;password=sa123";
             try {
                 conn = DriverManager.getConnection(dbUrl);
             } catch (SQLException ex) {
