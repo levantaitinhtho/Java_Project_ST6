@@ -25,7 +25,7 @@ public class SinhVienDao {
                 SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
                 sv.setMaPhong_324(rs.getString("maPhong"));
                 sv.setMsv_324(rs.getString("maSV"));
-                sv.setTen_324(rs.getString("Ten"));
+                sv.setTen_324(rs.getString("HoTen"));
                 sv.setCmnd_324(rs.getString("CMND"));
                 sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
                 sv.setQueQuan_324(rs.getString("queQuan"));
@@ -42,7 +42,7 @@ public class SinhVienDao {
     public List<SinhVien_trangChu_324> getThongTinTheoQueQuan_324(){
         List<SinhVien_trangChu_324> sinhVien = new ArrayList<SinhVien_trangChu_324>();
             Connection connection = KetNoiSQL.getConnection();
-            String sql = "select queQuan from SinhVien";
+            String sql = "select DISTINCT queQuan from SinhVien";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 ResultSet rs = preparedStatement.executeQuery();
@@ -112,7 +112,7 @@ public class SinhVienDao {
                     SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
                     sv.setMaPhong_324(rs.getString("maPhong"));
                     sv.setMsv_324(rs.getString("maSV"));
-                    sv.setTen_324(rs.getString("Ten"));
+                    sv.setTen_324(rs.getString("HoTen"));
                     sv.setCmnd_324(rs.getString("CMND"));
                     sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
                     sv.setQueQuan_324(rs.getString("queQuan"));
@@ -124,12 +124,7 @@ public class SinhVienDao {
             }
         return sinhVien;
 }
-    public static void main(String[] args) {
-        SinhVienDao svd = new SinhVienDao();
-        String maSV = "maSV";
-        String ten = "tài";
-        svd.getTen(maSV, ten);
-    }
+
 }
 
 
