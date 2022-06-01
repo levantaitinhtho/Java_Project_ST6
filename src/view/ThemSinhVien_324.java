@@ -353,6 +353,8 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
                 .addGap(52, 52, 52))
         );
 
+        jButton1.setBackground(new java.awt.Color(0, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Thêm");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
