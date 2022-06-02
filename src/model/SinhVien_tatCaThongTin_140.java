@@ -6,7 +6,7 @@ public class SinhVien_tatCaThongTin_140 {
     private String MaKTX_140;
     private String Ten_140;
     private String CMND_140;
-    private int Gioitinh_140;
+    private String Gioitinh_140;
     private String Ngaysinh_140;
     private String SDT_140;
     private String Quequan_140;
@@ -58,11 +58,11 @@ public class SinhVien_tatCaThongTin_140 {
         this.CMND_140 = CMND_140;
     }
 
-    public int getGioitinh_140() {
+    public String getGioitinh_140() {
         return Gioitinh_140;
     }
 
-    public void setGioitinh_140(int Gioitinh_140) {
+    public void setGioitinh_140(String Gioitinh_140) {
         this.Gioitinh_140 = Gioitinh_140;
     }
 

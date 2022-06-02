@@ -54,30 +54,7 @@ public class StudentDao {
         return students;
 
     }
-     public List<SinhVien_tatCaThongTin_140> getAlLStudents2() {
-        List<SinhVien_tatCaThongTin_140> students = new ArrayList<SinhVien_tatCaThongTin_140>();
-        KetNoiSQL connection = new KetNoiSQL();
-        try {
-            ResultSet rs = connection.GetResultSet("[Phong]");
-            while (rs.next()) {
-                SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
-                
-                student.setTenPhong_140(rs.getString("tenPhong"));
-                student.setMaPhong_140(rs.getString("maPhong"));
-                student.setLoaiPhong_140(rs.getString("loaiPhong"));
-                student.setSoSinhVienHienTai_140(rs.getString("soNguoiHienTai"));
-                student.setSoSinhVienToiDa_140(rs.getString("soNguoiToiDa"));
-                student.setTinhTrangPhong_140(rs.getString("tinhTrangPhong"));
-                
-                students.add(student);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return students;
-
-    }
-
+   
     public SinhVien_tatCaThongTin_140 getStudentByID(String id) {
         Connection conn = KetNoiSQL.getConnection();
         String sql = "Select * from SinhVien where MaSV = ?";
@@ -331,48 +308,7 @@ public class StudentDao {
         return null;
     }
     
-    public static ThongTinPhong_140 getInfo(int id) {
-        ThongTinPhong_140 de = new ThongTinPhong_140();
-        Connection conn = KetNoiSQL.getConnection();
-        try {
-            PreparedStatement preparedStatement = conn.prepareStatement("select maPhong, tenPhong, soNguoiHienTai, soNguoiToiDa from Phong where maPhong = ?");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                de.setTenPhong(resultSet.getString("tenPhong"));
-                de.setMaPhong(resultSet.getString("maPhong"));
-                de.setSoSVHienTai(resultSet.getString("soNguoiHienTai"));
-                de.setSoSVToiDa(resultSet.getString("soNguoiToiDa"));
-
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return de;
-    }
     
-    public void addTTPhong(SinhVien_tatCaThongTin_140 sv40) throws SQLException {
- 
-        Connection conn = KetNoiSQL.getConnection();
-        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
-        String sql = "INSERT INTO Phong (tenPhong, maPhong, loaiPhong, soNguoiHienTai, soNguoiToiDa) VALUES(?,?,?,?,?,?)";
-        try {
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, student.getTenPhong_140());
-            pstmt.setString(2, student.getMaPhong_140());
-            pstmt.setString(3, student.getLoaiPhong_140());
-            pstmt.setString(4, student.getSoSinhVienHienTai_140());
-            pstmt.setString(5, student.getSoSinhVienToiDa_140());
-            pstmt.setString(6, student.getTinhTrangPhong_140());
-              
-            int rs = pstmt.executeUpdate();
-            System.out.println(rs);
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
 }
 
         

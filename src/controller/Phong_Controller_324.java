@@ -15,10 +15,22 @@ public class Phong_Controller_324 {
     
     SinhVienTheoPhong_Dao_324 svDao = new SinhVienTheoPhong_Dao_324();
     private JLabel labelA1,labelA2,labelA3,labelA4,labelB1,labelB2,labelB3,labelB4,labelC1,labelC2,labelC3,labelC4;
+    String maPhongA1 = "MPA1";
+    String maPhongA2 = "MPA2";
+    String maPhongA3 = "MPA3";
+    String maPhongA4 = "MPA4";
+    String maPhongB1 = "MPB1";
+    String maPhongB2 = "MPB2";
+    String maPhongB3 = "MPB3";
+    String maPhongB4 = "MPB4";
+    String maPhongC1 = "MPC1";
+    String maPhongC2 = "MPC2";
+    String maPhongC3 = "MPC3";
+    String maPhongC4 = "MPC4";
     
     public Phong_Controller_324() {
     }
-
+        
     public Phong_Controller_324(JLabel labelA1, JLabel labelA2, JLabel labelA3,  JLabel labelA4, JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4) {
         this.labelA1 = labelA1;
         this.labelA2 = labelA2;
@@ -143,18 +155,7 @@ public class Phong_Controller_324 {
     }
     
     public void hienThiSoSinhVien(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
-        String maPhongA1 = "MPA1";
-        String maPhongA2 = "MPA2";
-        String maPhongA3 = "MPA3";
-        String maPhongA4 = "MPA4";
-        String maPhongB1 = "MPB1";
-        String maPhongB2 = "MPB2";
-        String maPhongB3 = "MPB3";
-        String maPhongB4 = "MPB4";
-        String maPhongC1 = "MPC1";
-        String maPhongC2 = "MPC2";
-        String maPhongC3 = "MPC3";
-        String maPhongC4 = "MPC4";
+        
      
         labelA1.setText("So cho con trong: " + choTrong(maPhongA1));
         labelA2.setText("So cho con trong: " + choTrong(maPhongA2));
@@ -168,5 +169,20 @@ public class Phong_Controller_324 {
         labelC2.setText("So cho con trong: " + choTrong(maPhongC2));
         labelC3.setText("So cho con trong: " + choTrong(maPhongC3));
         labelC4.setText("So cho con trong: " + choTrong(maPhongC4));
+    }
+    public void soSinhVienToiDa(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
+        
+        labelA1.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongA1).getSoSinhVienToiDa_140()));
+        labelA2.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongA2).getSoSinhVienToiDa_140()));
+        labelA3.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongA3).getSoSinhVienToiDa_140()));
+        labelA4.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongA4).getSoSinhVienToiDa_140()));
+        labelB1.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongB1).getSoSinhVienToiDa_140()));
+        labelB2.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongB2).getSoSinhVienToiDa_140()));
+        labelB3.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongB3).getSoSinhVienToiDa_140()));
+        labelB4.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongB4).getSoSinhVienToiDa_140()));
+        labelC1.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongC1).getSoSinhVienToiDa_140()));
+        labelC2.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongC2).getSoSinhVienToiDa_140()));
+        labelC3.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongC3).getSoSinhVienToiDa_140()));
+        labelC4.setText("Tổng số chỗ: " + Integer.parseInt(svDao.CountTotal(maPhongC4).getSoSinhVienToiDa_140()));
     }
 }

@@ -6,13 +6,13 @@ public class SinhVien_trangChu_324 {
     private String msv_324;
     private String ten_324;
     private String cmnd_324;
-    private boolean gioTinh_324;
+    private String gioTinh_324;
     private String queQuan_324;
 
     public SinhVien_trangChu_324() {
     }
 
-    public SinhVien_trangChu_324(String maPhong, String msv, String ten, String cmnd, boolean gioTinh, String queQuan) {
+    public SinhVien_trangChu_324(String maPhong, String msv, String ten, String cmnd, String gioTinh, String queQuan) {
         this.maPhong_324 = maPhong;
         this.msv_324 = msv;
         this.ten_324 = ten;
@@ -53,11 +53,11 @@ public class SinhVien_trangChu_324 {
         this.cmnd_324 = cmnd;
     }
 
-    public boolean isGioTinh_324() {
+    public String isGioTinh_324() {
         return gioTinh_324;
     }
 
-    public void setGioTinh_324(boolean gioTinh) {
+    public void setGioTinh_324(String gioTinh) {
         this.gioTinh_324 = gioTinh;
     }
 

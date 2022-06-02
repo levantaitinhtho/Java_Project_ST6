@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package dao;
 
 import connect.KetNoiSQL;
@@ -16,10 +13,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.DienNuoc_317;
 
-/**
- *
- * @author Admin
- */
 public class DienNuocDao {
 
     public List<DienNuoc_317> getTatCaThongTinDienNuoc() {
