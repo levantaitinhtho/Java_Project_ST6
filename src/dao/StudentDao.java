@@ -239,7 +239,7 @@ public class StudentDao {
                 svs.setTen_140(rs.getString("HoTen"));
                 svs.setCMND_140(rs.getString("CMND"));
                 svs.setNgaysinh_140(rs.getString("ngaySinh"));
-                svs.setGioitinh_140(rs.getString("gioiTinh"));
+                svs.setGioitinh_140(kiemTraGioiTinh(rs.getString("gioiTinh")));
                 svs.setSDT_140(rs.getString("SDT"));
                 svs.setQuequan_140(rs.getString("queQuan"));
                 sv.add(svs);
@@ -307,7 +307,12 @@ public class StudentDao {
         }
         return null;
     }
-    
+    public String kiemTraGioiTinh(String gioiTinh){
+        if(gioiTinh.equals("1"))
+            return "Nam";
+        else
+            return "Nữ";
+    }
     
 }
 
