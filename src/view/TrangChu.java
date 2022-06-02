@@ -54,9 +54,7 @@ public class TrangChu extends javax.swing.JFrame {
              return false;
             }
         };
-        
-        
-        
+                
     public TrangChu() {
         initComponents();
         Add_listPanel();

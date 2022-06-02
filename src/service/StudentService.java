@@ -31,9 +31,6 @@ public class StudentService {
         return studentDao.getAllStudenByRoom(maPhong);
     }
     
-   public void DeleteTTPhong(String id) throws SQLException {
-        studentDao.DeleteTTPhong(id);
-    }
     public void ThemSinhVIen(SinhVien_tatCaThongTin_140 sv) throws SQLException {
         svDao.themSinhVien(sv);
     }

@@ -7,7 +7,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -34,7 +33,7 @@ public class StudentDao {
                 student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
-                student.setGioitinh_140(rs.getInt("GioiTinh"));
+                student.setGioitinh_140(rs.getString("GioiTinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
@@ -94,7 +93,7 @@ public class StudentDao {
                 student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
-                student.setGioitinh_140(rs.getInt("Gioitinh"));
+                student.setGioitinh_140(rs.getString("Gioitinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
@@ -128,7 +127,7 @@ public class StudentDao {
                 student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
-                student.setGioitinh_140(rs.getInt("Gioitinh"));
+                student.setGioitinh_140(rs.getString("Gioitinh"));
                 student.setNgaysinh_140(rs.getString("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
@@ -231,7 +230,7 @@ public class StudentDao {
                 student.setMaKTX_140(rs.getString("maKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
-                student.setGioitinh_140(rs.getInt("gioiTinh"));
+                student.setGioitinh_140(rs.getString("gioiTinh"));
                 student.setNgaysinh_140(rs.getString("ngaySinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("queQuan"));
@@ -263,7 +262,7 @@ public class StudentDao {
                 svs.setTen_140(rs.getString("HoTen"));
                 svs.setCMND_140(rs.getString("CMND"));
                 svs.setNgaysinh_140(rs.getString("ngaySinh"));
-                svs.setGioitinh_140(rs.getInt("gioiTinh"));
+                svs.setGioitinh_140(rs.getString("gioiTinh"));
                 svs.setSDT_140(rs.getString("SDT"));
                 svs.setQuequan_140(rs.getString("queQuan"));
                 sv.add(svs);
@@ -343,8 +342,7 @@ public class StudentDao {
                 de.setMaPhong(resultSet.getString("maPhong"));
                 de.setSoSVHienTai(resultSet.getString("soNguoiHienTai"));
                 de.setSoSVToiDa(resultSet.getString("soNguoiToiDa"));
-                //de.setTinhTrangPhong(resultSet.getString("tinhTrangPhong"));
-                
+
             }
 
         } catch (SQLException ex) {
@@ -354,10 +352,9 @@ public class StudentDao {
     }
     
     public void addTTPhong(SinhVien_tatCaThongTin_140 sv40) throws SQLException {
-        
+ 
         Connection conn = KetNoiSQL.getConnection();
         SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
-        
         String sql = "INSERT INTO Phong (tenPhong, maPhong, loaiPhong, soNguoiHienTai, soNguoiToiDa) VALUES(?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -368,68 +365,15 @@ public class StudentDao {
             pstmt.setString(5, student.getSoSinhVienToiDa_140());
             pstmt.setString(6, student.getTinhTrangPhong_140());
               
-
             int rs = pstmt.executeUpdate();
             System.out.println(rs);
             
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    public void DeleteTTPhong(String id){
-        Connection conn = KetNoiSQL.ConnectSQL();
-        System.out.println(id);
 
-       try {
-            PreparedStatement ps = conn.prepareStatement("delete from [dbo.Phong] where maPhong =?");
-            ps.setString(1, id);
-
-            int result = ps.executeUpdate();
-        } catch (SQLException ex) {
-            Logger.getLogger(StudentService.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    
-    
-
-    
-    
-    
-
-        
-  
 }
 
         
-    
-    
-//    public User getUserByUsername(String userName) {
-//        Connection conn = KetNoiSQL.getConnection();
-//        String sql = "SELECT *  FROM dbo.[User] WHERE username=?";
-//
-//        User user = new User();
-//        try {
-//            PreparedStatement stm;
-//            stm = conn.prepareStatement(sql);
-//            stm.setString(1, userName);
-//            ResultSet rs = stm.executeQuery();
-//
-//            if (rs.next()) {
-//                user.setId(rs.getInt("id"));
-//                user.setName(rs.getString("name"));
-//                user.setPhone(rs.getString("phone"));
-//                user.setUsername(rs.getString("username"));
-//                user.setPassword(rs.getString("password"));
-//                user.setRole(rs.getString("role"));
-//                user.setFavourites(rs.getString("favourites"));
-//                user.setAbout(rs.getString("about"));
-//            }
-//
-//        } catch (SQLException ex) {
-//            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        return user;
-//
-//    }
+  

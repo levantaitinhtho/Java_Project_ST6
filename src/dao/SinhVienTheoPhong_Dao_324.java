@@ -18,6 +18,9 @@ import model.SinhVien_trangChu_324;
 import model.ThongTinPhong_140;
 
 public class SinhVienTheoPhong_Dao_324 {
+    SinhVien_tatCaThongTin_140 sv = new SinhVien_tatCaThongTin_140();
+    
+    //Lay thong tin cua phong theo ma Phong nhap vao
     public ThongTinPhong_140 getRoomByMaPhong(String maPhong){
         Connection connection = KetNoiSQL.getConnection();
         String sql = "select * from Phong where maPhong = ?";
@@ -30,9 +33,9 @@ public class SinhVienTheoPhong_Dao_324 {
                     sv.setTenPhong(rs.getString("tenPhong"));
                     sv.setMaPhong(rs.getString("maPhong"));
                     sv.setLoaiPhong(rs.getString("loaiPhong"));
-                    sv.setSoSVHienTai(rs.getString("soNguoiHienTai"));
+                    sv.setSoSVHienTai(String.valueOf(CountStudent(maPhong)));
                     sv.setSoSVToiDa(rs.getString("soNguoiToiDa"));
-                    sv.setTinhTrangPhong(rs.getString("tinhTrangPhong"));
+                    sv.setTinhTrangPhong(demchoTrong(maPhong));
                     return sv;
                  }
             }
@@ -41,6 +44,8 @@ public class SinhVienTheoPhong_Dao_324 {
             }
         return null;
     }
+    
+    //Lay ra danh sach sinh vien theo ma phong duoc nhap vao
     public List<SinhVien_tatCaThongTin_140> getAllStudenByRoom(String maPhong){
         List<SinhVien_tatCaThongTin_140> sv = new ArrayList<>();
         Connection connection = KetNoiSQL.getConnection();
@@ -65,7 +70,9 @@ public class SinhVienTheoPhong_Dao_324 {
         }
         return sv;
     }
-    public int demSV(String maPhong){
+    
+    //Dem so luong sinh vien trong phong
+    public int CountStudent(String maPhong){
         Connection connection = KetNoiSQL.getConnection();
         int a = 0;
         String sql = "select * from SinhVien where maPhong = ?";
@@ -80,6 +87,33 @@ public class SinhVienTheoPhong_Dao_324 {
             ex.printStackTrace();
         }
         return a;
+    }
+    
+    //Dem so luong sinh vien trong phong
+    public SinhVien_tatCaThongTin_140 CountTotal(String maPhong){
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "select soNguoiToiDa from Phong where maPhong = ?";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, maPhong);
+            ResultSet rs = preparedStatement.executeQuery();
+            while(rs.next()){
+                SinhVien_tatCaThongTin_140 sv = new SinhVien_tatCaThongTin_140();
+                sv.setSoSinhVienToiDa_140(rs.getString("soNguoiToiDa"));
+                return sv;
+            }
+            }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String demchoTrong(String maPhong){
+        int a = Integer.parseInt(CountTotal(maPhong).getSoSinhVienToiDa_140()) - CountStudent(maPhong);
+        if(a<=0)
+            return "Hết Chỗ";
+        else
+            return "Còn Chỗ";
     }
 
 }

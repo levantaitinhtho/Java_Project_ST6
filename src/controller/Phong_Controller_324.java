@@ -8,11 +8,14 @@ package controller;
 import dao.SinhVienTheoPhong_Dao_324;
 import java.util.List;
 import javax.swing.JLabel;
+import model.SinhVien_tatCaThongTin_140;
 
 
 public class Phong_Controller_324 {
-    private JLabel labelA1,labelA2,labelA3,labelA4,labelB1,labelB2,labelB3,labelB4,labelC1,labelC2,labelC3,labelC4;
+    
     SinhVienTheoPhong_Dao_324 svDao = new SinhVienTheoPhong_Dao_324();
+    private JLabel labelA1,labelA2,labelA3,labelA4,labelB1,labelB2,labelB3,labelB4,labelC1,labelC2,labelC3,labelC4;
+    
     public Phong_Controller_324() {
     }
 
@@ -127,8 +130,18 @@ public class Phong_Controller_324 {
         this.labelC4 = labelC4;
     }
     public int setDemSoChoTrong(String maPhong){
-        return svDao.demSV(maPhong);
+        return svDao.CountStudent(maPhong);
     }
+    
+    public SinhVien_tatCaThongTin_140 setDoSoChoToiDa(String maPhong){
+        return svDao.CountTotal(maPhong);
+    }
+    
+    public int choTrong(String maPhong){
+        int a = Integer.parseInt(svDao.CountTotal(maPhong).getSoSinhVienToiDa_140()) - setDemSoChoTrong(maPhong);
+        return a;
+    }
+    
     public void hienThiSoSinhVien(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
         String maPhongA1 = "MPA1";
         String maPhongA2 = "MPA2";
@@ -143,18 +156,17 @@ public class Phong_Controller_324 {
         String maPhongC3 = "MPC3";
         String maPhongC4 = "MPC4";
      
-        
-        labelA1.setText("So cho con trong: " +( 8 - setDemSoChoTrong(maPhongA1)));
-        labelA2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA2)));
-        labelA3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA3)));
-        labelA4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongA4)));
-        labelB1.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB1)));
-        labelB2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB2)));
-        labelB3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB3)));
-        labelB4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongB4)));
-        labelC1.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC1)));
-        labelC2.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC2)));
-        labelC3.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC3)));
-        labelC4.setText("So cho con trong: " + (8 - setDemSoChoTrong(maPhongC4)));
+        labelA1.setText("So cho con trong: " + choTrong(maPhongA1));
+        labelA2.setText("So cho con trong: " + choTrong(maPhongA2));
+        labelA3.setText("So cho con trong: " + choTrong(maPhongA3));
+        labelA4.setText("So cho con trong: " + choTrong(maPhongA4));
+        labelB1.setText("So cho con trong: " + choTrong(maPhongB1));
+        labelB2.setText("So cho con trong: " + choTrong(maPhongB2));
+        labelB3.setText("So cho con trong: " + choTrong(maPhongB3));
+        labelB4.setText("So cho con trong: " + choTrong(maPhongB4));
+        labelC1.setText("So cho con trong: " + choTrong(maPhongC1));
+        labelC2.setText("So cho con trong: " + choTrong(maPhongC2));
+        labelC3.setText("So cho con trong: " + choTrong(maPhongC3));
+        labelC4.setText("So cho con trong: " + choTrong(maPhongC4));
     }
 }
