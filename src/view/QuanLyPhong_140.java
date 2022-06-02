@@ -39,7 +39,10 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         svHt_ht_324.setText(h40.getSoSVHienTai());
         svTD_ht_324.setText(h40.getSoSVToiDa());
         tinhTrang_ht_324.setText(h40.getTinhTrangPhong());
-        
+        if(tinhTrang_ht_324.getText().equals("Hết Chỗ"))
+            Them_Button.setVisible(false);
+        else
+            Them_Button.setVisible(true);
         defaultTableModel = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -377,6 +380,10 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
                 h40 = svDao.getRoomByMaPhong(maPhong_ht_324.getText());
                 tinhTrang_ht_324.setText(h40.getTinhTrangPhong());
                 svHt_ht_324.setText(h40.getSoSVHienTai());
+                if(tinhTrang_ht_324.getText().equals("Hết Chỗ"))
+                    Them_Button.setVisible(false);
+                else
+                    Them_Button.setVisible(true);
                 KetNoiSQL.closeConnection(connection);
                 JOptionPane.showMessageDialog(null,"Xóa thành công");
 
