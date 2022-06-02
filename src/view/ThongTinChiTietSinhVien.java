@@ -28,10 +28,10 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         MaKTX_320TextField.setText(student.getMaKTX_140());
         HoTen_320TextField.setText(student.getTen_140());
         CMND_320TextField.setText(student.getCMND_140());
-        if (student.getGioitinh_140()== 1) {
+        if (student.getGioitinh_140()== "1") {
             GioiTinh_320TextField.setText("Nam");
         }
-        if (student.getGioitinh_140() == 0) {
+        if (student.getGioitinh_140() == "0") {
             GioiTinh_320TextField.setText("Nữ");
         }
         NgaySinh_320TextField.setText(student.getNgaysinh_140());

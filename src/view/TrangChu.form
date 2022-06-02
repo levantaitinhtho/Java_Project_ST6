@@ -439,7 +439,7 @@
                                   <Component id="jLabel30" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="sdt_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="212" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jButton14" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                                   <Component id="jButton15" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>

@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import dao.TaiKhoan_Dao_324;
-
 
 public class CheckAccount_Controller_324 {
     private String userName;
@@ -21,6 +16,8 @@ public class CheckAccount_Controller_324 {
         this.userName = userName;
         this.passWord = passWord;
     }
+    
+    
     public int checkoutAccountUser(String taiKhoan, String matKhau){
         this.userName = taiKhoan;
         this.passWord = matKhau;
