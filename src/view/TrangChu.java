@@ -30,8 +30,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
-import service.DienNuocService;
-import service.TaiKhoanService_324;
+import service.*;
 
 public class TrangChu extends javax.swing.JFrame {
     List<JPanel> listPanel_317 = new ArrayList<>();
@@ -41,8 +40,10 @@ public class TrangChu extends javax.swing.JFrame {
     TaiKhoanService_324 taiKhoanService_324 = new TaiKhoanService_324();
     Phong_Controller_324 phong324 = new Phong_Controller_324();
     Controller_DieuKhien_trangChu_324 ctr ;
+    
     String[] title = {"Ma phong","Ma sinh vien" , "Ten" , "CMND", "Gioi tinh", "Que Quan"}; 
     String[] title_317 = {"Mã Phòng","Ngày Thanh Toán","CScudien","CSmoidien","CScunuoc","CSmoinuoc","Tiền Điện","Tiền Nước" ,"Tổng Tiền"};
+    
     DefaultTableModel defaultTableModel = new DefaultTableModel(title,0){
         public boolean isCellEditable(int row, int column){
              return false;
@@ -62,14 +63,14 @@ public class TrangChu extends javax.swing.JFrame {
         Add_listPanelCon();
         Choose_Panel(0);
         Choose_Lable(0);
-       jpn_QLSinhVien_324.setVisible(false);
+        jpn_QLSinhVien_324.setVisible(false);
         setLocationRelativeTo(null);
         jpn_quanLyTiemKiem.setVisible(false);
         ctr = new Controller_DieuKhien_trangChu_324();
         ctr.SetTable(tbSV,defaultTableModel);
         ctr.SetTable_317(tbDN, defaultTableModel1);
         phong324.hienThiSoSinhVien(soChoTrongA1_JLable_324,soChoTrongA2_JLable_324,soChoTrongA3_JLable_324,soChoTrongA4_JLable_324,soChoTrongB1_JLable_324,soChoTrongB2_JLable_324,soChoTrongB3_JLable_324,soChoTrongB4_JLable_324,soChoTrongC1_JLable_324,soChoTrongC2_JLable_324,soChoTrongC3_JLable_324,soChoTrongC4_JLable_324);
-        
+        phong324.soSinhVienToiDa(tongChoA1, tongChoA2, tongChoA3, tongChoA4, tongChoB1, tongChoB2, tongChoB3, tongChoB4, tongChoC1, tongChoC2, tongChoC3, tongChoC4);
          
     }
 
@@ -90,8 +91,10 @@ public class TrangChu extends javax.swing.JFrame {
         listPanelCon.add(jpn_QLPhongKTX_324);
         listPanelCon.add(jpn_QLThongKe_324);
         listPanelCon.add(jpn_QLDienNuoc_324);
-        listPanelCon.add(jpn_QLNhanXe_324);
-                
+        listPanelCon.add(jpn_QLNhanXe_324);              
+    }
+    
+    public void Add_listPanelChoose(){
     }
      public void Choose_Panel(int index_324){
          
@@ -222,53 +225,53 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_Tang1 = new javax.swing.JPanel();
         jpn_Phong1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        tongChoA1 = new javax.swing.JLabel();
         soChoTrongA1_JLable_324 = new javax.swing.JLabel();
         jpn_Phong2 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        tongChoA2 = new javax.swing.JLabel();
         soChoTrongA2_JLable_324 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
+        tongChoA4 = new javax.swing.JLabel();
         soChoTrongA4_JLable_324 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        tongChoA3 = new javax.swing.JLabel();
         soChoTrongA3_JLable_324 = new javax.swing.JLabel();
         jpn_Tang2 = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
+        tongChoB4 = new javax.swing.JLabel();
         soChoTrongB4_JLable_324 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
+        tongChoB2 = new javax.swing.JLabel();
         soChoTrongB2_JLable_324 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
+        tongChoB1 = new javax.swing.JLabel();
         soChoTrongB1_JLable_324 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        tongChoB3 = new javax.swing.JLabel();
         soChoTrongB3_JLable_324 = new javax.swing.JLabel();
         jpn_Tang3 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
+        tongChoC1 = new javax.swing.JLabel();
         soChoTrongC1_JLable_324 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
+        tongChoC3 = new javax.swing.JLabel();
         soChoTrongC3_JLable_324 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
+        tongChoC4 = new javax.swing.JLabel();
         soChoTrongC4_JLable_324 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
+        tongChoC2 = new javax.swing.JLabel();
         soChoTrongC2_JLable_324 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
@@ -580,7 +583,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sdt_317, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -716,8 +719,8 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jPanel3_QuanLyPhongKTX_317Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(jLabel4_icon_qlpktx_317)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2_qlpktx_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(jLabel2_qlpktx_317, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel4_ThongKe_317.setBackground(new java.awt.Color(121, 130, 222));
@@ -1279,6 +1282,11 @@ public class TrangChu extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton8.setText("Quay lại");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton9.setText("Xuất file ");
@@ -1352,9 +1360,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Phong A101");
 
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("Tổng số chỗ: 8");
+        tongChoA1.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoA1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoA1.setText("Tổng số chỗ: 8");
 
         soChoTrongA1_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongA1_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1365,7 +1373,7 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_Phong1Layout.setHorizontalGroup(
             jpn_Phong1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoA1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongA1_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpn_Phong1Layout.setVerticalGroup(
@@ -1374,7 +1382,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel22)
+                .addComponent(tongChoA1)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongA1_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1392,9 +1400,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("Phong A102");
 
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("Tổng số chỗ: 8");
+        tongChoA2.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoA2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoA2.setText("Tổng số chỗ: 8");
 
         soChoTrongA2_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongA2_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1405,7 +1413,7 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_Phong2Layout.setHorizontalGroup(
             jpn_Phong2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoA2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongA2_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpn_Phong2Layout.setVerticalGroup(
@@ -1414,7 +1422,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel28)
+                .addComponent(tongChoA2)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongA2_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1432,9 +1440,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel33.setText("Phong A104");
 
-        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("Tổng số chỗ: 8");
+        tongChoA4.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoA4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoA4.setText("Tổng số chỗ: 8");
 
         soChoTrongA4_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongA4_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1445,7 +1453,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoA4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongA4_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel18Layout.setVerticalGroup(
@@ -1454,7 +1462,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel34)
+                .addComponent(tongChoA4)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongA4_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1475,9 +1483,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setText("Phong A103");
 
-        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("Tổng số chỗ: 8");
+        tongChoA3.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoA3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoA3.setText("Tổng số chỗ: 8");
 
         soChoTrongA3_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongA3_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1488,7 +1496,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoA3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongA3_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel20Layout.setVerticalGroup(
@@ -1497,7 +1505,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel40)
+                .addComponent(tongChoA3)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongA3_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1545,9 +1553,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("Phong B104");
 
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("Tổng số chỗ: 8");
+        tongChoB4.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoB4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoB4.setText("Tổng số chỗ: 8");
 
         soChoTrongB4_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongB4_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1558,7 +1566,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-            .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoB4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongB4_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel27Layout.setVerticalGroup(
@@ -1567,7 +1575,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel43)
+                .addComponent(tongChoB4)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongB4_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1585,9 +1593,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("Phong B102");
 
-        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("Tổng số chỗ: 8");
+        tongChoB2.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoB2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoB2.setText("Tổng số chỗ: 8");
 
         soChoTrongB2_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongB2_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1598,7 +1606,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoB2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongB2_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel28Layout.setVerticalGroup(
@@ -1607,7 +1615,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel46)
+                .addComponent(tongChoB2)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongB2_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1625,9 +1633,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("Phong B101");
 
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("Tổng số chỗ: 8");
+        tongChoB1.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoB1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoB1.setText("Tổng số chỗ: 8");
 
         soChoTrongB1_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongB1_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1638,7 +1646,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoB1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongB1_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel29Layout.setVerticalGroup(
@@ -1647,7 +1655,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel49)
+                .addComponent(tongChoB1)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongB1_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1665,9 +1673,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("Phong B103");
 
-        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel52.setText("Tổng số chỗ: 8");
+        tongChoB3.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoB3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoB3.setText("Tổng số chỗ: 8");
 
         soChoTrongB3_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongB3_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1678,7 +1686,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel30Layout.setHorizontalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoB3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongB3_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel30Layout.setVerticalGroup(
@@ -1687,7 +1695,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel52)
+                .addComponent(tongChoB3)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongB3_JLable_324)
                 .addContainerGap(17, Short.MAX_VALUE))
@@ -1735,9 +1743,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel54.setText("Phong C101");
 
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel55.setText("Tổng số chỗ: 8");
+        tongChoC1.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoC1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoC1.setText("Tổng số chỗ: 8");
 
         soChoTrongC1_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongC1_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1748,7 +1756,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoC1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongC1_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel31Layout.setVerticalGroup(
@@ -1757,7 +1765,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel55)
+                .addComponent(tongChoC1)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongC1_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1775,9 +1783,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel57.setText("Phong C103");
 
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setText("Tổng số chỗ: 8");
+        tongChoC3.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoC3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoC3.setText("Tổng số chỗ: 8");
 
         soChoTrongC3_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongC3_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1788,7 +1796,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel32Layout.setHorizontalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoC3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongC3_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel32Layout.setVerticalGroup(
@@ -1797,7 +1805,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel58)
+                .addComponent(tongChoC3)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongC3_JLable_324)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -1815,9 +1823,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel60.setText("Phong C104");
 
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel61.setText("Tổng số chỗ: 8");
+        tongChoC4.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoC4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoC4.setText("Tổng số chỗ: 8");
 
         soChoTrongC4_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongC4_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1828,7 +1836,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoC4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongC4_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel33Layout.setVerticalGroup(
@@ -1837,7 +1845,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel61)
+                .addComponent(tongChoC4)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongC4_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1855,9 +1863,9 @@ public class TrangChu extends javax.swing.JFrame {
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel63.setText("Phong C102");
 
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel64.setText("Tổng số chỗ: 8");
+        tongChoC2.setForeground(new java.awt.Color(255, 255, 255));
+        tongChoC2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tongChoC2.setText("Tổng số chỗ: 8");
 
         soChoTrongC2_JLable_324.setForeground(new java.awt.Color(255, 255, 255));
         soChoTrongC2_JLable_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1868,7 +1876,7 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel63, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-            .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongChoC2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(soChoTrongC2_JLable_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel34Layout.setVerticalGroup(
@@ -1877,7 +1885,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel64)
+                .addComponent(tongChoC2)
                 .addGap(5, 5, 5)
                 .addComponent(soChoTrongC2_JLable_324)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1939,6 +1947,11 @@ public class TrangChu extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(0, 102, 204));
 
         jButton6.setText("Quay lại");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -2146,6 +2159,11 @@ public class TrangChu extends javax.swing.JFrame {
         jButton10.setFont(new java.awt.Font("Candara", 3, 24)); // NOI18N
         jButton10.setText("Trở Lại");
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Candara", 3, 24)); // NOI18N
         jButton11.setText("Thêm");
@@ -2308,7 +2326,7 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jpn_Chung_317Layout.createSequentialGroup()
                 .addComponent(jpn_DieuKhien_317, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jpn_Chung_317Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpn_ThietKe_317, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jpn_ThietKe_317, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(thanh_Xoa_phongTo_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jpn_Chung_317Layout.setVerticalGroup(
@@ -2316,7 +2334,7 @@ public class TrangChu extends javax.swing.JFrame {
             .addGroup(jpn_Chung_317Layout.createSequentialGroup()
                 .addComponent(thanh_Xoa_phongTo_317, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jpn_ThietKe_317, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(jpn_ThietKe_317, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
             .addComponent(jpn_DieuKhien_317, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -2639,8 +2657,9 @@ public class TrangChu extends javax.swing.JFrame {
     }//GEN-LAST:event_jpn_QLThongKe_324AncestorAdded
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
         jpn_TrangChu_317.setVisible(true);
+        jpn_QLSinhVien_324.setVisible(false);
+        jpn_DangKyKTX_324.setVisible(false);
         jpn_QLThongKe_324.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -2726,6 +2745,25 @@ public class TrangChu extends javax.swing.JFrame {
         jpn_TrangChu_317.setVisible(true);
         jpn_CaiDat_317.setVisible(false);
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        jpn_TrangChu_317.setVisible(true);
+        jpn_QLSinhVien_324.setVisible(false);
+        jpn_DangKyKTX_324.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        jpn_TrangChu_317.setVisible(true);
+        jpn_QLSinhVien_324.setVisible(false);
+        jpn_DangKyKTX_324.setVisible(false);
+        jpn_QLPhongKTX_324.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        jpn_TrangChu_317.setVisible(true);
+        jpn_QLSinhVien_324.setVisible(false);
+        jpn_DangKyKTX_324.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     public void setModel2(TaiKhoanDangNhap_324 taiKhoanDangNhap_324) {
         User_name_317.setText(taiKhoanDangNhap_324.getUsername());
@@ -2826,13 +2864,11 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel2_dkktx_317;
     private javax.swing.JLabel jLabel2_qlpktx_317;
     private javax.swing.JLabel jLabel2_qlsv_317;
@@ -2841,29 +2877,19 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel4_icon_qlpktx_317;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel6_icon_qlnx_317;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel7_icon_tp_317;
@@ -2956,5 +2982,17 @@ public class TrangChu extends javax.swing.JFrame {
     private javax.swing.JPanel thanh_Xoa_phongTo_317;
     private javax.swing.JLabel thoat_317;
     private javax.swing.JPanel tk1_317;
+    private javax.swing.JLabel tongChoA1;
+    private javax.swing.JLabel tongChoA2;
+    private javax.swing.JLabel tongChoA3;
+    private javax.swing.JLabel tongChoA4;
+    private javax.swing.JLabel tongChoB1;
+    private javax.swing.JLabel tongChoB2;
+    private javax.swing.JLabel tongChoB3;
+    private javax.swing.JLabel tongChoB4;
+    private javax.swing.JLabel tongChoC1;
+    private javax.swing.JLabel tongChoC2;
+    private javax.swing.JLabel tongChoC3;
+    private javax.swing.JLabel tongChoC4;
     // End of variables declaration//GEN-END:variables
 }

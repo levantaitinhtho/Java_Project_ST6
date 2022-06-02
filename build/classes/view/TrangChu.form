@@ -781,8 +781,8 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Component id="jLabel4_icon_qlpktx_317" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel2_qlpktx_317" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel2_qlpktx_317" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1791,6 +1791,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButton9">
                       <Properties>
@@ -1963,7 +1966,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel10" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel22" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoA1" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongA1_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -1973,7 +1976,7 @@
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                           <Component id="jLabel10" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoA1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongA1_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -1994,7 +1997,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong A101"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel22">
+                                <Component class="javax.swing.JLabel" name="tongChoA1">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2028,7 +2031,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel27" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel28" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoA2" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongA2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2038,7 +2041,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel27" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoA2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongA2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2059,7 +2062,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong A102"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel28">
+                                <Component class="javax.swing.JLabel" name="tongChoA2">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2093,7 +2096,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel33" alignment="1" pref="143" max="32767" attributes="0"/>
-                                      <Component id="jLabel34" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoA4" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongA4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2103,7 +2106,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel33" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoA4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongA4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2124,7 +2127,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong A104"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel34">
+                                <Component class="javax.swing.JLabel" name="tongChoA4">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2159,7 +2162,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel39" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel40" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoA3" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongA3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2169,7 +2172,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel39" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoA3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongA3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2190,7 +2193,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong A103"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel40">
+                                <Component class="javax.swing.JLabel" name="tongChoA3">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2275,7 +2278,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel42" alignment="1" pref="143" max="32767" attributes="0"/>
-                                      <Component id="jLabel43" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoB4" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongB4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2285,7 +2288,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel42" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoB4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongB4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2306,7 +2309,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong B104"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel43">
+                                <Component class="javax.swing.JLabel" name="tongChoB4">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2340,7 +2343,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel45" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel46" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoB2" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongB2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2350,7 +2353,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel45" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoB2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongB2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2371,7 +2374,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong B102"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel46">
+                                <Component class="javax.swing.JLabel" name="tongChoB2">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2405,7 +2408,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel48" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel49" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoB1" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongB1_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2415,7 +2418,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel48" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoB1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongB1_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2436,7 +2439,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong B101"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel49">
+                                <Component class="javax.swing.JLabel" name="tongChoB1">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2470,7 +2473,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel51" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel52" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoB3" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongB3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2480,7 +2483,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel51" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoB3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongB3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="17" max="32767" attributes="0"/>
@@ -2501,7 +2504,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong B103"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel52">
+                                <Component class="javax.swing.JLabel" name="tongChoB3">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2583,7 +2586,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel54" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel55" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoC1" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongC1_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2593,7 +2596,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel54" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel55" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoC1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongC1_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2614,7 +2617,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong C101"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel55">
+                                <Component class="javax.swing.JLabel" name="tongChoC1">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2648,7 +2651,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel57" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel58" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoC3" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongC3_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2658,7 +2661,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel57" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoC3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongC3_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace pref="26" max="32767" attributes="0"/>
@@ -2679,7 +2682,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong C103"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel58">
+                                <Component class="javax.swing.JLabel" name="tongChoC3">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2713,7 +2716,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel60" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel61" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoC4" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongC4_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2723,7 +2726,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel60" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoC4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongC4_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2744,7 +2747,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong C104"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel61">
+                                <Component class="javax.swing.JLabel" name="tongChoC4">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2778,7 +2781,7 @@
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel63" alignment="1" pref="141" max="32767" attributes="0"/>
-                                      <Component id="jLabel64" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tongChoC2" alignment="1" max="32767" attributes="0"/>
                                       <Component id="soChoTrongC2_JLable_324" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
@@ -2788,7 +2791,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel63" min="-2" pref="45" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tongChoC2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                           <Component id="soChoTrongC2_JLable_324" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -2809,7 +2812,7 @@
                                     <Property name="text" type="java.lang.String" value="Phong C102"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel64">
+                                <Component class="javax.swing.JLabel" name="tongChoC2">
                                   <Properties>
                                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2866,6 +2869,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -3176,6 +3182,9 @@
                         <Property name="text" type="java.lang.String" value="Tr&#x1edf; L&#x1ea1;i"/>
                         <Property name="horizontalTextPosition" type="int" value="0"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="jButton11">
                       <Properties>

@@ -24,9 +24,7 @@ public class StudentService {
     public List<SinhVien_tatCaThongTin_140> getAllStudents(){
         return studentDao.getAlLStudents();
     }
-    public List<SinhVien_tatCaThongTin_140> getAllStudents2(){
-        return studentDao.getAlLStudents2();
-    }
+
     public List<SinhVien_tatCaThongTin_140> thongTinSinhVien(String maPhong){
         return studentDao.getAllStudenByRoom(maPhong);
     }
@@ -37,9 +35,5 @@ public class StudentService {
         
     public SinhVien_tatCaThongTin_140 getStudentByMaSv_320 (String MaSV){
         return studentDao.getStudentByMaSv_320(MaSV);
-    }
-    public void addTTPhong(SinhVien_tatCaThongTin_140 stDao) throws SQLException{ 
-        studentDao.addTTPhong(stDao );
-        
-}
+    }      
 }

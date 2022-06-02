@@ -28,7 +28,7 @@ public class SinhVienDao {
                 sv.setMsv_324(rs.getString("maSV"));
                 sv.setTen_324(rs.getString("HoTen"));
                 sv.setCmnd_324(rs.getString("CMND"));
-                sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
+                sv.setGioTinh_324(kiemTraGioiTinh(rs.getString("gioiTinh")));
                 sv.setQueQuan_324(rs.getString("queQuan"));
                 sinhVien.add(sv);
              }
@@ -37,6 +37,14 @@ public class SinhVienDao {
             e.printStackTrace();    
         }
         return sinhVien;
+    }
+    
+    //Tra ve gioi tinh Nam neu bang 1 va Nu neu bang 0
+    public String kiemTraGioiTinh(String gioiTinh){
+        if(gioiTinh.equals("1"))
+            return "Nam";
+        else
+            return "Nữ";
     }
     
     //Ham nay lay tat ca thong tin cua sinh vien theo " Que Quan "
@@ -109,7 +117,7 @@ public class SinhVienDao {
             preparedStatement.setString(2,sv.getMaKTX_140());
             preparedStatement.setString(3,sv.getTen_140());
             preparedStatement.setString(4,sv.getCMND_140());
-            preparedStatement.setInt(5,sv.getGioitinh_140());
+            preparedStatement.setString(5,sv.getGioitinh_140());
             preparedStatement.setString(6,sv.getNgaysinh_140());
             preparedStatement.setString(7,sv.getSDT_140());
             preparedStatement.setString(8,sv.getQuequan_140());
@@ -140,7 +148,7 @@ public class SinhVienDao {
                     sv.setMsv_324(rs.getString("maSV"));
                     sv.setTen_324(rs.getString("HoTen"));
                     sv.setCmnd_324(rs.getString("CMND"));
-                    sv.setGioTinh_324(rs.getBoolean("gioiTinh"));
+                    sv.setGioTinh_324(kiemTraGioiTinh(rs.getString("gioiTinh")));
                     sv.setQueQuan_324(rs.getString("queQuan"));
                     sinhVien.add(sv);
                  }

@@ -12,7 +12,6 @@ import service.TaiKhoanService_324;
 
 public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     CheckAccount_Controller_324 controll = new CheckAccount_Controller_324();
-    TaiKhoanService_324 service = new TaiKhoanService_324();
     TrangChu tc = new TrangChu();
     public DangKy_DangNhap_324() {
         initComponents();
