@@ -157,18 +157,18 @@ public class Phong_Controller_324 {
     public void hienThiSoSinhVien(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
         
      
-        labelA1.setText("So cho con trong: " + choTrong(maPhongA1));
-        labelA2.setText("So cho con trong: " + choTrong(maPhongA2));
-        labelA3.setText("So cho con trong: " + choTrong(maPhongA3));
-        labelA4.setText("So cho con trong: " + choTrong(maPhongA4));
-        labelB1.setText("So cho con trong: " + choTrong(maPhongB1));
-        labelB2.setText("So cho con trong: " + choTrong(maPhongB2));
-        labelB3.setText("So cho con trong: " + choTrong(maPhongB3));
-        labelB4.setText("So cho con trong: " + choTrong(maPhongB4));
-        labelC1.setText("So cho con trong: " + choTrong(maPhongC1));
-        labelC2.setText("So cho con trong: " + choTrong(maPhongC2));
-        labelC3.setText("So cho con trong: " + choTrong(maPhongC3));
-        labelC4.setText("So cho con trong: " + choTrong(maPhongC4));
+        labelA1.setText("Số chỗ còn trống: " + choTrong(maPhongA1));
+        labelA2.setText("Số chỗ còn trống: " + choTrong(maPhongA2));
+        labelA3.setText("Số chỗ còn trống: " + choTrong(maPhongA3));
+        labelA4.setText("Số chỗ còn trống: " + choTrong(maPhongA4));
+        labelB1.setText("Số chỗ còn trống: " + choTrong(maPhongB1));
+        labelB2.setText("Số chỗ còn trống: " + choTrong(maPhongB2));
+        labelB3.setText("Số chỗ còn trống: " + choTrong(maPhongB3));
+        labelB4.setText("Số chỗ còn trống: " + choTrong(maPhongB4));
+        labelC1.setText("Số chỗ còn trống: " + choTrong(maPhongC1));
+        labelC2.setText("Số chỗ còn trống: " + choTrong(maPhongC2));
+        labelC3.setText("Số chỗ còn trống: " + choTrong(maPhongC3));
+        labelC4.setText("Số chỗ còn trống: " + choTrong(maPhongC4));
     }
     public void soSinhVienToiDa(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
         
