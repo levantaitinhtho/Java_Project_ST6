@@ -2998,7 +2998,7 @@
                 <Container class="javax.swing.JPanel" name="jpn_QLDienNuoc_324">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="c8" green="64" red="78" type="rgb"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -3057,34 +3057,39 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel1">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="c8" green="64" red="78" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel13" max="32767" attributes="0"/>
                                       <Component id="jLabel11" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jLabel12" alignment="1" pref="104" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="105" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="mp_317" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                                      <Component id="csdc_317" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                                      <Component id="ntt_317" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                                      <Component id="mp_317" alignment="1" pref="165" max="32767" attributes="0"/>
+                                      <Component id="csdc_317" alignment="1" pref="165" max="32767" attributes="0"/>
+                                      <Component id="ntt_317" alignment="1" pref="165" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel18" pref="103" max="32767" attributes="0"/>
                                       <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="csnc_317" min="-2" pref="168" max="-2" attributes="0"/>
-                                      <Component id="csdm_317" min="-2" pref="168" max="-2" attributes="0"/>
-                                      <Component id="csnm_317" min="-2" pref="168" max="-2" attributes="0"/>
+                                      <Component id="csnc_317" pref="168" max="32767" attributes="0"/>
+                                      <Component id="csdm_317" pref="168" max="32767" attributes="0"/>
+                                      <Component id="csnm_317" pref="168" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               </Group>
@@ -3173,20 +3178,25 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel3">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="c8" green="64" red="78" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                  <Component id="jButton10" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jButton10" pref="110" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                  <Component id="jButton11" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jButton11" pref="110" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                  <Component id="jButton12" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jButton12" pref="110" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                  <Component id="jButton13" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButton13" pref="110" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3208,6 +3218,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JButton" name="jButton10">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="c8" green="64" red="78" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Candara" size="24" style="3"/>
                             </Property>
@@ -3220,6 +3233,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton11">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="c8" green="64" red="78" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Candara" size="24" style="3"/>
                             </Property>
@@ -3232,6 +3248,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton12">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="c8" green="64" red="78" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Candara" size="24" style="3"/>
                             </Property>
@@ -3244,6 +3263,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton13">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="c8" green="64" red="78" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Candara" size="24" style="3"/>
                             </Property>
@@ -3270,6 +3292,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel19">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="c8" green="64" red="78" type="rgb"/>
+                            </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Times New Roman" size="36" style="3"/>
                             </Property>
