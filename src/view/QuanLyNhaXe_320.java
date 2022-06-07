@@ -477,6 +477,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             Xoa_Button.setVisible(true);
             Thoat_Button.setVisible(true);
             deleteTextfiedData();
+            MaXe_TextField.setEnabled(true);
         }
     }//GEN-LAST:event_Luu_ButtonActionPerformed
 
