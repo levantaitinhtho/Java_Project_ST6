@@ -49,9 +49,9 @@ go
 CREATE TABLE Taikhoan(
 	userName nvarchar(20) NOT NULL,
 	Pass nvarchar(20) NULL,
-	email varchar(25) null,
 	hoVaTen nvarchar(50) NULL,
 	SDT nvarchar(15) NULL,
+	email varchar(25) null,
  CONSTRAINT [PK_Taikhoan] PRIMARY KEY (userName)
 )
 

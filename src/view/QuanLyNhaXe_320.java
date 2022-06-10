@@ -485,9 +485,9 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        new QuanLyNhaXe_320().setVisible(true);
-    }
+//    public static void main(String args[]) {
+//        new QuanLyNhaXe_320().setVisible(true);
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable BangThongTin_Table;
