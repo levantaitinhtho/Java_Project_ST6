@@ -43,6 +43,11 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         trangThai_Panel_324 = new javax.swing.JPanel();
         dangNhap_Label_324 = new javax.swing.JLabel();
         dangKy_Label_324 = new javax.swing.JLabel();
+        KeoNgang_jSeparator = new javax.swing.JSeparator();
+        KyTucXa_Label_324 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        exitSystem = new javax.swing.JLabel();
+        DangNhap_DangKy = new javax.swing.JPanel();
         DangNhap_Panel_324 = new javax.swing.JPanel();
         tenTaiKhoan_Label_324 = new javax.swing.JLabel();
         matKhau_Label_324 = new javax.swing.JLabel();
@@ -66,10 +71,6 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         showPass2_Lable2 = new javax.swing.JLabel();
         hide = new javax.swing.JLabel();
         dangKy_JLabel_324 = new javax.swing.JLabel();
-        KeoNgang_jSeparator = new javax.swing.JSeparator();
-        KyTucXa_Label_324 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        exitSystem = new javax.swing.JLabel();
 
         jLabel9.setText("jLabel9");
 
@@ -113,6 +114,39 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             }
         });
         trangThai_Panel_324.add(dangKy_Label_324);
+
+        KeoNgang_jSeparator.setForeground(new java.awt.Color(255, 255, 255));
+
+        KyTucXa_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        KyTucXa_Label_324.setForeground(new java.awt.Color(255, 255, 255));
+        KyTucXa_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        KyTucXa_Label_324.setText("KÝ TÚC XÁ");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        exitSystem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        exitSystem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitSystem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dongcuoi.png"))); // NOI18N
+        exitSystem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                exitSystemMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 572, Short.MAX_VALUE)
+                .addComponent(exitSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitSystem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        DangNhap_DangKy.setLayout(new java.awt.CardLayout());
 
         DangNhap_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
 
@@ -171,8 +205,8 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         DangNhap_Panel_324.setLayout(DangNhap_Panel_324Layout);
         DangNhap_Panel_324Layout.setHorizontalGroup(
             DangNhap_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangNhap_Panel_324Layout.createSequentialGroup()
-                .addGap(0, 42, Short.MAX_VALUE)
+            .addGroup(DangNhap_Panel_324Layout.createSequentialGroup()
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addGroup(DangNhap_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(tenTaiKhoan_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(matKhau_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -185,16 +219,17 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DangNhap_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(showPassDn_Lable)
-                    .addComponent(hidePassDn_Lable)))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangNhap_Panel_324Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hidePassDn_Lable))
+                .addGap(65, 65, 65))
+            .addGroup(DangNhap_Panel_324Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
                 .addComponent(dangNhap_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DangNhap_Panel_324Layout.setVerticalGroup(
             DangNhap_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DangNhap_Panel_324Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangNhap_Panel_324Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
                 .addGroup(DangNhap_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tenTaiKhoan_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tenTaiKhoan_textField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -211,10 +246,12 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                             .addComponent(matKhauDN_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(quenMatKhau_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addComponent(dangNhap_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addGap(55, 55, 55))
         );
+
+        DangNhap_DangKy.add(DangNhap_Panel_324, "card2");
 
         DangKy_Panel_324.setBackground(new java.awt.Color(0, 40, 120));
 
@@ -309,12 +346,9 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         DangKy_Panel_324Layout.setHorizontalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
+                .addContainerGap(110, Short.MAX_VALUE)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                        .addContainerGap()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -332,13 +366,16 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                             .addComponent(showPass1_Lable1)
                             .addComponent(hide1_Lable)
                             .addComponent(showPass2_Lable2)
-                            .addComponent(hide))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                            .addComponent(hide))
+                        .addGap(65, 65, 65))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
+                        .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(204, 204, 204))))
         );
         DangKy_Panel_324Layout.setVerticalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -363,66 +400,33 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(showPass2_Lable2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(hide)))
-                .addGap(38, 38, 38)
-                .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
-        KeoNgang_jSeparator.setForeground(new java.awt.Color(255, 255, 255));
-
-        KyTucXa_Label_324.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        KyTucXa_Label_324.setForeground(new java.awt.Color(255, 255, 255));
-        KyTucXa_Label_324.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        KyTucXa_Label_324.setText("KÝ TÚC XÁ");
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        exitSystem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        exitSystem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitSystem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/dongcuoi.png"))); // NOI18N
-        exitSystem.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                exitSystemMousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(exitSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exitSystem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        DangNhap_DangKy.add(DangKy_Panel_324, "card3");
 
         javax.swing.GroupLayout dangNhapDangKy_Panel_324Layout = new javax.swing.GroupLayout(dangNhapDangKy_Panel_324);
         dangNhapDangKy_Panel_324.setLayout(dangNhapDangKy_Panel_324Layout);
         dangNhapDangKy_Panel_324Layout.setHorizontalGroup(
             dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(KeoNgang_jSeparator)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                .addContainerGap(153, Short.MAX_VALUE)
+            .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
                 .addGroup(dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                        .addComponent(trangThai_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                        .addComponent(KyTucXa_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(106, 106, 106))))
-            .addGroup(dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(DangNhap_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(26, Short.MAX_VALUE)))
-            .addGroup(dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                    .addContainerGap(20, Short.MAX_VALUE)
-                    .addComponent(DangKy_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(DangNhap_DangKy, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(KyTucXa_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(trangThai_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dangNhapDangKy_Panel_324Layout.setVerticalGroup(
             dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -432,30 +436,26 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                 .addComponent(trangThai_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(KeoNgang_jSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(KyTucXa_Label_324)
-                .addContainerGap(315, Short.MAX_VALUE))
-            .addGroup(dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                    .addContainerGap(210, Short.MAX_VALUE)
-                    .addComponent(DangNhap_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(45, Short.MAX_VALUE)))
-            .addGroup(dangNhapDangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                    .addContainerGap(215, Short.MAX_VALUE)
-                    .addComponent(DangKy_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(25, 25, 25)))
+                .addGap(78, 78, 78)
+                .addComponent(DangNhap_DangKy, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dangNhapDangKy_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(dangNhapDangKy_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dangNhapDangKy_Panel_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(dangNhapDangKy_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -668,6 +668,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DangKy_Panel_324;
+    private javax.swing.JPanel DangNhap_DangKy;
     private javax.swing.JPanel DangNhap_Panel_324;
     private javax.swing.JLabel EmailDK_Label_324;
     private javax.swing.JSeparator KeoNgang_jSeparator;

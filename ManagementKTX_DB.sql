@@ -49,9 +49,8 @@ go
 CREATE TABLE Taikhoan(
 	userName nvarchar(20) NOT NULL,
 	Pass nvarchar(20) NULL,
+	email varchar(25) null,
 	hoVaTen nvarchar(50) NULL,
-	gioiTinh bit NULL,
-	Quyen nvarchar(20) NULL,
 	SDT nvarchar(15) NULL,
  CONSTRAINT [PK_Taikhoan] PRIMARY KEY (userName)
 )
@@ -178,12 +177,12 @@ VALUES  (N'MSV001', N'TRẦN THANH THUẬN', N'2345678', 0, CAST(N'1996-01-05' A
 
 
 --Thuc hien insert bang Tai khoang
-INSERT Taikhoan (userName, Pass, hoVaTen, gioiTinh, Quyen, SDT) 
-VALUES (N'levantaitinhtho', N'123', N'Lê Văn Tài', 0, N'Admin', N'0386733025'),
-		(N'HuynhHaiHau123', N'12345', N'Huỳnh Thị Hải Hậu', 0, N'Admin', N'0386733025'),
-		(N'DoTanTu22@', N'25062002', N'Đỗ Tấn Từ', 0, N'Admin', N'0775543228'),
-		(N'TranAnhTuan2002', N'077554', N'Trần Anh Tuấn', 0, N'Admin', N'0905733025'),
-		(N'TuanLe123', N'123@tl', N'Lê Hoàng Anh Tuấn', 0, N'Admin', N'0386733025')
+INSERT Taikhoan (userName, Pass, hoVaTen, SDT, email) 
+VALUES (N'levantaitinhtho', N'123', N'Lê Văn Tài', N'0386733025','leVanTai@gmail.com'),
+		(N'HuynhHaiHau123', N'12345', N'Huỳnh Thị Hải Hậu', N'0386733025','HuynhHau@gmail.com'),
+		(N'DoTanTu22@', N'25062002', N'Đỗ Tấn Từ', N'0775543228','doTanTu@.com'),
+		(N'TranAnhTuan2002', N'077554', N'Trần Anh Tuấn',  N'0905733025','tranAnhTuan@gmail.com'),
+		(N'TuanLe123', N'123@tl', N'Lê Hoàng Anh Tuấn', N'0386733025','tuaLe@gmail.com')
 
 GO
 ALTER TABLE Diennuoc  WITH CHECK ADD  CONSTRAINT [FK_Diennuoc_Phong] FOREIGN KEY(maPhong)

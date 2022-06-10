@@ -94,6 +94,8 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
 
+        setUndecorated(true);
+
         mainPanel.setBackground(new java.awt.Color(53, 111, 198));
 
         jPanel1.setBackground(new java.awt.Color(53, 111, 198));
@@ -391,7 +393,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
 
         capNhatThongTin.setBackground(new java.awt.Color(0, 255, 255));
         capNhatThongTin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        capNhatThongTin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/return.png"))); // NOI18N
+        capNhatThongTin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Actions-document-edit-icon-16.png"))); // NOI18N
         capNhatThongTin.setText("Cập nhật ");
         capNhatThongTin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -460,6 +462,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 102), 3));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
