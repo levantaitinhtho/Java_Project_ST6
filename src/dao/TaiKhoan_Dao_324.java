@@ -54,8 +54,6 @@ public class TaiKhoan_Dao_324 {
                 taiKhoanDangNhap_324.setUsername(rs.getString("UserName"));
                 taiKhoanDangNhap_324.setPassword(rs.getString("Pass"));
                 taiKhoanDangNhap_324.setHoTen(rs.getString("hoVaTen"));
-                taiKhoanDangNhap_324.setGioiTinh(rs.getString("gioiTinh"));
-                taiKhoanDangNhap_324.setQuyen(rs.getString("Quyen"));
                 taiKhoanDangNhap_324.setSdt(rs.getString("SDT"));            
                 return taiKhoanDangNhap_324;
             }
@@ -88,11 +86,14 @@ public class TaiKhoan_Dao_324 {
    
     public void taoTaiKhoan(TaoTaiKhoan_324 tk){
         Connection connection = KetNoiSQL.getConnection();
-        String sql = "INSERT Taikhoan (userName, Pass, hoVaTen, gioiTinh, Quyen, SDT) VALUES (?,?,?,?,?,?)";   
+        String sql = "INSERT Taikhoan (userName,email,Pass, hoVaTen,SDT) VALUES (?,?,?,?,?)";   
         try {
             PreparedStatement pr = connection.prepareStatement(sql);
                 pr.setString(1,tk.getTenTaiKhoan());
-                pr.setString(2,tk.getEmail())
+                pr.setString(2,tk.getEmail());
+                pr.setString(3,tk.getMatKhau());
+                pr.setString(4,tk.getHoTen());
+                pr.setString(5,tk.getSoDt());
                 int rs = pr.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
