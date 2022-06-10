@@ -6,6 +6,8 @@
 package view;
 
 import controller.ThietLap_controller_324;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import model.SinhVien_tatCaThongTin_140;
 import service.StudentService;
 
@@ -14,7 +16,7 @@ import service.StudentService;
  * @author LÊ HOÀNG ANH TUẤN
  */
 public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
-
+    SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
     ThietLap_controller_324 capPhep = new ThietLap_controller_324();
     StudentService studentService = new StudentService();
     public ThongTinChiTietSinhVien(String MaSV) {
@@ -41,6 +43,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         NgheNghiep_320TextField.setText(student.getNghenghiep_140());
         NgayLHD_320TextField.setDate(student.getNgaylamhopdong_140());
         MaPhong_320TextField.setText(student.getMaPhong_140());
+        luuThongTin_button.setVisible(false);
     }
 
 
@@ -91,6 +94,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         nuRadioButton_tt = new javax.swing.JRadioButton();
         capNhatThongTin = new javax.swing.JButton();
         quayLaiSV_Button = new javax.swing.JButton();
+        luuThongTin_button = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
 
@@ -411,6 +415,16 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
             }
         });
 
+        luuThongTin_button.setBackground(new java.awt.Color(0, 255, 255));
+        luuThongTin_button.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        luuThongTin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Actions-document-edit-icon-16.png"))); // NOI18N
+        luuThongTin_button.setText("Lưu lại");
+        luuThongTin_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                luuThongTin_buttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -419,6 +433,8 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(luuThongTin_button, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(capNhatThongTin, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62)
                         .addComponent(quayLaiSV_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -427,7 +443,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(54, 54, 54))
         );
@@ -441,11 +457,12 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(capNhatThongTin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quayLaiSV_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(quayLaiSV_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(luuThongTin_button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -458,7 +475,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -472,7 +489,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1413, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,7 +510,8 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -505,7 +523,36 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
 
     private void capNhatThongTinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capNhatThongTinActionPerformed
         capPhep.capNhat(MaSV_320TextField, HoTen_320TextField, CMND_320TextField, SDT_320TextField, QueQuan_320TextField, TenNGH_320TextField, SDT_NGH_320TextField, QuanHe_320TextField, NgheNghiep_320TextField);
+        luuThongTin_button.setVisible(true);
+        capNhatThongTin.setVisible(false);
     }//GEN-LAST:event_capNhatThongTinActionPerformed
+
+    private void luuThongTin_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_luuThongTin_buttonActionPerformed
+        student.setHotengh_140(TenNGH_320TextField.getText());
+        student.setSdtgh_140(SDT_NGH_320TextField.getText());
+        student.setMaSv_140(MaSV_320TextField.getText());
+        student.setQuanhe_140(QuanHe_320TextField.getText());
+        student.setNghenghiep_140(NgheNghiep_320TextField.getText());
+        Date ngayLHD = NgayLHD_320TextField.getDate();
+        student.setNgaylamhopdong_140(ngayLHD);
+        student.setMaSv_140(MaSV_320TextField.getText());
+        student.setTen_140(HoTen_320TextField.getText());
+        student.setCMND_140(CMND_320TextField.getText());
+        if(namRadiobutton_tt.isSelected())
+            student.setGioitinh_140("1");
+        else
+            if(nuRadioButton_tt.isSelected())
+                student.setGioitinh_140("0");
+        Date ngaySinh = NgaySinh_320TextField.getDate();
+        student.setNgaysinh_140(ngaySinh);
+        student.setSDT_140(SDT_320TextField.getText());
+        student.setQuequan_140(QueQuan_320TextField.getText());
+        studentService.CapNhatThongTin(student);
+        luuThongTin_button.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Cập nhật thông tin thành công");
+        capNhatThongTin.setVisible(true);
+        capPhep.dongCapNhat(MaSV_320TextField, HoTen_320TextField, CMND_320TextField, SDT_320TextField, QueQuan_320TextField, TenNGH_320TextField, SDT_NGH_320TextField, QuanHe_320TextField, NgheNghiep_320TextField);
+    }//GEN-LAST:event_luuThongTin_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -580,6 +627,7 @@ public class ThongTinChiTietSinhVien extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JButton luuThongTin_button;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JRadioButton namRadiobutton_tt;
     private javax.swing.JRadioButton nuRadioButton_tt;
