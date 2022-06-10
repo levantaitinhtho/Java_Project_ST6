@@ -2,19 +2,30 @@
 package model;
 
 public class TaoTaiKhoan_324 {
+    private String hoTen;
     private String tenTaiKhoan;
     private String email;
+    private String soDt;
     private String matKhau;
-    private String nhapLaiMatKhau;
 
     public TaoTaiKhoan_324() {
     }
 
-    public TaoTaiKhoan_324(String tenTaiKhoan, String email, String matKhau, String nhapLaiMatKhau) {
+    public TaoTaiKhoan_324(String hoTen, String tenTaiKhoan, String email, String soDt, String matKhau) {
+        this.hoTen = hoTen;
         this.tenTaiKhoan = tenTaiKhoan;
         this.email = email;
+        this.soDt = soDt;
         this.matKhau = matKhau;
-        this.nhapLaiMatKhau = nhapLaiMatKhau;
+    }
+    
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
     }
 
     public String getTenTaiKhoan() {
@@ -33,6 +44,14 @@ public class TaoTaiKhoan_324 {
         this.email = email;
     }
 
+    public String getSoDt() {
+        return soDt;
+    }
+
+    public void setSoDt(String soDt) {
+        this.soDt = soDt;
+    }
+
     public String getMatKhau() {
         return matKhau;
     }
@@ -41,13 +60,6 @@ public class TaoTaiKhoan_324 {
         this.matKhau = matKhau;
     }
 
-    public String getNhapLaiMatKhau() {
-        return nhapLaiMatKhau;
-    }
 
-    public void setNhapLaiMatKhau(String nhapLaiMatKhau) {
-        this.nhapLaiMatKhau = nhapLaiMatKhau;
-    }
-    
-    
+   
 }

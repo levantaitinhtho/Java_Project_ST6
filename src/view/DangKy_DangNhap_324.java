@@ -8,11 +8,13 @@ import java.awt.Color;
 import javax.swing.*;
 import javax.swing.border.*;
 import model.TaiKhoanDangNhap_324;
+import model.TaoTaiKhoan_324;
 import service.TaiKhoanService_324;
 
 public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     CheckAccount_Controller_324 controll = new CheckAccount_Controller_324();
     TrangChu tc = new TrangChu();
+    TaiKhoanService_324 service = new TaiKhoanService_324();
     public DangKy_DangNhap_324() {
         initComponents();
         setLocationRelativeTo(null);
@@ -71,6 +73,10 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         showPass2_Lable2 = new javax.swing.JLabel();
         hide = new javax.swing.JLabel();
         dangKy_JLabel_324 = new javax.swing.JLabel();
+        tenTaiKhoanDK_Label_325 = new javax.swing.JLabel();
+        hoTentk_jTextField_324 = new javax.swing.JTextField();
+        EmailDK_Label_325 = new javax.swing.JLabel();
+        soDT_JTextField = new javax.swing.JTextField();
 
         jLabel9.setText("jLabel9");
 
@@ -246,7 +252,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                             .addComponent(matKhauDN_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(quenMatKhau_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(dangNhap_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55))
         );
@@ -341,47 +347,87 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             }
         });
 
+        tenTaiKhoanDK_Label_325.setBackground(new java.awt.Color(255, 255, 204));
+        tenTaiKhoanDK_Label_325.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        tenTaiKhoanDK_Label_325.setForeground(new java.awt.Color(255, 255, 255));
+        tenTaiKhoanDK_Label_325.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/user.png"))); // NOI18N
+        tenTaiKhoanDK_Label_325.setText(" HỌ VÀ TÊN:");
+
+        hoTentk_jTextField_324.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        hoTentk_jTextField_324.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hoTentk_jTextField_324.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        hoTentk_jTextField_324.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hoTentk_jTextField_324ActionPerformed(evt);
+            }
+        });
+
+        EmailDK_Label_325.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        EmailDK_Label_325.setForeground(new java.awt.Color(255, 255, 255));
+        EmailDK_Label_325.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/phone-call.png"))); // NOI18N
+        EmailDK_Label_325.setText(" SỐ ĐIỆN THOẠI:");
+
+        soDT_JTextField.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        soDT_JTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        soDT_JTextField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
         javax.swing.GroupLayout DangKy_Panel_324Layout = new javax.swing.GroupLayout(DangKy_Panel_324);
         DangKy_Panel_324.setLayout(DangKy_Panel_324Layout);
         DangKy_Panel_324Layout.setHorizontalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
-                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tenTaiKhoanDK_Label_324))
-                            .addComponent(matKhau1DK_Label_324)
-                            .addComponent(maKhau2DK_Label_324))
+                        .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(204, 204, 204))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
+                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(maKhau2DK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tenTaiKhoanDK_Label_325, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tenTaiKhoanDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(matKhau1DK_Label_324, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
+                                .addComponent(EmailDK_Label_325)
+                                .addGap(60, 60, 60)))
                         .addGap(18, 18, 18)
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(matKhau1DK_PassWordField_324, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(emailDK_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tenTaiKhoan_TextField_324, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(matKhau2DK_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(matKhau2DK_PassWordField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hoTentk_jTextField_324, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(soDT_JTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(showPass1_Lable1)
                             .addComponent(hide1_Lable)
                             .addComponent(showPass2_Lable2)
                             .addComponent(hide))
-                        .addGap(65, 65, 65))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
-                        .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(204, 204, 204))))
+                        .addGap(49, 49, 49))))
         );
         DangKy_Panel_324Layout.setVerticalGroup(
             DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(tenTaiKhoanDK_Label_325, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(hoTentk_jTextField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tenTaiKhoanDK_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tenTaiKhoan_TextField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(EmailDK_Label_325, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(soDT_JTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DangKy_Panel_324Layout.createSequentialGroup()
-                        .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tenTaiKhoanDK_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tenTaiKhoan_TextField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
                         .addGroup(DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(EmailDK_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(emailDK_TextField_324, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -400,9 +446,8 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangKy_Panel_324Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(showPass2_Lable2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(hide)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(62, 62, 62)
+                .addComponent(dangKy_JLabel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         DangNhap_DangKy.add(DangKy_Panel_324, "card3");
@@ -424,8 +469,8 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                         .addGap(183, 183, 183)
                         .addComponent(KyTucXa_Label_324, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dangNhapDangKy_Panel_324Layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(trangThai_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(155, 155, 155)
+                        .addComponent(trangThai_Panel_324, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dangNhapDangKy_Panel_324Layout.setVerticalGroup(
@@ -438,9 +483,9 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
                 .addComponent(KeoNgang_jSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(KyTucXa_Label_324)
-                .addGap(78, 78, 78)
-                .addComponent(DangNhap_DangKy, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(36, 36, 36)
+                .addComponent(DangNhap_DangKy, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -578,6 +623,8 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
 
     private void dangKy_JLabel_324MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dangKy_JLabel_324MousePressed
         dangKy_JLabel_324.setBorder(new MatteBorder(1, 1, 1, 1, Color.red));
+        //Nhan vao ho ten
+        String hoTen = hoTentk_jTextField_324.getText();
         
         //Nhan vao ten
         String tenTaiKhoan = tenTaiKhoan_TextField_324.getText();
@@ -592,26 +639,33 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         //Nhan mat khau nhap lai vao va chuyen thanh chuoi de kiem tra
         String matKhauLan2 = new String(matKhau2DK_PassWordField_324.getPassword());
 
-        
+        //Nhan so dien thoai
+        String soDt = soDT_JTextField.getText();
         //Su dung StringBuilder de dua ra thong bao neu cac truong khong dung quy tac
         StringBuilder sb = new StringBuilder();
+         if(hoTen.isEmpty()) {
+            sb.append("Họ tên không được để trống!");
+        }
+        if(soDt.isEmpty()){
+            sb.append("Số điện thoại không được để trống!");
+        }
         if(tenTaiKhoan.isEmpty()) {
-            sb.append("Ten khong duoc de trong!");
+            sb.append("Tên tài khoản không được để trống!");
         }
         if(email.isEmpty()){
-            sb.append("\nEmai khong duoc de trong!");
+            sb.append("\nEmail không được để trống!");
         }
         if(false==kiemTra.validate(email)) {
-            sb.append("\nEmail ban nhap vao khong dung, vui long kiem tra lai! (vd : abc123@Gmail.com)");
+            sb.append("\nEmail nhập vào không đúng, vui lòng kiểm tra lại! (vd : abc123@Gmail.com)");
         }
         if(matKhauLan1.isEmpty()){
-            sb.append("\nMat khau khong duoc de trong!");
+            sb.append("\nMật khẩu không được để trống!");
         }
         if(matKhauLan2.isEmpty()){
-            sb.append("\nBan phai nhap lai mat khau!");
+            sb.append("\nBạn phải nhập lại mật khẩu!");
         }
         if(matKhauLan1.equals(matKhauLan2)==false){
-            sb.append("\nMat khau nhap lai khong dung!");
+            sb.append("\nMật khẩu nhập lại không đúng!");
         }
         if(sb.length() > 0){
             JOptionPane.showMessageDialog(this, sb.toString(), "Lỗi đăng ký!", JOptionPane.ERROR_MESSAGE);
@@ -619,14 +673,25 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             return;
         }
         else{
-            JOptionPane.showMessageDialog(this, "Tuyet vơi");
-            
+            TaoTaiKhoan_324 tk= new TaoTaiKhoan_324();
+            tk.setHoTen(hoTen);
+            tk.setTenTaiKhoan(tenTaiKhoan);
+            tk.setEmail(email);
+            tk.setSoDt(soDt);
+            tk.setMatKhau(matKhauLan1);
+            service.taoTaiKhoan(tk);
+            DangNhap_Panel_324.setVisible(true);
+            DangKy_Panel_324.setVisible(false);
         }
     }//GEN-LAST:event_dangKy_JLabel_324MousePressed
 
     private void exitSystemMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitSystemMousePressed
        System.exit(0);
     }//GEN-LAST:event_exitSystemMousePressed
+
+    private void hoTentk_jTextField_324ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hoTentk_jTextField_324ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hoTentk_jTextField_324ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -671,6 +736,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     private javax.swing.JPanel DangNhap_DangKy;
     private javax.swing.JPanel DangNhap_Panel_324;
     private javax.swing.JLabel EmailDK_Label_324;
+    private javax.swing.JLabel EmailDK_Label_325;
     private javax.swing.JSeparator KeoNgang_jSeparator;
     private javax.swing.JLabel KyTucXa_Label_324;
     private javax.swing.JLabel dangKy_JLabel_324;
@@ -683,6 +749,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     private javax.swing.JLabel hide;
     private javax.swing.JLabel hide1_Lable;
     private javax.swing.JLabel hidePassDn_Lable;
+    private javax.swing.JTextField hoTentk_jTextField_324;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel maKhau2DK_Label_324;
@@ -695,7 +762,9 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
     private javax.swing.JLabel showPass1_Lable1;
     private javax.swing.JLabel showPass2_Lable2;
     private javax.swing.JLabel showPassDn_Lable;
+    private javax.swing.JTextField soDT_JTextField;
     private javax.swing.JLabel tenTaiKhoanDK_Label_324;
+    private javax.swing.JLabel tenTaiKhoanDK_Label_325;
     private javax.swing.JLabel tenTaiKhoan_Label_324;
     private javax.swing.JTextField tenTaiKhoan_TextField_324;
     private javax.swing.JTextField tenTaiKhoan_textField_324;
