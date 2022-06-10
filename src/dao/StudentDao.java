@@ -215,7 +215,6 @@ public class StudentDao {
                 student.setQuanhe_140(rs.getString("quanHe"));
                 student.setNghenghiep_140(rs.getString("Nghenghiep"));
                 student.setTenTang(getTangByMaPhong(student.getMaPhong_140()).getTenTang());
-                System.out.println(student.getTenTang());
 
             }
         } catch (SQLException ex) {

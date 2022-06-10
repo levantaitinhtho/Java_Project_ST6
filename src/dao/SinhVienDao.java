@@ -156,6 +156,32 @@ public class SinhVienDao {
             }
         return sinhVien;
 }
+    public void CapNhatThongTin(SinhVien_tatCaThongTin_140 sv){
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "Update SinhVien set HoTen = ?, CMND = ?,"
+                + " gioiTinh = ?,ngaySinh = ?, SDT = ?, queQuan = ?, ngayLamHopDong = ?,"
+                + " hoTenGH = ?, sdtGH = ?, quanHe = ?, Nghenghiep = ? where maSV = ?";
+                try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, sv.getTen_140());
+            preparedStatement.setString(2, sv.getCMND_140());
+            preparedStatement.setString(3, sv.getGioitinh_140());
+            preparedStatement.setDate(4, new Date(sv.getNgaysinh_140().getTime()));
+            preparedStatement.setString(5, sv.getSDT_140());
+            preparedStatement.setString(6, sv.getQuequan_140());
+            preparedStatement.setDate(7, new Date(sv.getNgaylamhopdong_140().getTime()));
+            preparedStatement.setString(8, sv.getHotengh_140());
+            preparedStatement.setString(9, sv.getSdtgh_140());
+            preparedStatement.setString(10, sv.getQuanhe_140());
+            preparedStatement.setString(11, sv.getNghenghiep_140());
+            preparedStatement.setString(12, sv.getMaSv_140());
+            
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

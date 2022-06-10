@@ -38,4 +38,8 @@ public class StudentService {
     public SinhVien_tatCaThongTin_140 getStudentByMaSv_320 (String MaSV){
         return studentDao.getStudentByMaSv_320(MaSV);
     }      
+    
+    public void CapNhatThongTin(SinhVien_tatCaThongTin_140 sv){
+        svDao.CapNhatThongTin(sv);
+    }
 }
