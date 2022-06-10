@@ -2477,7 +2477,6 @@ public class TrangChu extends javax.swing.JFrame {
         String a = jComboBox2.getSelectedItem().toString();
         jpn_quanLyTiemKiem.setVisible(true);
         ctr = new Controller_DieuKhien_trangChu_324();
-        System.out.println(a);
         if(a.equals("Quê quán")){
             ctr.quanLy_jList_queQuan(jl_queQuan);
             panelcon.setVisible(true);

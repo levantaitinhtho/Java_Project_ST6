@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.SinhVien_tatCaThongTin_140;
 import model.SinhVien_trangChu_324;
-
+import java.sql.Date;
 
 public class SinhVienDao {
     
@@ -90,10 +90,9 @@ public class SinhVienDao {
     //Su dung chung de kiem tra thong tin tim kiem
     public SinhVien_trangChu_324 getTen(String theLoai ,String doiTuong){
         Connection connection = KetNoiSQL.getConnection();
-        String sql = "select * from SinhVien where " + theLoai + " = ?";
+        String sql = "select * from SinhVien where " + theLoai + " like N'%"+doiTuong+"%'";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setString(1,doiTuong);
                 ResultSet rs = preparedStatement.executeQuery();
                    while(rs.next()){
                     SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
@@ -108,25 +107,24 @@ public class SinhVienDao {
     }
     public void themSinhVien(SinhVien_tatCaThongTin_140 sv){
         Connection connection = KetNoiSQL.getConnection();
-        String sql = "insert into SinhVien(maSV, maKTX, HoTen , CMND, gioiTinh, ngaySinh, SDT, queQuan, ngayLamHopDong, maPhong,hoTenGH, sdtGH, quanHe, Nghenghiep)"
-                + "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into SinhVien(maSV, HoTen , CMND, gioiTinh, ngaySinh, SDT, queQuan, ngayLamHopDong, maPhong,hoTenGH, sdtGH, quanHe, Nghenghiep)"
+                + "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,sv.getMaSv_140());
-            preparedStatement.setString(2,sv.getMaKTX_140());
-            preparedStatement.setString(3,sv.getTen_140());
-            preparedStatement.setString(4,sv.getCMND_140());
-            preparedStatement.setString(5,sv.getGioitinh_140());
-            preparedStatement.setString(6,sv.getNgaysinh_140());
-            preparedStatement.setString(7,sv.getSDT_140());
-            preparedStatement.setString(8,sv.getQuequan_140());
-            preparedStatement.setString(9,sv.getNgaylamhopdong_140());
-            preparedStatement.setString(10,sv.getMaPhong_140());
-            preparedStatement.setString(11,sv.getHotengh_140());
-            preparedStatement.setString(12,sv.getSdtgh_140());
-            preparedStatement.setString(13,sv.getQuanhe_140());
-            preparedStatement.setString(14,sv.getNghenghiep_140());
+            preparedStatement.setString(2,sv.getTen_140());
+            preparedStatement.setString(3,sv.getCMND_140());
+            preparedStatement.setString(4,sv.getGioitinh_140());
+            preparedStatement.setDate(5,new Date(sv.getNgaysinh_140().getTime()));
+            preparedStatement.setString(6,sv.getSDT_140());
+            preparedStatement.setString(7,sv.getQuequan_140());
+            preparedStatement.setDate(8,new Date(sv.getNgaylamhopdong_140().getTime()));
+            preparedStatement.setString(9,sv.getMaPhong_140());
+            preparedStatement.setString(10,sv.getHotengh_140());
+            preparedStatement.setString(11,sv.getSdtgh_140());
+            preparedStatement.setString(12,sv.getQuanhe_140());
+            preparedStatement.setString(13,sv.getNghenghiep_140());
             
             int rs = preparedStatement.executeUpdate();
         } catch (SQLException ex) {
@@ -137,10 +135,9 @@ public class SinhVienDao {
     public List<SinhVien_trangChu_324> getThongTinTheoDieuKien_324(String loai, String ten){   
         List<SinhVien_trangChu_324> sinhVien = new ArrayList<SinhVien_trangChu_324>();
             Connection connection = KetNoiSQL.getConnection();
-            String sql = "select * from SinhVien where " +loai + " = ?";
+            String sql = "select * from SinhVien where " +loai + " like N'%"+ten+"%'";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setString(1,ten);
                 ResultSet rs = preparedStatement.executeQuery();
                 while(rs.next()){
                     SinhVien_trangChu_324 sv  = new SinhVien_trangChu_324();
@@ -152,13 +149,13 @@ public class SinhVienDao {
                     sv.setQueQuan_324(rs.getString("queQuan"));
                     sinhVien.add(sv);
                  }
+               
             }
             catch(SQLException e){
                 e.printStackTrace();    
             }
         return sinhVien;
 }
-
 }
 
 

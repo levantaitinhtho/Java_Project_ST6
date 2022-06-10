@@ -467,6 +467,7 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
             xe.setMSV(MaSinhVien_TextField.getText());
             xe.setBienSo(BienSo_TextField.getText());
             xe.setNgayGui( NgayGui_datechooser.getDate());
+            System.out.println(xe.getNgayGui());;
             xeServices_320.editMotobike(xe);
             JOptionPane.showMessageDialog(this, "Cập nhật thông tin thành công!");
             defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
