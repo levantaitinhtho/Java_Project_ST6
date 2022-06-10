@@ -1,16 +1,15 @@
 
 package model;
-
+import java.util.Date;
 public class SinhVien_tatCaThongTin_140 {
     private String MaSv_140;
-    private String MaKTX_140;
     private String Ten_140;
     private String CMND_140;
     private String Gioitinh_140;
-    private String Ngaysinh_140;
+    private Date   Ngaysinh_140;
     private String SDT_140;
     private String Quequan_140;
-    private String Ngaylamhopdong_140;
+    private Date   Ngaylamhopdong_140;
     private String MaPhong_140;
     private String Hinh_140;
     private String Hotengh_140;
@@ -22,6 +21,24 @@ public class SinhVien_tatCaThongTin_140 {
     private String SoSinhVienToiDa_140;
     private String TinhTrangPhong_140;
     private String LoaiPhong_140;
+    private String tenTang;
+    private String maTang;
+
+    public String getTenTang() {
+        return tenTang;
+    }
+
+    public void setTenTang(String tenTang) {
+        this.tenTang = tenTang;
+    }
+
+    public String getMaTang() {
+        return maTang;
+    }
+
+    public void setMaTang(String maTang) {
+        this.maTang = maTang;
+    }
 
     public SinhVien_tatCaThongTin_140() {
     }
@@ -32,14 +49,6 @@ public class SinhVien_tatCaThongTin_140 {
 
     public void setMaSv_140(String MaSv_140) {
         this.MaSv_140 = MaSv_140;
-    }
-
-    public String getMaKTX_140() {
-        return MaKTX_140;
-    }
-
-    public void setMaKTX_140(String MaKTX_140) {
-        this.MaKTX_140 = MaKTX_140;
     }
 
     public String getTen_140() {
@@ -66,11 +75,11 @@ public class SinhVien_tatCaThongTin_140 {
         this.Gioitinh_140 = Gioitinh_140;
     }
 
-    public String getNgaysinh_140() {
+    public Date getNgaysinh_140() {
         return Ngaysinh_140;
     }
 
-    public void setNgaysinh_140(String Ngaysinh_140) {
+    public void setNgaysinh_140(Date Ngaysinh_140) {
         this.Ngaysinh_140 = Ngaysinh_140;
     }
 
@@ -90,11 +99,11 @@ public class SinhVien_tatCaThongTin_140 {
         this.Quequan_140 = Quequan_140;
     }
 
-    public String getNgaylamhopdong_140() {
+    public Date getNgaylamhopdong_140() {
         return Ngaylamhopdong_140;
     }
 
-    public void setNgaylamhopdong_140(String Ngaylamhopdong_140) {
+    public void setNgaylamhopdong_140(Date Ngaylamhopdong_140) {
         this.Ngaylamhopdong_140 = Ngaylamhopdong_140;
     }
 
@@ -185,10 +194,5 @@ public class SinhVien_tatCaThongTin_140 {
     public void setLoaiPhong_140(String LoaiPhong_140) {
         this.LoaiPhong_140 = LoaiPhong_140;
     }
-
-    
-
-    
-    
     
 }

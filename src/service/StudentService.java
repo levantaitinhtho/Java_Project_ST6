@@ -32,7 +32,9 @@ public class StudentService {
     public void ThemSinhVIen(SinhVien_tatCaThongTin_140 sv) throws SQLException {
         svDao.themSinhVien(sv);
     }
-        
+    public SinhVien_tatCaThongTin_140 getTangByMaPhong (String maPhong){
+        return studentDao.getTangByMaPhong(maPhong);
+    }      
     public SinhVien_tatCaThongTin_140 getStudentByMaSv_320 (String MaSV){
         return studentDao.getStudentByMaSv_320(MaSV);
     }      

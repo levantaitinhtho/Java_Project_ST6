@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import service.StudentService;
-
+import java.sql.Date;
 
 
 
@@ -30,14 +30,13 @@ public class StudentDao {
                 SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
 
                 student.setMaSv_140(rs.getString("MaSV"));
-                student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getString("GioiTinh"));
-                student.setNgaysinh_140(rs.getString("Ngaysinh"));
+                student.setNgaysinh_140(rs.getDate("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
-                student.setNgaylamhopdong_140(rs.getString("Ngaylamhopdong"));
+                student.setNgaylamhopdong_140(rs.getDate("Ngaylamhopdong"));
                 student.setHinh_140(rs.getString("Hinh"));
                 student.setHotengh_140(rs.getString("Hotengh"));
                 student.setSdtgh_140(rs.getString("Sdtgh"));
@@ -67,14 +66,13 @@ public class StudentDao {
             rs = stm.executeQuery();
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("MaSV"));
-                student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getString("Gioitinh"));
-                student.setNgaysinh_140(rs.getString("Ngaysinh"));
+                student.setNgaysinh_140(rs.getDate("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
-                student.setNgaylamhopdong_140(rs.getString("Ngaylamhopdong"));
+                student.setNgaylamhopdong_140(rs.getDate("Ngaylamhopdong"));
                 student.setMaPhong_140(rs.getString("MaPhong"));
                 student.setHinh_140(rs.getString("Hinh"));
                 student.setHotengh_140(rs.getString("Hotengh"));
@@ -101,14 +99,13 @@ public class StudentDao {
             rs = stm.executeQuery();
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("MaSV"));
-                student.setMaKTX_140(rs.getString("MaKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
                 student.setGioitinh_140(rs.getString("Gioitinh"));
-                student.setNgaysinh_140(rs.getString("Ngaysinh"));
+                student.setNgaysinh_140(rs.getDate("Ngaysinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("Quequan"));
-                student.setNgaylamhopdong_140(rs.getString("Ngaylamhopdong"));
+                student.setNgaylamhopdong_140(rs.getDate("Ngaylamhopdong"));
                 student.setMaPhong_140(rs.getString("maPhong"));
                 student.setTenPhong_140(rs.getString("tenPhong"));
                 student.setLoaiPhong_140(rs.getString("loaiPhong"));
@@ -204,20 +201,21 @@ public class StudentDao {
             rs = stm.executeQuery();
             if (rs.next()) {
                 student.setMaSv_140(rs.getString("maSV"));
-                student.setMaKTX_140(rs.getString("maKTX"));
                 student.setTen_140(rs.getString("HoTen"));
                 student.setCMND_140(rs.getString("CMND"));
-                student.setGioitinh_140(rs.getString("gioiTinh"));
-                student.setNgaysinh_140(rs.getString("ngaySinh"));
+                student.setGioitinh_140(kiemTraGioiTinh(rs.getString("gioiTinh")));
+                student.setNgaysinh_140(rs.getDate("ngaySinh"));
                 student.setSDT_140(rs.getString("SDT"));
                 student.setQuequan_140(rs.getString("queQuan"));
-                student.setNgaylamhopdong_140(rs.getString("ngayLamHopDong"));
+                student.setNgaylamhopdong_140(rs.getDate("ngayLamHopDong"));
                 student.setMaPhong_140(rs.getString("maPhong"));
                 student.setHinh_140(rs.getString("Hinh"));
                 student.setHotengh_140(rs.getString("hoTenGH"));
                 student.setSdtgh_140(rs.getString("sdtGH"));
                 student.setQuanhe_140(rs.getString("quanHe"));
                 student.setNghenghiep_140(rs.getString("Nghenghiep"));
+                student.setTenTang(getTangByMaPhong(student.getMaPhong_140()).getTenTang());
+                System.out.println(student.getTenTang());
 
             }
         } catch (SQLException ex) {
@@ -238,7 +236,7 @@ public class StudentDao {
                 svs.setMaSv_140(rs.getString("maSV"));
                 svs.setTen_140(rs.getString("HoTen"));
                 svs.setCMND_140(rs.getString("CMND"));
-                svs.setNgaysinh_140(rs.getString("ngaySinh"));
+                svs.setNgaysinh_140(rs.getDate("ngaySinh"));
                 svs.setGioitinh_140(kiemTraGioiTinh(rs.getString("gioiTinh")));
                 svs.setSDT_140(rs.getString("SDT"));
                 svs.setQuequan_140(rs.getString("queQuan"));
@@ -306,6 +304,28 @@ public class StudentDao {
             Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+    
+    public SinhVien_tatCaThongTin_140 getTangByMaPhong(String maPhong){
+        Connection conn = KetNoiSQL.getConnection();
+        String sql =  "select t.tenTang,t.maTang "
+                    + "from Phong as p, Tang as t "
+                    + "where p.maTang = t.maTang "
+                    + "and maPhong = ?";
+        SinhVien_tatCaThongTin_140 student = new SinhVien_tatCaThongTin_140();
+        try {
+            PreparedStatement stm = conn.prepareStatement(sql);
+            stm.setString(1, maPhong);
+            ResultSet rs ;
+            rs = stm.executeQuery();
+            if (rs.next()) {
+                student.setMaTang(rs.getString("maTang"));
+                student.setTenTang(rs.getString("tenTang"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return student;
     }
     public String kiemTraGioiTinh(String gioiTinh){
         if(gioiTinh.equals("1"))

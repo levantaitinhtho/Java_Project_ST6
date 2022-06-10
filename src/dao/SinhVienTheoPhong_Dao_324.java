@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package dao;
-
+import java.sql.Date;
 import connect.KetNoiSQL;
 import controller.KiemTraEmail_324;
 import java.sql.Connection;
@@ -59,7 +59,7 @@ public class SinhVienTheoPhong_Dao_324 {
                 svs.setMaSv_140(rs.getString("maSV"));
                 svs.setTen_140(rs.getString("HoTen"));
                 svs.setCMND_140(rs.getString("CMND"));
-                svs.setNgaysinh_140(rs.getString("ngaySinh"));
+                svs.setNgaysinh_140(rs.getDate("ngaySinh"));
                 svs.setGioitinh_140(kiemTraGioiTinh(rs.getString("gioiTinh")));
                 svs.setSDT_140(rs.getString("SDT"));
                 svs.setQuequan_140(rs.getString("queQuan"));
