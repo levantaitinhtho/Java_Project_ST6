@@ -366,47 +366,36 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="jButton14" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
+                              <Component id="jButton15" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="userName" pref="299" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jLabel23" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
-                                                  <Component id="jLabel21" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="pass_317" max="32767" attributes="0"/>
-                                                  <Component id="User_name_317" min="-2" pref="255" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel26" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
-                                                      <Component id="jLabel30" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
-                                                      <Component id="jLabel25" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="jLabel24" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="64" pref="64" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="gt_317" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
-                                                  <Component id="ht_317" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
-                                                  <Component id="q_317" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
-                                                  <Component id="sdt_317" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="sdt" max="32767" attributes="0"/>
+                                          <Component id="hvt" pref="289" max="32767" attributes="0"/>
+                                          <Component id="a" alignment="0" pref="289" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="102" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jButton14" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jButton15" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="pass" alignment="1" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="User_name_317" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ht_317" alignment="1" pref="314" max="32767" attributes="0"/>
+                                  <Component id="sdt_317" alignment="1" pref="314" max="32767" attributes="0"/>
+                                  <Component id="email" alignment="1" pref="314" max="32767" attributes="0"/>
+                                  <Component id="pass_317" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -414,69 +403,46 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="User_name_317" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel21" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="pass_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel23" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="User_name_317" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="userName" alignment="3" pref="35" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel24" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="ht_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="pass_317" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="pass" alignment="3" pref="35" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel25" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="gt_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="ht_317" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="hvt" alignment="3" pref="35" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel26" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="q_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="sdt_317" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="sdt" alignment="3" pref="35" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel30" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="sdt_317" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="email" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="a" alignment="3" pref="35" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton14" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="jButton15" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="jButton14" alignment="3" pref="41" max="32767" attributes="0"/>
+                                  <Component id="jButton15" alignment="3" pref="41" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel21">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Times New Roman" size="18" style="3"/>
-                        </Property>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="USER_NAME"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JTextField" name="User_name_317">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
                         </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel23">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Times New Roman" size="18" style="3"/>
-                        </Property>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="PASS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="pass_317">
@@ -486,7 +452,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel24">
+                    <Component class="javax.swing.JLabel" name="hvt">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
@@ -505,39 +471,23 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ht_317ActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel25">
+                    <Component class="javax.swing.JLabel" name="a">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="GI&#x1eda;I T&#xcd;NH"/>
+                        <Property name="text" type="java.lang.String" value="Email"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="gt_317">
+                    <Component class="javax.swing.JTextField" name="sdt_317">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel26">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Times New Roman" size="18" style="3"/>
-                        </Property>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="QUY&#x1ec0;N"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="q_317">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Times New Roman" size="18" style="3"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel30">
+                    <Component class="javax.swing.JLabel" name="sdt">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
@@ -546,7 +496,7 @@
                         <Property name="text" type="java.lang.String" value="SDT"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="sdt_317">
+                    <Component class="javax.swing.JTextField" name="email">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="18" style="3"/>
@@ -571,6 +521,24 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="pass">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="18" style="3"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="PassWord"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="userName">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Times New Roman" size="18" style="3"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="UserName"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -3168,12 +3136,24 @@
                           </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="csdc_317">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="0.0"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="csnc_317">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="0.0"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="csdm_317">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="0.0"/>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="csnm_317">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="0.0"/>
+                          </Properties>
                         </Component>
                         <Component class="com.toedter.calendar.JDateChooser" name="ntt_317">
                           <Properties>
@@ -3289,6 +3269,9 @@
                             <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                             <Property name="horizontalTextPosition" type="int" value="0"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

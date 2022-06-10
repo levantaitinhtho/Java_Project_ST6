@@ -5,20 +5,18 @@ public class TaiKhoanDangNhap_324 {
     private String username;
     private String password;
     private String hoTen;
-    private String gioiTinh;
-    private String Quyen;
+    private String email;
     private String Sdt;
     
 
     public TaiKhoanDangNhap_324() {
     }
 
-    public TaiKhoanDangNhap_324(String username, String password, String hoTen, String gioiTinh, String Quyen, String Sdt) {
+    public TaiKhoanDangNhap_324(String username, String password, String hoTen, String email, String Sdt) {
         this.username = username;
         this.password = password;
         this.hoTen = hoTen;
-        this.gioiTinh = gioiTinh;
-        this.Quyen = Quyen;
+        this.email = email;
         this.Sdt = Sdt;
     }
 
@@ -46,20 +44,12 @@ public class TaiKhoanDangNhap_324 {
         this.hoTen = hoTen;
     }
 
-    public String getGioiTinh() {
-        return gioiTinh;
+    public String getEmail() {
+        return email;
     }
 
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
-    }
-
-    public String getQuyen() {
-        return Quyen;
-    }
-
-    public void setQuyen(String Quyen) {
-        this.Quyen = Quyen;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSdt() {
@@ -71,6 +61,7 @@ public class TaiKhoanDangNhap_324 {
     }
 
    
+
 
     @Override
     public String toString() {

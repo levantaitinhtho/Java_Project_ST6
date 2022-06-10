@@ -54,6 +54,7 @@ public class TaiKhoan_Dao_324 {
                 taiKhoanDangNhap_324.setUsername(rs.getString("UserName"));
                 taiKhoanDangNhap_324.setPassword(rs.getString("Pass"));
                 taiKhoanDangNhap_324.setHoTen(rs.getString("hoVaTen"));
+                taiKhoanDangNhap_324.setEmail(rs.getString("email"));
                 taiKhoanDangNhap_324.setSdt(rs.getString("SDT"));            
                 return taiKhoanDangNhap_324;
             }
@@ -67,16 +68,15 @@ public class TaiKhoan_Dao_324 {
    
    public void updateTaiKhoan(TaiKhoanDangNhap_324 taiKhoanDangNhap_324) {
         Connection connection = KetNoiSQL.getConnection();
-        String sql = "Update Taikhoan set userName = ? , Pass = ? , hoVaTen = ? , gioiTinh =? , Quyen = ? , SDT = ?  where userName = ?";
+        String sql = "Update Taikhoan set userName = ? , Pass = ? , hoVaTen = ? , email=? , SDT = ?  where userName = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, taiKhoanDangNhap_324.getUsername());
             preparedStatement.setString(2, taiKhoanDangNhap_324.getPassword());
             preparedStatement.setString(3, taiKhoanDangNhap_324.getHoTen());
-            preparedStatement.setString(4, taiKhoanDangNhap_324.getGioiTinh() );
-            preparedStatement.setString(5, taiKhoanDangNhap_324.getQuyen());
-            preparedStatement.setString(6, taiKhoanDangNhap_324.getSdt());
-            preparedStatement.setString(7, taiKhoanDangNhap_324.getUsername() );
+            preparedStatement.setString(4, taiKhoanDangNhap_324.getEmail() );
+            preparedStatement.setString(5, taiKhoanDangNhap_324.getSdt());
+            preparedStatement.setString(6, taiKhoanDangNhap_324.getUsername() );
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
@@ -86,14 +86,11 @@ public class TaiKhoan_Dao_324 {
    
     public void taoTaiKhoan(TaoTaiKhoan_324 tk){
         Connection connection = KetNoiSQL.getConnection();
-        String sql = "INSERT Taikhoan (userName,email,Pass, hoVaTen,SDT) VALUES (?,?,?,?,?)";   
+        String sql = "INSERT Taikhoan (userName, Pass, hoVaTen, SDT, email) VALUES (?,?,?,?,?)";   
         try {
             PreparedStatement pr = connection.prepareStatement(sql);
                 pr.setString(1,tk.getTenTaiKhoan());
-                pr.setString(2,tk.getEmail());
-                pr.setString(3,tk.getMatKhau());
-                pr.setString(4,tk.getHoTen());
-                pr.setString(5,tk.getSoDt());
+                pr.setString(2,tk.getMatKhau());
                 int rs = pr.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();

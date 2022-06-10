@@ -680,7 +680,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
             tk.setEmail(email);
             tk.setSoDt(soDt);
             tk.setMatKhau(matKhauLan1);
-            service.taoTaiKhoan(tk);
+            service.TaoTaiKhoan(tk);
             DangNhap_Panel_324.setVisible(true);
             DangKy_Panel_324.setVisible(false);
         }
