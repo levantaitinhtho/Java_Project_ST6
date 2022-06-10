@@ -10,7 +10,9 @@ import controller.KiemTraEmail_324;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import model.TaiKhoanDangNhap_324;
+import model.TaoTaiKhoan_324;
 
 /**
  *
@@ -81,6 +83,19 @@ public class TaiKhoan_Dao_324 {
             System.out.println(rs);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+   
+    public void taoTaiKhoan(TaoTaiKhoan_324 tk){
+        Connection connection = KetNoiSQL.getConnection();
+        String sql = "INSERT Taikhoan (userName, Pass, hoVaTen, gioiTinh, Quyen, SDT) VALUES (?,?,?,?,?,?)";   
+        try {
+            PreparedStatement pr = connection.prepareStatement(sql);
+                pr.setString(1,tk.getTenTaiKhoan());
+                pr.setString(2,tk.getEmail())
+                int rs = pr.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
     }
 }

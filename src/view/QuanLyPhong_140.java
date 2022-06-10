@@ -62,8 +62,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
    
         setTableData2(service.thongTinSinhVien(maPhong));
        
-    }
-  
+    } 
   
     public void setTableData2(List<SinhVien_tatCaThongTin_140> students){
         for(SinhVien_tatCaThongTin_140 st: students){
@@ -99,6 +98,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
         tinhTrang_ht_324 = new javax.swing.JLabel();
         svTD_ht_324 = new javax.swing.JLabel();
 
+        setUndecorated(true);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -360,7 +360,7 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Thoat_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Thoat_ButtonActionPerformed
-        this.dispose();
+    this.dispose();
     }//GEN-LAST:event_Thoat_ButtonActionPerformed
     
     private void Xoa_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Xoa_ButtonActionPerformed
@@ -384,7 +384,6 @@ public  class QuanLyPhong_140 extends javax.swing.JFrame {
                     Them_Button.setVisible(false);
                 else
                     Them_Button.setVisible(true);
-                KetNoiSQL.closeConnection(connection);
                 JOptionPane.showMessageDialog(null,"Xóa thành công");
 
         }catch(SQLException ex){

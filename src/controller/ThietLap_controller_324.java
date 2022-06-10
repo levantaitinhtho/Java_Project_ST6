@@ -74,8 +74,8 @@ public class ThietLap_controller_324 {
         ngheNghiep.setText("");
         buttonNam.setSelected(true);
         buttonNu.setSelected(false);
-        ngaySinh.setDateFormatString("");
-        ngayHD.setDateFormatString("");
+//        ngaySinh.setDateFormatString("");
+//        ngayHD.setDateFormatString("");
     }
     
     public void capNhat(JTextField maSV, JTextField hoTen, JTextField cmnd, JTextField soDT, JTextField queQuan, JTextField tenNGH, JTextField soDTGH, JTextField quanHe, JTextField ngheNghiep){

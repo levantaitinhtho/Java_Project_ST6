@@ -154,6 +154,7 @@ public class Phong_Controller_324 {
         return a;
     }
     
+    
     public void hienThiSoSinhVien(JLabel labelA1, JLabel labelA2, JLabel labelA3, JLabel labelA4 ,JLabel labelB1, JLabel labelB2, JLabel labelB3, JLabel labelB4, JLabel labelC1, JLabel labelC2, JLabel labelC3, JLabel labelC4){
         
      
