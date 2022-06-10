@@ -90,6 +90,18 @@ public class ThietLap_controller_324 {
         ngheNghiep.setEditable(true);
     }
     
+    public void dongCapNhat(JTextField maSV, JTextField hoTen, JTextField cmnd, JTextField soDT, JTextField queQuan, JTextField tenNGH, JTextField soDTGH, JTextField quanHe, JTextField ngheNghiep){
+        maSV.setEditable(false);
+        hoTen.setEditable(false);
+        cmnd.setEditable(false);
+        soDT.setEditable(false);
+        queQuan.setEditable(false);
+        tenNGH.setEditable(false);
+        soDTGH.setEditable(false);
+        quanHe.setEditable(false);
+        ngheNghiep.setEditable(false);
+    }
+    
     public JTextField getMaSV() {
         return maSV;
     }

@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import model.SinhVien_tatCaThongTin_140;
 import service.StudentService;
 
@@ -489,26 +490,61 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        student.setHotengh_140(TenNGH_320TextField.getText());
-        student.setMaPhong_140(maPhong_txt.getText());
-        student.setSdtgh_140(SDT_NGH_320TextField.getText());
-        student.setQuanhe_140(QuanHe_320TextField.getText());
-        student.setNghenghiep_140(NgheNghiep_320TextField.getText());
-        Date ngayLHD = NgayLHD_320TextField.getDate();
-        student.setNgaylamhopdong_140(ngayLHD);
-        student.setMaSv_140(MaSV_320TextField.getText());
-        student.setTen_140(HoTen_320TextField.getText());
-        student.setCMND_140(CMND_320TextField.getText());
-        if(namButton.isSelected())
-            student.setGioitinh_140("1");
-        else
-            if(nuButton.isSelected())
-                student.setGioitinh_140("0");
-        Date ngaySinh = NgaySinh_320TextField.getDate();
-        student.setNgaysinh_140(ngaySinh);
-        student.setSDT_140(SDT_320TextField.getText());
-        student.setQuequan_140(QueQuan_320TextField.getText());
+        String tenGh = TenNGH_320TextField.getText();
+        String maPhong = maPhong_txt.getText();
+        String sdGh = SDT_NGH_320TextField.getText();
+        String quanHe = QuanHe_320TextField.getText();
+        String ngheNghiep = NgheNghiep_320TextField.getText();
+        String maSV = MaSV_320TextField.getText();
+        String hoTen = HoTen_320TextField.getText();
+        String cmnd = CMND_320TextField.getText();
+        String sdt = SDT_320TextField.getText();
+        String queQuan = QueQuan_320TextField.getText();
+        
+        StringBuilder sb = new StringBuilder();
+        if(tenGh.isEmpty())
+            sb.append("Tên người giám hộ không được để trống");
+        if(maPhong.isEmpty())
+            sb.append("\nMã Phòng không được để trống");
+        if(sdGh.isEmpty())
+            sb.append("\nSố điện thoại người giám hộ không được để trống");
+        if(quanHe.isEmpty())
+            sb.append("\nQuan hệ với người giám hộ không được để trống");
+        if(ngheNghiep.isEmpty())
+            sb.append("\nNghề nghiệp của người giám hộ không được để trống");
+        if(maSV.isEmpty())
+            sb.append("\nMã sinh viên không được để trống");
+        if(hoTen.isEmpty())
+            sb.append("\nTên sinh viên không được để trống");
+        if(cmnd.isEmpty())
+            sb.append("\nSố chứng minh thư không được để trống");
+        if(sdt.isEmpty())
+            sb.append("\nSố điện thoại của bạn không được để trống");
+        if(queQuan.isEmpty())
+            sb.append("\nQuê quán không được để trống");
+        if(sb.length() > 0){
+            JOptionPane.showMessageDialog(this,sb.toString(),"Thông báo!",JOptionPane.YES_NO_OPTION);
+        }
+        else{
+            student.setHotengh_140(tenGh);
+            student.setMaPhong_140(maPhong);
+            student.setSdtgh_140(sdGh);
+            student.setQuanhe_140(quanHe);
+            student.setNghenghiep_140(ngheNghiep);
+            Date ngayLHD = NgayLHD_320TextField.getDate();
+            student.setNgaylamhopdong_140(ngayLHD);
+            student.setMaSv_140(maSV);
+            student.setTen_140(hoTen);
+            student.setCMND_140(cmnd);
+            if(namButton.isSelected())
+                student.setGioitinh_140("1");
+            else
+                if(nuButton.isSelected())
+                    student.setGioitinh_140("0");
+            Date ngaySinh = NgaySinh_320TextField.getDate();
+            student.setNgaysinh_140(ngaySinh);
+            student.setSDT_140(sdt);
+            student.setQuequan_140(queQuan);
         try {
             studentService.ThemSinhVIen(student);
             QuanLyPhong_140 quanLy = new QuanLyPhong_140(maPhong_txt.getText());
@@ -517,6 +553,7 @@ public class ThemSinhVien_324 extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(ThemSinhVien_324.class.getName()).log(Level.SEVERE, null, ex);
         }
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void lamMoi_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamMoi_buttonActionPerformed
