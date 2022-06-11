@@ -91,6 +91,9 @@ public class TaiKhoan_Dao_324 {
             PreparedStatement pr = connection.prepareStatement(sql);
                 pr.setString(1,tk.getTenTaiKhoan());
                 pr.setString(2,tk.getMatKhau());
+                pr.setString(3,tk.getHoTen());
+                pr.setString(4,tk.getSoDt());
+                pr.setString(5,tk.getEmail());
                 int rs = pr.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
