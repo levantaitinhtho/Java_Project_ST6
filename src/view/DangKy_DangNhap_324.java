@@ -607,6 +607,7 @@ public class DangKy_DangNhap_324 extends javax.swing.JFrame {
         }else{
             if(controll.checkoutAccountUser(tenTaiKhoan, matKhau)==1){
                 TrangChu tc = new TrangChu();
+                JOptionPane.showMessageDialog(this, "Chúc mừng bạn đã đăng ký tài khoản thành công");
                 TaiKhoanDangNhap_324 tkd1 = tkd.getTaiKhoanByUser(tenTaiKhoan);
                 tc.setModel2(tkd1);
                 tc.setVisible(true);
