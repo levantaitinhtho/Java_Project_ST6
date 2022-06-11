@@ -95,8 +95,6 @@ public class QuanLyNhaXe_320 extends javax.swing.JFrame {
         Luu_Button = new javax.swing.JButton();
         NgayGui_datechooser = new com.toedter.calendar.JDateChooser();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         ThongTin_Label.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
